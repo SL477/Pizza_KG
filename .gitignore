@@ -1,0 +1,3 @@
+orgData/
+report/*
+!report/*.tex
