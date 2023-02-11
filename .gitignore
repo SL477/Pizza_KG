@@ -2,3 +2,4 @@ orgData/
 report/*
 !report/*.tex
 Pipfile.lock
+__pycache__/
