@@ -1,0 +1,225 @@
+@prefix : <http://link477.com/ds/pizza#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tef: <http://link477.com/ds/pizza#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://link477.com/ds/pizza> .
+
+<http://link477.com/ds/pizza> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://link477.com/ds/pizza#creator
+tef:creator rdf:type owl:AnnotationProperty ;
+            rdfs:comment "Created by Thomas Fishwick, 2023-02-11"@en ;
+            rdfs:label "Thomas Fishwick"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://link477.com/ds/pizza#cityHasRestaurant
+tef:cityHasRestaurant rdf:type owl:ObjectProperty ;
+                      owl:inverseOf tef:restaurantInCity ;
+                      rdfs:domain tef:city ;
+                      rdfs:range tef:restaurant .
+
+
+###  http://link477.com/ds/pizza#cityLocatedIn
+tef:cityLocatedIn rdf:type owl:ObjectProperty ;
+                  owl:inverseOf tef:hasCity ;
+                  rdfs:domain tef:city ;
+                  rdfs:range tef:province .
+
+
+###  http://link477.com/ds/pizza#hasCity
+tef:hasCity rdf:type owl:ObjectProperty ;
+            rdfs:domain tef:province ;
+            rdfs:range tef:city .
+
+
+###  http://link477.com/ds/pizza#hasMenuItem
+tef:hasMenuItem rdf:type owl:ObjectProperty ;
+                owl:inverseOf tef:servedInRestauant ;
+                rdfs:domain tef:restaurant ;
+                rdfs:range tef:menuItem .
+
+
+###  http://link477.com/ds/pizza#hasProvince
+tef:hasProvince rdf:type owl:ObjectProperty ;
+                owl:inverseOf tef:provinceLocatedIn ;
+                rdfs:domain tef:country ;
+                rdfs:range tef:province .
+
+
+###  http://link477.com/ds/pizza#provinceLocatedIn
+tef:provinceLocatedIn rdf:type owl:ObjectProperty ;
+                      rdfs:domain tef:province ;
+                      rdfs:range tef:country .
+
+
+###  http://link477.com/ds/pizza#restaurantInCity
+tef:restaurantInCity rdf:type owl:ObjectProperty ;
+                     rdfs:domain tef:restaurant ;
+                     rdfs:range tef:city .
+
+
+###  http://link477.com/ds/pizza#servedInRestauant
+tef:servedInRestauant rdf:type owl:ObjectProperty ;
+                      rdfs:domain tef:menuItem ;
+                      rdfs:range tef:restaurant .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://link477.com/ds/pizza#address
+tef:address rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#category
+tef:category rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#dateAdded
+tef:dateAdded rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://link477.com/ds/pizza#dateUpdated
+tef:dateUpdated rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://link477.com/ds/pizza#id
+tef:id rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#keys
+tef:keys rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#latitude
+tef:latitude rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:decimal .
+
+
+###  http://link477.com/ds/pizza#longitude
+tef:longitude rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:decimal .
+
+
+###  http://link477.com/ds/pizza#menuPageURL
+tef:menuPageURL rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:anyURI .
+
+
+###  http://link477.com/ds/pizza#menus.amountMax
+tef:menus.amountMax rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://link477.com/ds/pizza#menus.amountMin
+tef:menus.amountMin rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://link477.com/ds/pizza#menus.currency
+tef:menus.currency rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#menus.dateSeen
+tef:menus.dateSeen rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://link477.com/ds/pizza#menus.description
+tef:menus.description rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#menus.name
+tef:menus.name rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#postalCode
+tef:postalCode rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#priceRangeCurrency
+tef:priceRangeCurrency rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#priceRangeMax
+tef:priceRangeMax rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  http://link477.com/ds/pizza#priceRangeMin
+tef:priceRangeMin rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  http://link477.com/ds/pizza#primaryCategories
+tef:primaryCategories rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:range xsd:string .
+
+
+###  http://link477.com/ds/pizza#resaurantName
+tef:resaurantName rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://link477.com/ds/pizza#city
+tef:city rdf:type owl:Class .
+
+
+###  http://link477.com/ds/pizza#country
+tef:country rdf:type owl:Class .
+
+
+###  http://link477.com/ds/pizza#menuItem
+tef:menuItem rdf:type owl:Class .
+
+
+###  http://link477.com/ds/pizza#province
+tef:province rdf:type owl:Class .
+
+
+###  http://link477.com/ds/pizza#restaurant
+tef:restaurant rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://link477.com/ds/pizza#US
+tef:US rdf:type owl:NamedIndividual ,
+                tef:country ;
+       rdfs:comment "The country of the United States of America"^^xsd:string ;
+       rdfs:label "United States"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

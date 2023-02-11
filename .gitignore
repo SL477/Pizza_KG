@@ -1,3 +1,4 @@
 orgData/
 report/*
 !report/*.tex
+Pipfile.lock

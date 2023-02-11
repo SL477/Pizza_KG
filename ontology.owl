@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://link477.com/ds/pizza#"
+     xml:base="http://link477.com/ds/pizza"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tef="http://link477.com/ds/pizza#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://link477.com/ds/pizza"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://link477.com/ds/pizza#creator -->
+
+    <owl:AnnotationProperty rdf:about="http://link477.com/ds/pizza#creator">
+        <rdfs:comment xml:lang="en">Created by Thomas Fishwick, 2023-02-11</rdfs:comment>
+        <rdfs:label xml:lang="en">Thomas Fishwick</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://link477.com/ds/pizza#cityHasRestaurant -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#cityHasRestaurant">
+        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#restaurantInCity"/>
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#city"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#cityLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#cityLocatedIn">
+        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#hasCity"/>
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#city"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#province"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#hasCity">
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#province"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#city"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#hasMenuItem -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#hasMenuItem">
+        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#servedInRestauant"/>
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#restaurant"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#menuItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#hasProvince -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#hasProvince">
+        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#provinceLocatedIn"/>
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#country"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#province"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#provinceLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#provinceLocatedIn">
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#province"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#restaurantInCity -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#restaurantInCity">
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#restaurant"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#city"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#servedInRestauant -->
+
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#servedInRestauant">
+        <rdfs:domain rdf:resource="http://link477.com/ds/pizza#menuItem"/>
+        <rdfs:range rdf:resource="http://link477.com/ds/pizza#restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://link477.com/ds/pizza#address -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#address">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#category -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#category">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#dateAdded -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#dateAdded">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#dateUpdated -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#dateUpdated">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#id -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#keys -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#keys">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#latitude">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#longitude">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menuPageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menuPageURL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.amountMax -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.amountMax">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.amountMin -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.amountMin">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.currency -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.currency">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.dateSeen -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.dateSeen">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.description -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menus.name -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#menus.name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#postalCode">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#priceRangeCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#priceRangeCurrency">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#priceRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#priceRangeMax">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#priceRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#priceRangeMin">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#primaryCategories -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#primaryCategories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://link477.com/ds/pizza#resaurantName -->
+
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#resaurantName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://link477.com/ds/pizza#city -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#city"/>
+    
+
+
+    <!-- http://link477.com/ds/pizza#country -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#country"/>
+    
+
+
+    <!-- http://link477.com/ds/pizza#menuItem -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#menuItem"/>
+    
+
+
+    <!-- http://link477.com/ds/pizza#province -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#province"/>
+    
+
+
+    <!-- http://link477.com/ds/pizza#restaurant -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#restaurant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://link477.com/ds/pizza#US -->
+
+    <owl:NamedIndividual rdf:about="http://link477.com/ds/pizza#US">
+        <rdf:type rdf:resource="http://link477.com/ds/pizza#country"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The country of the United States of America</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
