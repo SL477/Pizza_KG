@@ -7,7 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://link477.com/ds/pizza> .
 
-<http://link477.com/ds/pizza> rdf:type owl:Ontology .
+<http://link477.com/ds/pizza> rdf:type owl:Ontology ;
+                               tef:creator ""^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -215,11 +216,363 @@ tef:restaurant rdf:type owl:Class .
 #    Individuals
 #################################################################
 
+###  http://link477.com/ds/pizza#AK
+tef:AK rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of AK"^^xsd:string ;
+       rdfs:label "AK"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#AL
+tef:AL rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of AL"^^xsd:string ;
+       rdfs:label "AL"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#AR
+tef:AR rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of AR"^^xsd:string ;
+       rdfs:label "AR"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#AZ
+tef:AZ rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of AZ"^^xsd:string ;
+       rdfs:label "AZ"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#CA
+tef:CA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of CA"^^xsd:string ;
+       rdfs:label "CA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#CO
+tef:CO rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of CO"^^xsd:string ;
+       rdfs:label "CO"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#CT
+tef:CT rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of CT"^^xsd:string ;
+       rdfs:label "CT"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#DE
+tef:DE rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of DE"^^xsd:string ;
+       rdfs:label "DE"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#FL
+tef:FL rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of FL"^^xsd:string ;
+       rdfs:label "FL"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#GA
+tef:GA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of GA"^^xsd:string ;
+       rdfs:label "GA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#HI
+tef:HI rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of HI"^^xsd:string ;
+       rdfs:label "HI"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#IA
+tef:IA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of IA"^^xsd:string ;
+       rdfs:label "IA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#ID
+tef:ID rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of ID"^^xsd:string ;
+       rdfs:label "ID"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#IL
+tef:IL rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of IL"^^xsd:string ;
+       rdfs:label "IL"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#IN
+tef:IN rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of IN"^^xsd:string ;
+       rdfs:label "IN"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#KS
+tef:KS rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of KS"^^xsd:string ;
+       rdfs:label "KS"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#KY
+tef:KY rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of KY"^^xsd:string ;
+       rdfs:label "KY"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#LA
+tef:LA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of LA"^^xsd:string ;
+       rdfs:label "LA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MD
+tef:MD rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MD"^^xsd:string ;
+       rdfs:label "MD"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MI
+tef:MI rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MI"^^xsd:string ;
+       rdfs:label "MI"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MN
+tef:MN rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MN"^^xsd:string ;
+       rdfs:label "MN"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MO
+tef:MO rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MO"^^xsd:string ;
+       rdfs:label "MO"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MS
+tef:MS rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MS"^^xsd:string ;
+       rdfs:label "MS"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#MT
+tef:MT rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of MT"^^xsd:string ;
+       rdfs:label "MT"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NC
+tef:NC rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NC"^^xsd:string ;
+       rdfs:label "NC"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#ND
+tef:ND rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of ND"^^xsd:string ;
+       rdfs:label "ND"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NE
+tef:NE rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NE"^^xsd:string ;
+       rdfs:label "NE"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NJ
+tef:NJ rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NJ"^^xsd:string ;
+       rdfs:label "NJ"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NM
+tef:NM rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NM"^^xsd:string ;
+       rdfs:label "NM"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NV
+tef:NV rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NV"^^xsd:string ;
+       rdfs:label "NV"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#NY
+tef:NY rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of NY"^^xsd:string ;
+       rdfs:label "NY"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#OH
+tef:OH rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of OH"^^xsd:string ;
+       rdfs:label "OH"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#OK
+tef:OK rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of OK"^^xsd:string ;
+       rdfs:label "OK"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#OR
+tef:OR rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of OR"^^xsd:string ;
+       rdfs:label "OR"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#PA
+tef:PA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of PA"^^xsd:string ;
+       rdfs:label "PA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#SC
+tef:SC rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of SC"^^xsd:string ;
+       rdfs:label "SC"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#SD
+tef:SD rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of SD"^^xsd:string ;
+       rdfs:label "SD"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#TN
+tef:TN rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of TN"^^xsd:string ;
+       rdfs:label "TN"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#TX
+tef:TX rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of TX"^^xsd:string ;
+       rdfs:label "TX"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#US
 tef:US rdf:type owl:NamedIndividual ,
                 tef:country ;
        rdfs:comment "The country of the United States of America"^^xsd:string ;
        rdfs:label "United States"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#UT
+tef:UT rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of UT"^^xsd:string ;
+       rdfs:label "UT"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#VA
+tef:VA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of VA"^^xsd:string ;
+       rdfs:label "VA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#WA
+tef:WA rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of WA"^^xsd:string ;
+       rdfs:label "WA"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#WI
+tef:WI rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of WI"^^xsd:string ;
+       rdfs:label "WI"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#WV
+tef:WV rdf:type owl:NamedIndividual ,
+                tef:province ;
+       tef:provinceLocatedIn tef:US ;
+       rdfs:comment "The US state with a code of WV"^^xsd:string ;
+       rdfs:label "WV"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

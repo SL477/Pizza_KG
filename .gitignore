@@ -3,3 +3,4 @@ report/*
 !report/*.tex
 Pipfile.lock
 __pycache__/
+.idea/
