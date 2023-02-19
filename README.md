@@ -3,3 +3,7 @@
 This was the coursework for the Semantic Web-tech and Knowledge Graphs Coursework. I was not enrolled in this module. But decided to do this later.
 
 The specification is [here](https://github.com/turing-knowledge-graphs/teaching/blob/main/city/2020-2021/INM713_Coursework.pdf) and the data is [here](https://www.kaggle.com/datasets/datafiniti/pizza-restaurants-and-the-pizza-they-sell?resource=download)
+
+## Ontology Modelling
+
+The original ontology/Knowledge Graph is stored in the ontologyModelling folder.
