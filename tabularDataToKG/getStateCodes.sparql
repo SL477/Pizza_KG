@@ -1,0 +1,9 @@
+PREFIX  dbpediaowl:  <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX yago: <https://dbpedia.org/class/yago/>
+
+SELECT distinct ?state  ?isoCode WHERE {
+?state dbpediaowl:country dbpedia:United_States .
+?state dbp:isoCode ?isoCode .
+} LIMIT 100

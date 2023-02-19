@@ -4,3 +4,5 @@ report/*
 Pipfile.lock
 __pycache__/
 .idea/
+tabularDataToKG/states.csv
+tabularDataToKG/ontology_ttl.owl
