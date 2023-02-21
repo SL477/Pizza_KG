@@ -5,6 +5,7 @@ from pizza_kg.data import OrgDataFiles, get_orgData, get_Graph
 from rdflib import Graph
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
+from pickle import load
 
 dbr_url = 'http://dbpedia.org/resource/'
 
@@ -36,12 +37,24 @@ def main():
     g.add((country_url, RDFS.label, label))
     g.add((country_url, RDFS.comment, comment))
 
+    # open the state dictionary
+    with open(os.path.join('tabularDataToKG', 'state.pkl'), 'rb') as f:
+        state_dict = load(f)
+
     # start adding the states
     # load the data
     df: pd.DataFrame = get_orgData(OrgDataFiles.MAIN)
     for state in df.province.unique():
         # set up the data
-        province = rdflib.URIRef()
+        province = rdflib.URIRef(state_dict[state])
+        state_name = str(province)[28:]
+        label = rdflib.Literal(state_name, datatype=XSD.string)
+        comment = rdflib.Literal('The US State of ' + state_name, datatype=XSD.string)
+
+        g.add((province, RDF.type, tef.province))
+        g.add((province, RDFS.label, label))
+        g.add((province, RDFS.comment, comment))
+        g.add((province, tef.provinceLocatedIn, country_url))
 
     # print the knowledge graph
     print_knowledge_graph(g)
