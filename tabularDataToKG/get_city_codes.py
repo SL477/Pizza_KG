@@ -6,7 +6,7 @@ import pandas as pd
 if __name__ == "__main__":
     sparql = SPARQLWrapper("https://dbpedia.org/sparql/")
     sparql.setReturnFormat(JSON)
-    with open(os.path.join('tabularDataToKG', 'getStateCodes.sparql'), 'r') as f:
+    with open(os.path.join('tabularDataToKG', 'getCityCodes.sparql'), 'r') as f:
         # print(f.read())
         sparql.setQuery(f.read())
 
@@ -14,16 +14,16 @@ if __name__ == "__main__":
         ret = sparql.queryAndConvert()
 
         states = []
-        codes = []
+        cities = []
 
         for r in ret["results"]["bindings"]:
             print(r)
             states.append(r['state']['value'])
-            codes.append(r['isoCode']['value'])
+            cities.append(r['city']['value'])
 
         # save to CSV
         pd.DataFrame.from_dict(
-            {'states': states, 'codes': codes}).to_csv(
-            os.path.join("tabularDataToKG", "states.csv"), index=False)
+            {'state': states, 'city': cities}).to_csv(
+            os.path.join("tabularDataToKG", "cities.csv"), index=False)
     except Exception as e:
         print(e)
