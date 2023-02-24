@@ -7,3 +7,5 @@ __pycache__/
 tabularDataToKG/states.csv
 tabularDataToKG/ontology_ttl.owl
 tabularDataToKG/cities.csv
+tabularDataToKG/allUSCities.csv
+tabularDataToKG/cityURLS.xlsx

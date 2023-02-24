@@ -1,0 +1,7 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?city 
+WHERE {
+    ?city rdf:type dbo:City ;
+     rdfs:label ?label ;
+      dbo:country dbpedia:United_States
+     }
