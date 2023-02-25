@@ -1,7 +1,7 @@
 """Tabular data to Knowledge graph"""
 import os
 import pandas as pd
-from pizza_kg.data import OrgDataFiles, get_orgData, get_Graph
+from pizza_kg.data import OrgDataFiles, get_org_data, get_graph
 from rdflib import Graph
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
@@ -11,16 +11,26 @@ dbr_url = 'http://dbpedia.org/resource/'
 
 
 def print_knowledge_graph(g: Graph) -> None:
-    """Print each statement in the Knowledge Graph"""
+    """Print each statement in the Knowledge Graph
+
+    Parameters
+    ----------
+    g: Graph
+        The Knowledge graph to print
+
+    Returns
+    -------
+    None"""
     # for stmt in g:
     #     pprint.pprint(stmt)
     print(g.serialize(format='ttl'))
 
 
 def main():
+    """This builds up and saves the Knowledge Graph"""
     # get the Knowledge Graph
     # https://rdflib.readthedocs.io/en/stable/intro_to_creating_rdf.html
-    g: Graph = get_Graph()
+    g: Graph = get_graph()
 
     # set up the namespaces
     tef = rdflib.Namespace('http://link477.com/ds/pizza#')
@@ -31,7 +41,9 @@ def main():
     # add the country
     country_url = rdflib.URIRef(dbr_url + 'United_States')
     label = rdflib.Literal('United States of America', datatype=XSD.string)
-    comment = rdflib.Literal('The country of the United States of America', datatype=XSD.string)
+    comment = rdflib.Literal(
+        'The country of the United States of America',
+        datatype=XSD.string)
 
     g.add((country_url, RDF.type, tef.Country))
     g.add((country_url, RDFS.label, label))
@@ -43,13 +55,15 @@ def main():
 
     # start adding the states
     # load the data
-    df: pd.DataFrame = get_orgData(OrgDataFiles.MAIN)
+    df: pd.DataFrame = get_org_data(OrgDataFiles.MAIN)
     for state in df.province.unique():
         # set up the data
         province = rdflib.URIRef(state_dict[state])
         state_name = str(province)[28:]
         label = rdflib.Literal(state_name, datatype=XSD.string)
-        comment = rdflib.Literal('The US State of ' + state_name, datatype=XSD.string)
+        comment = rdflib.Literal(
+            f'The US State of {state_name}',
+            datatype=XSD.string)
 
         g.add((province, RDF.type, tef.province))
         g.add((province, RDFS.label, label))
@@ -63,7 +77,9 @@ def main():
         city_url = rdflib.URIRef(city_tup.CityURL)
         label = rdflib.Literal(city_tup.city, datatype=XSD.string)
         state = state_dict[city_tup.province]
-        comment = rdflib.Literal("The US City of " + city_tup.city + " in state " + state[28:], datatype=XSD.string)
+        comment = rdflib.Literal(
+            f'The US City of {city_tup.city} in state {state[28:]}',
+            datatype=XSD.string)
 
         g.add((city_url, RDF.type, tef.city))
         g.add((city_url, RDFS.label, label))
@@ -74,7 +90,9 @@ def main():
     print_knowledge_graph(g)
 
     # save the knowledge graph
-    g.serialize(format='ttl', destination=os.path.join('tabularDataToKG', 'ontology_ttl.owl'))
+    g.serialize(
+        format='ttl',
+        destination=os.path.join('tabularDataToKG', 'ontology_ttl.owl'))
 
 
 if __name__ == '__main__':

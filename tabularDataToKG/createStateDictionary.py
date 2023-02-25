@@ -3,8 +3,9 @@ import os
 import pandas as pd
 from pickle import dump
 
+
 def main():
-    """Open the states csv file, build a dictionary and then save it"""
+    """Open the states csv file, builds a dictionary and then saves it"""
     df = pd.read_csv(os.path.join('tabularDataToKG', 'states.csv'))
 
     state_dict = {item.codes: item.states for item in df.itertuples()}

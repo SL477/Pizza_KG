@@ -1,29 +1,21 @@
 """Get the state codes from DBPedia using SPARQL and save to CSV"""
-from SPARQLWrapper import SPARQLWrapper, JSON
 import os
 import pandas as pd
+from pizza_kg.sparql_request import sparql_request
 
 if __name__ == "__main__":
-    sparql = SPARQLWrapper("https://dbpedia.org/sparql/")
-    sparql.setReturnFormat(JSON)
-    with open(os.path.join('tabularDataToKG', 'getStateCodes.sparql'), 'r') as f:
-        # print(f.read())
-        sparql.setQuery(f.read())
+    ret = sparql_request(
+        "https://dbpedia.org/sparql/",
+        os.path.join('tabularDataToKG', 'getStateCodes.sparql'))
 
-    try:
-        ret = sparql.queryAndConvert()
+    states = []
+    codes = []
 
-        states = []
-        codes = []
+    for r in ret["results"]["bindings"]:
+        print(r)
+        states.append(r['state']['value'])
+        codes.append(r['isoCode']['value'])
 
-        for r in ret["results"]["bindings"]:
-            print(r)
-            states.append(r['state']['value'])
-            codes.append(r['isoCode']['value'])
-
-        # save to CSV
-        pd.DataFrame.from_dict(
-            {'states': states, 'codes': codes}).to_csv(
-            os.path.join("tabularDataToKG", "states.csv"), index=False)
-    except Exception as e:
-        print(e)
+    # save to CSV
+    df = pd.DataFrame.from_dict({'states': states, 'codes': codes})
+    df.to_csv(os.path.join("tabularDataToKG", "states2.csv"), index=False)

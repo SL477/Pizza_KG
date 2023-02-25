@@ -7,3 +7,7 @@ The specification is [here](https://github.com/turing-knowledge-graphs/teaching/
 ## Ontology Modelling
 
 The original ontology/Knowledge Graph is stored in the ontologyModelling folder.
+
+## Tabular Data to Knowledge Graph
+
+This converts the CSV data to a Knowledge Graph

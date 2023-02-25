@@ -3,14 +3,16 @@ import os
 import pandas as pd
 from pickle import dump
 
+
 def main():
-    """Open the states csv file, build a dictionary and then save it"""
+    """Open the cities Excel file, builds a dictionary and then saves it"""
     df = pd.read_excel(os.path.join('tabularDataToKG', 'urlsPlain.xlsx'))
 
-    city_dict = {item.city + '_' + item.province: item.CityURL for item in df.itertuples()}
+    city_dict = {item.city + '_' + item.province: item.CityURL
+                 for item in df.itertuples()}
 
     with open(os.path.join('tabularDataToKG', 'city.pkl'), 'wb') as f:
-         dump(city_dict, f)
+        dump(city_dict, f)
     print(city_dict)
 
 
