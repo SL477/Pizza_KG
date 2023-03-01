@@ -93,11 +93,13 @@ def main():
     for city_tup in city_df.itertuples():
         # set up the data
         city_url = rdflib.URIRef(city_tup.CityURL.replace("'", ""))
-        label = rdflib.Literal(string_escape(city_tup.city), datatype=XSD.string)
+        label = rdflib.Literal(string_escape(city_tup.city),
+                               datatype=XSD.string)
         state = state_dict[city_tup.province]
-        comment = rdflib.Literal(
-            f'The US City of {string_escape(city_tup.city)} in state {state[28:]}',
-            datatype=XSD.string)
+        comment = rdflib.Literal('The US City of '
+                                 + string_escape(city_tup.city) + ' in state '
+                                 + state[28:],
+                                 datatype=XSD.string)
 
         g.add((city_url, RDF.type, tef.city))
         g.add((city_url, RDFS.label, label))
@@ -130,84 +132,118 @@ def main():
     with open(os.path.join('tabularDataToKG', 'city.pkl'), 'rb') as f:
         city_dict: dict = load(f)
 
-    for restaurant_tup in df[restaurant_fields].astype(str).value_counts().reset_index().itertuples():
+    restaurant_df = df[restaurant_fields].astype(str).value_counts()\
+        .reset_index()
+
+    for restaurant_tup in restaurant_df.itertuples():
         restaurant_url = rdflib.URIRef(tef_url + restaurant_tup.id)
-        restaurant_id = rdflib.Literal(restaurant_tup.id, datatype=XSD.string)
-        restaurant_addr = rdflib.Literal(string_escape(restaurant_tup.address), datatype=XSD.string)
 
         g.add((restaurant_url, RDF.type, tef.restaurant))
-        g.add((restaurant_url, tef.id, restaurant_id))
-        g.add((restaurant_url, tef.address, restaurant_addr))
+        g.add((restaurant_url,
+               tef.id,
+               rdflib.Literal(restaurant_tup.id, datatype=XSD.string)))
+        g.add((restaurant_url,
+               tef.address,
+               rdflib.Literal(string_escape(restaurant_tup.address),
+                              datatype=XSD.string)))
 
         # add each category
         for cat in restaurant_tup.categories.replace(' and ', ',').split(','):
-            cat_literal = rdflib.Literal(string_escape(cat), datatype=XSD.string)
-            g.add((restaurant_url, tef.category, cat_literal))
+            g.add((restaurant_url,
+                   tef.category,
+                   rdflib.Literal(string_escape(cat), datatype=XSD.string)))
 
         # add each primary category
         for cat in restaurant_tup.primaryCategories.split(','):
-            cat_literal = rdflib.Literal(string_escape(cat), datatype=XSD.string)
-            g.add((restaurant_url, tef.primaryCategories, cat_literal))
+            g.add((restaurant_url,
+                   tef.primaryCategories,
+                   rdflib.Literal(string_escape(cat), datatype=XSD.string)))
 
         # get the city
-        city_url = city_dict.get(restaurant_tup.city + '_' + restaurant_tup.province, '')
+        city_url = city_dict.get(
+            restaurant_tup.city + '_' + restaurant_tup.province, '')
         if city_url != '':
             city_url = rdflib.URIRef(city_url.replace("'", ""))
             g.add((restaurant_url, tef.restaurantInCity, city_url))
 
         # latitude
-        restaurant_latitude = rdflib.Literal(restaurant_tup.latitude, datatype=XSD.decimal)
-        g.add((restaurant_url, tef.latitude, restaurant_latitude))
+        g.add((restaurant_url,
+               tef.latitude,
+               rdflib.Literal(restaurant_tup.latitude, datatype=XSD.decimal)))
 
         # longitude
-        restaurant_longitude = rdflib.Literal(restaurant_tup.longitude, datatype=XSD.decimal)
-        g.add((restaurant_url, tef.longitude, restaurant_longitude))
+        g.add((restaurant_url,
+               tef.longitude,
+               rdflib.Literal(restaurant_tup.longitude,
+                              datatype=XSD.decimal)))
 
         # menu page URL
         if restaurant_tup.menuPageURL != "nan":
-            restaurant_menu_page_url = rdflib.Literal(restaurant_tup.menuPageURL, datatype=XSD.anyURI)
-            g.add((restaurant_url, tef.menuPageURL, restaurant_menu_page_url))
+            g.add((restaurant_url,
+                   tef.menuPageURL,
+                   rdflib.Literal(restaurant_tup.menuPageURL,
+                                  datatype=XSD.anyURI)))
 
         # menu currency
-        restaurant_menu_curr = rdflib.Literal(restaurant_tup.menusCurrency, datatype=XSD.string)
-        g.add((restaurant_url, tef.term('menus.currency'), restaurant_menu_curr))
+        g.add((restaurant_url,
+               tef.term('menus.currency'),
+               rdflib.Literal(restaurant_tup.menusCurrency,
+                              datatype=XSD.string)))
 
         # restaurant name
-        restaurant_name = rdflib.Literal(string_escape(restaurant_tup.name), datatype=XSD.string)
-        g.add((restaurant_url, tef.restaurantName, restaurant_name))
+        g.add((restaurant_url,
+               tef.restaurantName,
+               rdflib.Literal(string_escape(restaurant_tup.name),
+                              datatype=XSD.string)))
 
         # postal code
-        restaurant_post_code = rdflib.Literal(restaurant_tup.postalCode, datatype=XSD.string)
-        g.add((restaurant_url, tef.postalCode, restaurant_post_code))
+        g.add((restaurant_url,
+               tef.postalCode,
+               rdflib.Literal(restaurant_tup.postalCode, datatype=XSD.string)))
 
         # price range currency
-        restaurant_price_range_currency = rdflib.Literal(restaurant_tup.priceRangeCurrency, datatype=XSD.string)
-        g.add((restaurant_url, tef.priceRangeCurrency, restaurant_price_range_currency))
+        g.add((restaurant_url,
+               tef.priceRangeCurrency,
+               rdflib.Literal(restaurant_tup.priceRangeCurrency,
+                              datatype=XSD.string)))
 
         # price range min
-        restaurant_price_range_min = rdflib.Literal(restaurant_tup.priceRangeMin, datatype=XSD.integer)
-        g.add((restaurant_url, tef.priceRangeMin, restaurant_price_range_min))
+        g.add((restaurant_url,
+               tef.priceRangeMin,
+               rdflib.Literal(restaurant_tup.priceRangeMin,
+                              datatype=XSD.integer)))
 
         # price range max
-        restaurant_price_range_max = rdflib.Literal(restaurant_tup.priceRangeMax, datatype=XSD.integer)
-        g.add((restaurant_url, tef.priceRangeMax, restaurant_price_range_max))
+        g.add((restaurant_url,
+               tef.priceRangeMax,
+               rdflib.Literal(restaurant_tup.priceRangeMax,
+                              datatype=XSD.integer)))
 
         # label and comment
-        label = rdflib.Literal(string_escape(restaurant_tup.name) + '_' + string_escape(restaurant_tup.city), datatype=XSD.string)
-        comment = rdflib.Literal(string_escape(restaurant_tup.name) + " in " + string_escape(restaurant_tup.city), datatype=XSD.string)
+        label = rdflib.Literal(string_escape(restaurant_tup.name) + '_'
+                               + string_escape(restaurant_tup.city),
+                               datatype=XSD.string)
+        comment = rdflib.Literal(string_escape(restaurant_tup.name) + " in "
+                                 + string_escape(restaurant_tup.city),
+                                 datatype=XSD.string)
 
         g.add((restaurant_url, RDFS.label, label))
         g.add((restaurant_url, RDFS.comment, comment))
 
         # date Added
-        restaurant_date_added = rdflib.Literal(restaurant_tup.dateAdded)
-        g.add((restaurant_url, tef.dateAdded, restaurant_date_added))
+        g.add((restaurant_url,
+               tef.dateAdded,
+               rdflib.Literal(restaurant_tup.dateAdded)))
 
         # date updated
-        g.add((restaurant_url, tef.dateUpdated, rdflib.Literal(restaurant_tup.dateUpdated)))
+        g.add((restaurant_url,
+               tef.dateUpdated,
+               rdflib.Literal(restaurant_tup.dateUpdated)))
 
         # keys
-        g.add((restaurant_url, tef.keys, rdflib.Literal(restaurant_tup.keys, datatype=XSD.string)))
+        g.add((restaurant_url,
+               tef.keys,
+               rdflib.Literal(restaurant_tup.keys, datatype=XSD.string)))
 
     # print the knowledge graph
     print_knowledge_graph(g)
