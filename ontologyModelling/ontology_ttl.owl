@@ -304,11 +304,11 @@ tef:primaryCategories rdf:type owl:DatatypeProperty ;
                       rdfs:label "Primary Categories"^^xsd:string .
 
 
-###  http://link477.com/ds/pizza#resaurantName
-tef:resaurantName rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "The name of the restaurant"^^xsd:string ;
-                  rdfs:label "Restaurant Name"^^xsd:string .
+###  http://link477.com/ds/pizza#restaurantName
+tef:restaurantName rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The name of the restaurant"^^xsd:string ;
+                   rdfs:label "Restaurant Name"^^xsd:string .
 
 
 #################################################################

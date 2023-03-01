@@ -436,9 +436,9 @@
     
 
 
-    <!-- http://link477.com/ds/pizza#resaurantName -->
+    <!-- http://link477.com/ds/pizza#restaurantName -->
 
-    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#resaurantName">
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#restaurantName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the restaurant</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restaurant Name</rdfs:label>

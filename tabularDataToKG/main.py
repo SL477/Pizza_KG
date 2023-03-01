@@ -174,7 +174,7 @@ def main():
 
         # restaurant name
         restaurant_name = rdflib.Literal(string_escape(restaurant_tup.name), datatype=XSD.string)
-        g.add((restaurant_url, tef.resaurantName, restaurant_name))
+        g.add((restaurant_url, tef.restaurantName, restaurant_name))
 
         # postal code
         restaurant_post_code = rdflib.Literal(restaurant_tup.postalCode, datatype=XSD.string)
