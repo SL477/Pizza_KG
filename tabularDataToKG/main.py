@@ -121,13 +121,15 @@ def main():
         'priceRangeCurrency',
         'priceRangeMin',
         'priceRangeMax',
-        'province'
+        'province',
+        'dateAdded',
+        'dateUpdated',
+        'keys'
     ]
 
     with open(os.path.join('tabularDataToKG', 'city.pkl'), 'rb') as f:
         city_dict: dict = load(f)
 
-    # restaurant_count = 0
     for restaurant_tup in df[restaurant_fields].astype(str).value_counts().reset_index().itertuples():
         restaurant_url = rdflib.URIRef(tef_url + restaurant_tup.id)
         restaurant_id = rdflib.Literal(restaurant_tup.id, datatype=XSD.string)
@@ -196,6 +198,16 @@ def main():
 
         g.add((restaurant_url, RDFS.label, label))
         g.add((restaurant_url, RDFS.comment, comment))
+
+        # date Added
+        restaurant_date_added = rdflib.Literal(restaurant_tup.dateAdded)
+        g.add((restaurant_url, tef.dateAdded, restaurant_date_added))
+
+        # date updated
+        g.add((restaurant_url, tef.dateUpdated, rdflib.Literal(restaurant_tup.dateUpdated)))
+
+        # keys
+        g.add((restaurant_url, tef.keys, rdflib.Literal(restaurant_tup.keys, datatype=XSD.string)))
 
     # print the knowledge graph
     print_knowledge_graph(g)
