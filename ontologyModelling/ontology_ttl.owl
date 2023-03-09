@@ -388,11 +388,46 @@ tef:anchovies rdf:type owl:Class ;
               rdfs:label "Anchovies"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#anchovyPizza
+tef:anchovyPizza rdf:type owl:Class ;
+                 rdfs:subClassOf tef:namedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:anchovies
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:mozzarella
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:tomato
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( tef:anchovies
+                                                                     tef:mozzarella
+                                                                     tef:tomato
+                                                                   )
+                                                     ]
+                                 ] ;
+                 rdfs:comment "Anchovy Pizza"^^xsd:string ;
+                 rdfs:label "Anchovy Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#artichokes
 tef:artichokes rdf:type owl:Class ;
                rdfs:subClassOf tef:pizzaTopping ;
                rdfs:comment "Artichokes"^^xsd:string ;
                rdfs:label "Artichokes"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#arugula
+tef:arugula rdf:type owl:Class ;
+            rdfs:subClassOf tef:pizzaTopping ;
+            rdfs:comment "Something that looks like rocket"^^xsd:string ;
+            rdfs:label "Arugula"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#asparagus
@@ -402,11 +437,197 @@ tef:asparagus rdf:type owl:Class ;
               rdfs:label "Asparagus"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#aubergine
+tef:aubergine rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaTopping ;
+              rdfs:comment "Aubergine/eggplant"^^xsd:string ;
+              rdfs:label "Aubergine"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#auberginePizza
+tef:auberginePizza rdf:type owl:Class ;
+                   rdfs:subClassOf tef:namedPizza ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:aubergine
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:mozzarella
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:tomato
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( tef:aubergine
+                                                                       tef:mozzarella
+                                                                       tef:tomato
+                                                                     )
+                                                       ]
+                                   ] ;
+                   rdfs:comment "Aubergine Pizzza/Eggplant"^^xsd:string ;
+                   rdfs:label "Aubergine Pizzza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bacon
+tef:bacon rdf:type owl:Class ;
+          rdfs:subClassOf tef:meat ;
+          rdfs:comment "Bacon"^^xsd:string ;
+          rdfs:label "Bacon"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#baconCheeseBurgerPizza
+tef:baconCheeseBurgerPizza rdf:type owl:Class ;
+                           rdfs:subClassOf tef:namedPizza ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:bacon
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:burgerSauce
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:cheddar
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:mozzarella
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:pickle
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:someValuesFrom tef:tomato
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tef:hasTopping ;
+                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( tef:bacon
+                                                                               tef:burgerSauce
+                                                                               tef:cheddar
+                                                                               tef:mozzarella
+                                                                               tef:pickle
+                                                                               tef:tomato
+                                                                             )
+                                                               ]
+                                           ] ;
+                           rdfs:comment "Bacon Cheeseburger Pizza"^^xsd:string ;
+                           rdfs:label "Bacon Cheeseburger Pizza"^^xsd:string ;
+                           rdfs:seeAlso "https://www.papajohns.com/order/menu/pizza/bacon-cheddarburger#:~:text=Our%20fan%20favorite%20is%20better,on%20Pan%20or%20Large%20crust."^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bakedPotatoPizza
+tef:bakedPotatoPizza rdf:type owl:Class ;
+                     rdfs:subClassOf tef:namedPizza ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:bacon
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:mozzarella
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:onion
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:sourCream
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:tomato
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( tef:bacon
+                                                                         tef:mozzarella
+                                                                         tef:onion
+                                                                         tef:sourCream
+                                                                         tef:tomato
+                                                                       )
+                                                         ]
+                                     ] ;
+                     rdfs:comment "Baked Potato Pizza"^^xsd:string ;
+                     rdfs:label "Baked Potato Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#basil
 tef:basil rdf:type owl:Class ;
           rdfs:subClassOf tef:pizzaTopping ;
           rdfs:comment "Basil"^^xsd:string ;
           rdfs:label "Basil"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bbqPizza
+tef:bbqPizza rdf:type owl:Class ;
+             rdfs:subClassOf tef:namedPizza ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:bacon
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:bbqSauce
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:corn
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:mozzarella
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:onion
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:scallions
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:tomato
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( tef:bacon
+                                                                 tef:bbqSauce
+                                                                 tef:corn
+                                                                 tef:mozzarella
+                                                                 tef:onion
+                                                                 tef:scallions
+                                                                 tef:tomato
+                                                               )
+                                                 ]
+                             ] ;
+             rdfs:comment "BBQ Pizza"^^xsd:string ;
+             rdfs:label "BBQ Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bbqSauce
+tef:bbqSauce rdf:type owl:Class ;
+             rdfs:subClassOf tef:pizzaTopping ;
+             rdfs:comment "BBQ Sauce"^^xsd:string ;
+             rdfs:label "BBQ Sauce"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#beef
+tef:beef rdf:type owl:Class ;
+         rdfs:subClassOf tef:meat ;
+         rdfs:comment "Beef"^^xsd:string ;
+         rdfs:label "Beef"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#bianca
@@ -435,6 +656,219 @@ tef:bianca rdf:type owl:Class ;
                            ] ;
            rdfs:comment "White pizza. No tomato. Olive oil, salt, occasionally herbs"^^xsd:string ;
            rdfs:label "Pizza Bianca"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#biancaFiorentinaPizza
+tef:biancaFiorentinaPizza rdf:type owl:Class ;
+                          rdfs:subClassOf tef:namedPizza ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:someValuesFrom tef:garlic
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:someValuesFrom tef:mozzarella
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:someValuesFrom tef:olives
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:someValuesFrom tef:parmezan
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:someValuesFrom tef:spinach
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty tef:hasTopping ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( tef:garlic
+                                                                              tef:mozzarella
+                                                                              tef:olives
+                                                                              tef:parmezan
+                                                                              tef:spinach
+                                                                            )
+                                                              ]
+                                          ] ;
+                          rdfs:comment "Bianca Fiorentina Pizza"^^xsd:string ;
+                          rdfs:label "Bianca Fiorentina Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bltPizza
+tef:bltPizza rdf:type owl:Class ;
+             rdfs:subClassOf tef:namedPizza ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:bacon
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:lettuce
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:mozzarella
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:tomato
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( tef:bacon
+                                                                 tef:lettuce
+                                                                 tef:mozzarella
+                                                                 tef:tomato
+                                                               )
+                                                 ]
+                             ] ;
+             rdfs:comment "BLT Pizza"^^xsd:string ;
+             rdfs:label "BLT Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#blueCheese
+tef:blueCheese rdf:type owl:Class ;
+               rdfs:subClassOf tef:cheese ;
+               rdfs:comment "Blue Cheese"^^xsd:string ;
+               rdfs:label "Blue Cheese"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#breakfastPizza
+tef:breakfastPizza rdf:type owl:Class ;
+                   rdfs:subClassOf tef:namedPizza ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:egg
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:germanSausage
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:mozzarella
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:someValuesFrom tef:tomato
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty tef:hasTopping ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( tef:egg
+                                                                       tef:germanSausage
+                                                                       tef:mozzarella
+                                                                       tef:tomato
+                                                                     )
+                                                       ]
+                                   ] ;
+                   rdfs:comment "Breakfast Pizza"^^xsd:string ;
+                   rdfs:label "Breakfast Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#bruschettaPizza
+tef:bruschettaPizza rdf:type owl:Class ;
+                    rdfs:subClassOf tef:namedPizza ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:chicken
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:garlic
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:mozzarella
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:parmezan
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:sundriedTomato
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:someValuesFrom tef:tomato
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasTopping ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( tef:chicken
+                                                                        tef:garlic
+                                                                        tef:mozzarella
+                                                                        tef:parmezan
+                                                                        tef:sundriedTomato
+                                                                        tef:tomato
+                                                                      )
+                                                        ]
+                                    ] ;
+                    rdfs:comment "Bruschetta Pizza"^^xsd:string ;
+                    rdfs:label "Bruschetta Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#buffaloChickenPizza
+tef:buffaloChickenPizza rdf:type owl:Class ;
+                        rdfs:subClassOf tef:namedPizza ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:blueCheese
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:buffaloSauce
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:chicken
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:mozzarella
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:tomato
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                              owl:unionOf ( tef:blueCheese
+                                                                            tef:buffaloSauce
+                                                                            tef:chicken
+                                                                            tef:mozzarella
+                                                                            tef:tomato
+                                                                          )
+                                                            ]
+                                        ] ;
+                        rdfs:comment "Buffalo Chicken Pizza"^^xsd:string ;
+                        rdfs:label "Buffalo Chicken Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#buffaloSauce
+tef:buffaloSauce rdf:type owl:Class ;
+                 rdfs:subClassOf tef:pizzaTopping ;
+                 rdfs:comment "Buffalo Sauce"^^xsd:string ;
+                 rdfs:label "Buffalo Sauce"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#burger
+tef:burger rdf:type owl:Class ;
+           rdfs:subClassOf tef:pizzaBase ;
+           rdfs:comment "Burger"^^xsd:string ;
+           rdfs:label "Burger"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#burgerSauce
+tef:burgerSauce rdf:type owl:Class ;
+                rdfs:subClassOf tef:pizzaTopping ;
+                rdfs:comment "Burger Sauce"^^xsd:string ;
+                rdfs:label "Burger Sauce"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#caciocavallo
@@ -582,6 +1016,20 @@ tef:caprina rdf:type owl:Class ;
             rdfs:label "Caprina Pizza"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#cauliflower
+tef:cauliflower rdf:type owl:Class ;
+                rdfs:subClassOf tef:pizzaTopping ;
+                rdfs:comment "Cauliflower"^^xsd:string ;
+                rdfs:label "Cauiflower"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#cheddar
+tef:cheddar rdf:type owl:Class ;
+            rdfs:subClassOf tef:cheese ;
+            rdfs:comment "Cheddar"^^xsd:string ;
+            rdfs:label "Cheddar"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#cheese
 tef:cheese rdf:type owl:Class ;
            rdfs:subClassOf tef:pizzaTopping ;
@@ -611,16 +1059,213 @@ tef:chicken rdf:type owl:Class ;
             rdfs:label "Chicken"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#chickenParmPizza
+tef:chickenParmPizza rdf:type owl:Class ;
+                     rdfs:subClassOf tef:namedPizza ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:chicken
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:mozzarella
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:parmezan
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:someValuesFrom tef:tomato
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty tef:hasTopping ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( tef:chicken
+                                                                         tef:mozzarella
+                                                                         tef:parmezan
+                                                                         tef:tomato
+                                                                       )
+                                                         ]
+                                     ] ;
+                     rdfs:comment "Chicken Parm Pizza"^^xsd:string ;
+                     rdfs:label "Chicken Parm Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#chickenPestoPizza
+tef:chickenPestoPizza rdf:type owl:Class ;
+                      rdfs:subClassOf tef:namedPizza ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:chicken
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:mozzarella
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:pesto
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:tomato
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( tef:chicken
+                                                                          tef:mozzarella
+                                                                          tef:pesto
+                                                                          tef:tomato
+                                                                        )
+                                                          ]
+                                      ] ;
+                      rdfs:comment "Chicken Pesto Pizza"^^xsd:string ;
+                      rdfs:label "Chicken Pesto Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#chickenPizza
+tef:chickenPizza rdf:type owl:Class ;
+                 rdfs:subClassOf tef:namedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:chicken
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:mozzarella
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:tomato
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( tef:chicken
+                                                                     tef:mozzarella
+                                                                     tef:tomato
+                                                                   )
+                                                     ]
+                                 ] ;
+                 rdfs:comment "Chicken Pizza"^^xsd:string ;
+                 rdfs:label "Chicken Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#city
 tef:city rdf:type owl:Class ;
          rdfs:comment "The city a restaurant is in"^^xsd:string ;
          rdfs:label "City"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#cookieDough
+tef:cookieDough rdf:type owl:Class ;
+                rdfs:subClassOf tef:pizzaTopping ;
+                rdfs:comment "Cookie Dough"^^xsd:string ;
+                rdfs:label "Cookie Dough"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#cookiePizza
+tef:cookiePizza rdf:type owl:Class ;
+                rdfs:subClassOf tef:namedPizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:cookieDough
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:allValuesFrom tef:cookieDough
+                                ] ;
+                rdfs:comment "Cookie Dough Pizza"^^xsd:string ;
+                rdfs:label "Cookie Dough Pizza"^^xsd:string ;
+                rdfs:seeAlso "https://www.bbcgoodfood.com/recipes/cookie-dough-pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#corn
+tef:corn rdf:type owl:Class ;
+         rdfs:subClassOf tef:pizzaTopping ;
+         rdfs:comment "Corn"^^xsd:string ;
+         rdfs:label "Corn"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#country
 tef:country rdf:type owl:Class ;
             rdfs:comment "The country a restaurant is in"^^xsd:string ;
             rdfs:label "Country"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#cowboyPizza
+tef:cowboyPizza rdf:type owl:Class ;
+                rdfs:subClassOf tef:namedPizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:cheddar
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:germanSausage
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:mozzarella
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:mushrooms
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:olives
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:pepperoni
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:tomato
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( tef:cheddar
+                                                                    tef:germanSausage
+                                                                    tef:mozzarella
+                                                                    tef:mushrooms
+                                                                    tef:olives
+                                                                    tef:pepperoni
+                                                                    tef:tomato
+                                                                  )
+                                                    ]
+                                ] ;
+                rdfs:comment "Cowboy Pizza"^^xsd:string ;
+                rdfs:label "Cowboy Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#curry
+tef:curry rdf:type owl:Class ;
+          rdfs:subClassOf tef:pizzaTopping ;
+          rdfs:comment "Curry Sauce"^^xsd:string ;
+          rdfs:label "Curry"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#curryPizza
+tef:curryPizza rdf:type owl:Class ;
+               rdfs:subClassOf tef:namedPizza ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:curry
+                               ] ;
+               rdfs:comment "Curry Pizza"^^xsd:string ;
+               rdfs:label "Curry Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#doughSticks
+tef:doughSticks rdf:type owl:Class ;
+                rdfs:subClassOf tef:menuItem ;
+                rdfs:comment "Dough Sticks"^^xsd:string ;
+                rdfs:label "Dough Sticks"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#eFichi
@@ -649,6 +1294,20 @@ tef:eFichi rdf:type owl:Class ;
                            ] ;
            rdfs:comment "Figs on pizza"^^xsd:string ;
            rdfs:label "e fichi"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#egg
+tef:egg rdf:type owl:Class ;
+        rdfs:subClassOf tef:pizzaTopping ;
+        rdfs:comment "Egg"^^xsd:string ;
+        rdfs:label "Egg"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#feta
+tef:feta rdf:type owl:Class ;
+         rdfs:subClassOf tef:cheese ;
+         rdfs:comment "Feta"^^xsd:string ;
+         rdfs:label "Feta"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#fig
@@ -743,6 +1402,34 @@ tef:garlic rdf:type owl:Class ;
            rdfs:label "Garlic"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#garlicPizza
+tef:garlicPizza rdf:type owl:Class ;
+                rdfs:subClassOf tef:namedPizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:garlic
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:mozzarella
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:tomato
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( tef:garlic
+                                                                    tef:mozzarella
+                                                                    tef:tomato
+                                                                  )
+                                                    ]
+                                ] ;
+                rdfs:comment "Garlic Pizza"^^xsd:string ;
+                rdfs:label "Garlic Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#germanSausage
 tef:germanSausage rdf:type owl:Class ;
                   rdfs:subClassOf tef:meat ;
@@ -803,11 +1490,73 @@ tef:giardiniera rdf:type owl:Class ;
                 rdfs:label "Giardiniera Pizza"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#glutenFreeBase
+tef:glutenFreeBase rdf:type owl:Class ;
+                   rdfs:subClassOf tef:pizzaBase ;
+                   rdfs:comment "Gluten Free Base"^^xsd:string ;
+                   rdfs:label "Gluten Free Base"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#glutenFreePizza
+tef:glutenFreePizza rdf:type owl:Class ;
+                    rdfs:subClassOf tef:pizzaType ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty tef:hasBase ;
+                                      owl:someValuesFrom tef:glutenFreeBase
+                                    ] ;
+                    rdfs:comment "Gluten Free Pizza"^^xsd:string ;
+                    rdfs:label "Gluten Free Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#goatsCheese
 tef:goatsCheese rdf:type owl:Class ;
                 rdfs:subClassOf tef:cheese ;
                 rdfs:comment "Cheese made from goats milk"^^xsd:string ;
                 rdfs:label "Goats Cheese"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#gobiManchurianPizza
+tef:gobiManchurianPizza rdf:type owl:Class ;
+                        rdfs:subClassOf tef:namedPizza ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:cauliflower
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:garlic
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:manchurianSauce
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:mozzarella
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:onion
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:someValuesFrom tef:tomato
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty tef:hasTopping ;
+                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                              owl:unionOf ( tef:cauliflower
+                                                                            tef:garlic
+                                                                            tef:manchurianSauce
+                                                                            tef:mozzarella
+                                                                            tef:onion
+                                                                            tef:tomato
+                                                                          )
+                                                            ]
+                                        ] ;
+                        rdfs:comment "Gobi Manchurian Pizza"^^xsd:string ;
+                        rdfs:label "Gobi Manchurian Pizza"^^xsd:string ;
+                        rdfs:seeAlso "https://in.pinterest.com/pin/gobi-manchurian-pizza--585256914046020227/"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#gorgonzola
@@ -824,11 +1573,135 @@ tef:granaPadano rdf:type owl:Class ;
                 rdfs:label "Grana Padano"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#greekPizza
+tef:greekPizza rdf:type owl:Class ;
+               rdfs:subClassOf tef:namedPizza ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:artichokes
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:basil
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:feta
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:mozzarella
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:olives
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:tomato
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:allValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( tef:artichokes
+                                                                   tef:basil
+                                                                   tef:feta
+                                                                   tef:mozzarella
+                                                                   tef:olives
+                                                                   tef:tomato
+                                                                 )
+                                                   ]
+                               ] ;
+               rdfs:comment "Greek Pizza"^^xsd:string ;
+               rdfs:label "Greek Pizza"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#ham
 tef:ham rdf:type owl:Class ;
         rdfs:subClassOf tef:meat ;
         rdfs:comment "Ham"^^xsd:string ;
         rdfs:label "Ham"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#hariMirchPineapplePizza
+tef:hariMirchPineapplePizza rdf:type owl:Class ;
+                            rdfs:subClassOf tef:namedPizza ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:hotGreenPepper
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:jalapenoPepper
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:mozzarella
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:pepper
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:pineapple
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:someValuesFrom tef:tomato
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty tef:hasTopping ;
+                                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( tef:hotGreenPepper
+                                                                                tef:jalapenoPepper
+                                                                                tef:mozzarella
+                                                                                tef:pepper
+                                                                                tef:pineapple
+                                                                                tef:tomato
+                                                                              )
+                                                                ]
+                                            ] ;
+                            rdfs:comment "Hari Mirch Pineapple Pizza"^^xsd:string ;
+                            rdfs:label "Hari Mirch Pineapple Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#hawaiian
+tef:hawaiian rdf:type owl:Class ;
+             rdfs:subClassOf tef:namedPizza ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:bacon
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:ham
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:mozzarella
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:pineapple
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:someValuesFrom tef:tomato
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty tef:hasTopping ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( tef:bacon
+                                                                 tef:ham
+                                                                 tef:mozzarella
+                                                                 tef:pineapple
+                                                                 tef:tomato
+                                                               )
+                                                 ]
+                             ] ;
+             rdfs:comment "Hawiian Pizza, https://en.wikipedia.org/wiki/Hawaiian_pizza (inedible)"^^xsd:string ;
+             rdfs:label "Hawaiian Pizza"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#hotGreenPepper
@@ -918,6 +1791,20 @@ tef:leek rdf:type owl:Class ;
          rdfs:label "Leek"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#lettuce
+tef:lettuce rdf:type owl:Class ;
+            rdfs:subClassOf tef:pizzaTopping ;
+            rdfs:comment "Lettuce"^^xsd:string ;
+            rdfs:label "Lettuce"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#manchurianSauce
+tef:manchurianSauce rdf:type owl:Class ;
+                    rdfs:subClassOf tef:pizzaTopping ;
+                    rdfs:comment "Manchurian Sauce"^^xsd:string ;
+                    rdfs:label "Manchurian Sauce"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#margherita
 tef:margherita rdf:type owl:Class ;
                rdfs:subClassOf tef:namedPizza ,
@@ -961,6 +1848,13 @@ tef:meatPizza rdf:type owl:Class ;
               rdfs:subClassOf tef:pizzaType ;
               rdfs:comment "A pizza with meat on it"^^xsd:string ;
               rdfs:label "Meat Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#meatballs
+tef:meatballs rdf:type owl:Class ;
+              rdfs:subClassOf tef:meat ;
+              rdfs:comment "Meatballs"^^xsd:string ;
+              rdfs:label "Meatballs"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#menuItem
@@ -1158,11 +2052,25 @@ tef:peperonata rdf:type owl:Class ;
                           "Sliced peppers, garlic and basil"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#pepper
+tef:pepper rdf:type owl:Class ;
+           rdfs:subClassOf tef:pizzaTopping ;
+           rdfs:comment "Red/Green Peppers"^^xsd:string ;
+           rdfs:label "Pepper"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#pepperoni
 tef:pepperoni rdf:type owl:Class ;
               rdfs:subClassOf tef:meat ;
               rdfs:comment "A type of spicy sausage"^^xsd:string ;
               rdfs:label "Pepperoni"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pesto
+tef:pesto rdf:type owl:Class ;
+          rdfs:subClassOf tef:pizzaTopping ;
+          rdfs:comment "Pesto Sauce"^^xsd:string ;
+          rdfs:label "Pesto"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#petitPois
@@ -1172,11 +2080,25 @@ tef:petitPois rdf:type owl:Class ;
               rdfs:label "Petit Pois"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#pickle
+tef:pickle rdf:type owl:Class ;
+           rdfs:subClassOf tef:pizzaTopping ;
+           rdfs:comment "Pickle"^^xsd:string ;
+           rdfs:label "Pickle"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#pineKernel
 tef:pineKernel rdf:type owl:Class ;
                rdfs:subClassOf tef:pizzaTopping ;
                rdfs:comment "Pine Kernel"^^xsd:string ;
                rdfs:label "Pine Kernel"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pineapple
+tef:pineapple rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaTopping ;
+              rdfs:comment "Pineapple"^^xsd:string ;
+              rdfs:label "Pineapple"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#pisan
@@ -1235,6 +2157,101 @@ tef:pizzaBase rdf:type owl:Class ;
               rdfs:label "Pizza Base"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#pizzaBurger
+tef:pizzaBurger rdf:type owl:Class ;
+                rdfs:subClassOf tef:pizzaType ;
+                rdfs:comment "Pizza Burger"^^xsd:string ;
+                rdfs:label "Pizza Burger"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaRoll
+tef:pizzaRoll rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaType ;
+              rdfs:comment "Pizza Roll"^^xsd:string ;
+              rdfs:label "Pizza Roll"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSauce
+tef:pizzaSauce rdf:type owl:Class ;
+               rdfs:subClassOf tef:pizzaTopping ;
+               rdfs:comment "Pizza Sauce"^^xsd:string ;
+               rdfs:label "Pizza Sauce"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSlice
+tef:pizzaSlice rdf:type owl:Class ;
+               rdfs:subClassOf tef:pizzaType ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasBase ;
+                                 owl:someValuesFrom tef:pizzaSliceBase
+                               ] ;
+               rdfs:comment "Slice of pizza"^^xsd:string ;
+               rdfs:label "Pizza Slice"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSliceBase
+tef:pizzaSliceBase rdf:type owl:Class ;
+                   rdfs:subClassOf tef:pizzaBase ;
+                   rdfs:comment "Pizza Slice"^^xsd:string ;
+                   rdfs:label "Pizza Slice"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSteak
+tef:pizzaSteak rdf:type owl:Class ;
+               rdfs:subClassOf tef:namedPizza ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasBase ;
+                                 owl:someValuesFrom tef:roll
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:beef
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:mozzarella
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:onion
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:pepper
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:someValuesFrom tef:tomato
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty tef:hasTopping ;
+                                 owl:allValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( tef:beef
+                                                                   tef:mozzarella
+                                                                   tef:onion
+                                                                   tef:pepper
+                                                                   tef:tomato
+                                                                 )
+                                                   ]
+                               ] ;
+               rdfs:comment "Pizza Steak"^^xsd:string ;
+               rdfs:label "Pizza Steak"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSub
+tef:pizzaSub rdf:type owl:Class ;
+             rdfs:subClassOf tef:pizzaType ;
+             rdfs:comment "A pizza sub"^^xsd:string ;
+             rdfs:label "Pizza Sub"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaSubBase
+tef:pizzaSubBase rdf:type owl:Class ;
+                 rdfs:subClassOf tef:pizzaBase ;
+                 rdfs:comment "A base for a pizza sub"^^xsd:string ;
+                 rdfs:label "Pizza Sub Base"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#pizzaTopping
 tef:pizzaTopping rdf:type owl:Class ;
                  rdfs:subClassOf tef:ingredients ;
@@ -1247,6 +2264,38 @@ tef:pizzaType rdf:type owl:Class ;
               rdfs:subClassOf tef:pizza ;
               rdfs:comment "Generic types of pizza"^^xsd:string ;
               rdfs:label "Pizza Type"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#pizzaiola
+tef:pizzaiola rdf:type owl:Class ;
+              rdfs:subClassOf tef:menuItem ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:basil
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:garlic
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:meat
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:oil
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:oregano
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:tomato
+                              ] ;
+              rdfs:comment "Pizzaiola, meat cooked pizza style"^^xsd:string ;
+              rdfs:label "Pizzaiola"^^xsd:string ;
+              rdfs:seeAlso "https://en.wikipedia.org/wiki/Carne_pizzaiola"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#pizzetta
@@ -1354,6 +2403,34 @@ tef:princeCarlo rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "Leek, ham and rosemary pizza"^^xsd:string ;
                 rdfs:label "Prince Carlo Pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#prosciuttoArugula
+tef:prosciuttoArugula rdf:type owl:Class ;
+                      rdfs:subClassOf tef:namedPizza ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:arugula
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:ham
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:someValuesFrom tef:mozzarella
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty tef:hasTopping ;
+                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( tef:arugula
+                                                                          tef:ham
+                                                                          tef:mozzarella
+                                                                        )
+                                                          ]
+                                      ] ;
+                      rdfs:comment "Ham and Arugula Pizza"^^xsd:string ;
+                      rdfs:label "Prosciutto Arugula Pizza"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#province
@@ -1486,6 +2563,13 @@ tef:rocket rdf:type owl:Class ;
            rdfs:label "Rocket"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#roll
+tef:roll rdf:type owl:Class ;
+         rdfs:subClassOf tef:pizzaBase ;
+         rdfs:comment "Roll"^^xsd:string ;
+         rdfs:label "Roll"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#romana
 tef:romana rdf:type owl:Class ;
            rdfs:subClassOf tef:namedPizza ,
@@ -1557,6 +2641,13 @@ tef:rosemary rdf:type owl:Class ;
              rdfs:subClassOf tef:pizzaTopping ;
              rdfs:comment "Rosemary, a type of herb"^^xsd:string ;
              rdfs:label "Rosemary"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#scallions
+tef:scallions rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaTopping ;
+              rdfs:comment "Scallions"^^xsd:string ;
+              rdfs:label "Scallions"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#seafood
@@ -1699,6 +2790,13 @@ tef:soho rdf:type owl:Class ;
          rdfs:label "Soho Pizza"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#sourCream
+tef:sourCream rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaTopping ;
+              rdfs:comment "Sour Cream"^^xsd:string ;
+              rdfs:label "Sour Cream"^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#spinach
 tef:spinach rdf:type owl:Class ;
             rdfs:subClassOf tef:pizzaTopping ;
@@ -1727,11 +2825,129 @@ tef:sundriedTomato rdf:type owl:Class ;
                    rdfs:label "Sundried Tomato"^^xsd:string .
 
 
+###  http://link477.com/ds/pizza#supremePizza
+tef:supremePizza rdf:type owl:Class ;
+                 rdfs:subClassOf tef:namedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:germanSausage
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:hotGreenPepper
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:meatballs
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:mushrooms
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:onion
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:pepperoni
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:someValuesFrom tef:tomato
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty tef:hasTopping ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( tef:germanSausage
+                                                                     tef:hotGreenPepper
+                                                                     tef:meatballs
+                                                                     tef:mushrooms
+                                                                     tef:onion
+                                                                     tef:pepperoni
+                                                                     tef:tomato
+                                                                   )
+                                                     ]
+                                 ] ;
+                 rdfs:comment "Supreme Pizza"^^xsd:string ;
+                 rdfs:label "Supreme Pizza"^^xsd:string ;
+                 rdfs:seeAlso "https://tuscaneats.com/what-toppings-come-on-a-supreme-pizza/#:~:text=The%20supreme%20pizza%2C%20or%20as,green%20bell%20peppers%2C%20and%20onions."^^xsd:string .
+
+
 ###  http://link477.com/ds/pizza#sweetPepper
 tef:sweetPepper rdf:type owl:Class ;
                 rdfs:subClassOf tef:pizzaTopping ;
                 rdfs:comment "Sweet Pepper"^^xsd:string ;
                 rdfs:label "Sweet Pepper"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#tacoChips
+tef:tacoChips rdf:type owl:Class ;
+              rdfs:subClassOf tef:pizzaTopping ;
+              rdfs:comment "Taco Chips"^^xsd:string ;
+              rdfs:label "Taco Chips"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#tacoPizza
+tef:tacoPizza rdf:type owl:Class ;
+              rdfs:subClassOf tef:namedPizza ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:lettuce
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:mozzarella
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:tacoChips
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:someValuesFrom tef:tomato
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tef:hasTopping ;
+                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( tef:lettuce
+                                                                  tef:mozzarella
+                                                                  tef:tacoChips
+                                                                  tef:tomato
+                                                                )
+                                                  ]
+                              ] ;
+              rdfs:comment "Taco Pizza"^^xsd:string ;
+              rdfs:label "Taco Pizza"^^xsd:string ;
+              rdfs:seeAlso "https://en.wikipedia.org/wiki/Taco_pizza"^^xsd:string .
+
+
+###  http://link477.com/ds/pizza#threeCheese
+tef:threeCheese rdf:type owl:Class ;
+                rdfs:subClassOf tef:namedPizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:cheese
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:someValuesFrom tef:tomato
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( tef:cheese
+                                                                    tef:tomato
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty tef:hasTopping ;
+                                  owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                  owl:onClass tef:cheese
+                                ] ;
+                rdfs:comment "Three cheese pizza"^^xsd:string ;
+                rdfs:label "Three Cheese Pizza"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#tobascoPepperSauce
@@ -1874,22 +3090,44 @@ tef:viennese rdf:type owl:Class ;
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( tef:american
                 tef:americanHot
+                tef:anchovyPizza
+                tef:auberginePizza
+                tef:baconCheeseBurgerPizza
+                tef:bakedPotatoPizza
+                tef:bbqPizza
                 tef:bianca
+                tef:biancaFiorentinaPizza
+                tef:bltPizza
+                tef:bruschettaPizza
+                tef:buffaloChickenPizza
                 tef:cajun
                 tef:capricciosa
                 tef:caprina
+                tef:chickenParmPizza
+                tef:chickenPestoPizza
+                tef:chickenPizza
+                tef:cookiePizza
+                tef:cowboyPizza
+                tef:curryPizza
                 tef:eFichi
                 tef:fiorentina
                 tef:fruttiDiMare
+                tef:garlicPizza
                 tef:giardiniera
+                tef:gobiManchurianPizza
+                tef:greekPizza
+                tef:hariMirchPineapplePizza
+                tef:hawaiian
                 tef:laReine
                 tef:margherita
                 tef:mushroom
                 tef:napoletana
                 tef:parmese
                 tef:pisan
+                tef:pizzaSteak
                 tef:polloAdAstra
                 tef:princeCarlo
+                tef:prosciuttoArugula
                 tef:pugliese
                 tef:quattroFormaggi
                 tef:quattroStagioni
@@ -1898,23 +3136,10 @@ tef:viennese rdf:type owl:Class ;
                 tef:sicilian
                 tef:sloppyGiuseppe
                 tef:soho
+                tef:supremePizza
+                tef:tacoPizza
+                tef:threeCheese
                 tef:veneziana
-                tef:viennese
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( tef:bianca
-                tef:capricciosa
-                tef:eFichi
-                tef:pisan
-                tef:pizzetta
-                tef:pugliese
-                tef:quattroFormaggi
-                tef:quattroStagioni
-                tef:romana
-                tef:sicilian
                 tef:viennese
               )
 ] .

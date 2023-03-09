@@ -3,6 +3,7 @@ import pandas as pd
 import pprint
 import os
 from pizza_kg.data import get_org_data, OrgDataFiles
+import re
 
 
 def find_pizza(org: str, pizza_dict: dict) -> str:
@@ -25,7 +26,7 @@ def find_pizza(org: str, pizza_dict: dict) -> str:
     for key, value in pizza_dict.items():
         if key.lower() in org.lower():
             return value
-    return ''
+    return 'pizza'
 
 
 def main() -> pd.DataFrame:
@@ -66,11 +67,20 @@ def main() -> pd.DataFrame:
             .str.replace(org_str, replace_str)
 
     # load the map of pizzas
-    pizza_df = pd.read_excel(os.path.join('tabularDataToKG', 'pizzaMapping.xlsx'), sheet_name='Sheet1', index_col='org')
-    print(pizza_df)
-    pizza_dict = pizza_df.to_dict()
-    print(pizza_dict['MapTo'])
-    ret_df['menuItem'] = ret_df['menusName'].apply(find_pizza, args=(pizza_dict['MapTo'],))
+    pizzaMap = os.path.join('tabularDataToKG', 'pizzaMapping.xlsx')
+    pizza_df = pd.read_excel(pizzaMap, sheet_name='Sheet1', index_col='org')
+    # print(pizza_df)
+    pizza_dict = pizza_df.to_dict()['MapTo']
+    # print(pizza_dict)
+    ret_df['menuItem'] = ret_df['menusName'].apply(find_pizza,
+                                                   args=(pizza_dict,))
+
+    ret_df['pizzaSize'] = ret_df['menusName'].str.extract(
+        r'((\d+)"|(\d+) inch)',
+        expand=False,
+        flags=re.IGNORECASE)[0]
+    ret_df['pizzaSize'] = ret_df['pizzaSize'].str.strip('"').str.lower()\
+        .str.strip(' inch')
     return ret_df
 
 
