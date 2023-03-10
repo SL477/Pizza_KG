@@ -6,6 +6,8 @@ from rdflib import Graph
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
 from pickle import load
+from clean_menu_items import main as clean_menu_items
+import urllib.parse
 
 
 dbr_url = 'http://dbpedia.org/resource/'
@@ -73,7 +75,7 @@ def main():
     # start adding the states
     # load the data
     df: pd.DataFrame = get_org_data(OrgDataFiles.MAIN)
-    df.rename(columns={'menus.currency': 'menusCurrency'}, inplace=True)
+    # df.rename(columns={'menus.currency': 'menusCurrency'}, inplace=True)
     for state in df.province.unique():
         # set up the data
         province = rdflib.URIRef(state_dict[state])
@@ -117,7 +119,6 @@ def main():
         'latitude',
         'longitude',
         'menuPageURL',
-        'menusCurrency',
         'name',
         'postalCode',
         'priceRangeCurrency',
@@ -184,12 +185,6 @@ def main():
                    rdflib.Literal(restaurant_tup.menuPageURL,
                                   datatype=XSD.anyURI)))
 
-        # menu currency
-        g.add((restaurant_url,
-               tef.term('menus.currency'),
-               rdflib.Literal(restaurant_tup.menusCurrency,
-                              datatype=XSD.string)))
-
         # restaurant name
         g.add((restaurant_url,
                tef.restaurantName,
@@ -197,9 +192,11 @@ def main():
                               datatype=XSD.string)))
 
         # postal code
-        g.add((restaurant_url,
-               tef.postalCode,
-               rdflib.Literal(restaurant_tup.postalCode, datatype=XSD.string)))
+        if not pd.isna(restaurant_tup.postalCode):
+            g.add((restaurant_url,
+                   tef.postalCode,
+                   rdflib.Literal(restaurant_tup.postalCode,
+                                  datatype=XSD.string)))
 
         # price range currency
         g.add((restaurant_url,
@@ -245,13 +242,67 @@ def main():
                tef.keys,
                rdflib.Literal(restaurant_tup.keys, datatype=XSD.string)))
 
+    # add in the menu items
+    menu_items_df = clean_menu_items()
+    for menu_tup in menu_items_df.itertuples():
+        menuNameEncoded = urllib.parse.quote_plus(menu_tup.menusName)
+        menu_item_url = rdflib.URIRef(tef_url + menu_tup.id + menuNameEncoded)
+
+        g.add((menu_item_url, RDF.type, tef.term(menu_tup.menuItem.strip())))
+
+        # menu item name
+        menuItemName = rdflib.Literal(menu_tup.menusName.strip(),
+                                      datatype=XSD.string)
+        g.add((menu_item_url, RDFS.label, menuItemName))
+        g.add((menu_item_url, RDFS.comment, menuItemName))
+        g.add((menu_item_url, tef.term("menus.name"), menuItemName))
+
+        # menu currency
+        menuCurrency = rdflib.Literal(menu_tup.menusCurrency.strip(),
+                                      datatype=XSD.string)
+        g.add((menu_item_url, tef.term('menus.currency'), menuCurrency))
+
+        # restaurant
+        restaurant_url = rdflib.URIRef(tef_url + menu_tup.id.strip())
+        g.add((menu_item_url, tef.servedInRestaurant, restaurant_url))
+
+        # pizza size
+        if not pd.isna(menu_tup.pizzaSize):
+            size = rdflib.Literal(menu_tup.pizzaSize.strip(),
+                                  datatype=XSD.integer)
+            g.add((menu_item_url, tef.pizzaSize, size))
+
+        # menu description
+        if not pd.isna(menu_tup.menusDescription):
+            menuDesc = rdflib.Literal(menu_tup.menusDescription.strip(),
+                                      datatype=XSD.string)
+            g.add((menu_item_url, tef.term('menus.description'), menuDesc))
+
+        # menus amount max
+        menusAmountMax = rdflib.Literal(menu_tup.menusAmountMax,
+                                        datatype=XSD.decimal)
+        g.add((menu_item_url, tef.term('menus.amountMax'), menusAmountMax))
+
+        # menus amount min
+        menusAmountMin = rdflib.Literal(menu_tup.menusAmountMin,
+                                        datatype=XSD.decimal)
+        g.add((menu_item_url, tef.term('menus.amountMin'), menusAmountMin))
+
+        # menus date seen
+        for dateSeen in menu_tup.menusDateSeen.strip().split(','):
+            dateSeen = rdflib.Literal(dateSeen)
+            g.add((menu_item_url, tef.term('menus.dateSeen'), dateSeen))
+
     # print the knowledge graph
     print_knowledge_graph(g)
 
     # save the knowledge graph
-    g.serialize(
-        format='ttl',
-        destination=os.path.join('tabularDataToKG', 'ontology_ttl.owl'))
+    g.serialize(format='ttl',
+                destination=os.path.join('tabularDataToKG',
+                                         'ontology_ttl.owl'))
+    g.serialize(format='xml',
+                destination=os.path.join('tabularDataToKG',
+                                         'ontology.owl'))
 
 
 if __name__ == '__main__':

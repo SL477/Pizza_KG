@@ -74,7 +74,7 @@ tef:hasIngredient rdf:type owl:ObjectProperty ;
 
 ###  http://link477.com/ds/pizza#hasMenuItem
 tef:hasMenuItem rdf:type owl:ObjectProperty ;
-                owl:inverseOf tef:servedInRestauant ;
+                owl:inverseOf tef:servedInRestaurant ;
                 rdfs:domain tef:restaurant ;
                 rdfs:range tef:menuItem ;
                 rdfs:comment "The menu items a restaurant has"^^xsd:string ;
@@ -142,12 +142,12 @@ tef:restaurantInCity rdf:type owl:ObjectProperty ;
                      rdfs:label "Restaurant In City"^^xsd:string .
 
 
-###  http://link477.com/ds/pizza#servedInRestauant
-tef:servedInRestauant rdf:type owl:ObjectProperty ;
-                      rdfs:domain tef:menuItem ;
-                      rdfs:range tef:restaurant ;
-                      rdfs:comment "The restaurant a menu item is served in"^^xsd:string ;
-                      rdfs:label "Served In Restaurant"^^xsd:string .
+###  http://link477.com/ds/pizza#servedInRestaurant
+tef:servedInRestaurant rdf:type owl:ObjectProperty ;
+                       rdfs:domain tef:menuItem ;
+                       rdfs:range tef:restaurant ;
+                       rdfs:comment "The restaurant a menu item is served in"^^xsd:string ;
+                       rdfs:label "Served In Restaurant"^^xsd:string .
 
 
 #################################################################
@@ -208,8 +208,8 @@ tef:latitude rdf:type owl:DatatypeProperty ;
 ###  http://link477.com/ds/pizza#longitude
 tef:longitude rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:decimal ;
-              rdfs:comment "The longditude of the restaurant"^^xsd:string ;
-              rdfs:label "Londitude"^^xsd:string .
+              rdfs:comment "The longitude of the restaurant"^^xsd:string ;
+              rdfs:label "Longitude"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#menuPageURL

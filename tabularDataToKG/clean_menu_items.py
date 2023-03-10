@@ -35,14 +35,22 @@ def main() -> pd.DataFrame:
     Returns
     -------
     pd.DataFrame
-        The cleaned menu items"""
+        The cleaned menu items columns:
+        - menusAmountMax
+        - menusAmountMin
+        - menusDateSeen
+        - menusDescription
+        - menusName
+        - menusCurrency"""
     ret_df: pd.DataFrame = get_org_data(OrgDataFiles.MAIN)
     menu_item_cols = [
         'menus.amountMax',
         'menus.amountMin',
         'menus.dateSeen',
         'menus.description',
-        'menus.name'
+        'menus.name',
+        'menus.currency',
+        'id'
     ]
     ret_df = ret_df[menu_item_cols].copy()
     ret_df.rename(columns={
@@ -50,7 +58,8 @@ def main() -> pd.DataFrame:
         'menus.amountMin': 'menusAmountMin',
         'menus.dateSeen': 'menusDateSeen',
         'menus.description': 'menusDescription',
-        'menus.name': 'menusName'
+        'menus.name': 'menusName',
+        'menus.currency': 'menusCurrency'
     }, inplace=True)
 
     # replace items
