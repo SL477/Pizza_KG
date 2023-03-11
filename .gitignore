@@ -4,3 +4,10 @@ report/*
 Pipfile.lock
 __pycache__/
 .idea/
+tabularDataToKG/states.csv
+tabularDataToKG/cities.csv
+tabularDataToKG/allUSCities.csv
+tabularDataToKG/cityURLS.xlsx
+tabularDataToKG/clean_menu_items.xlsx
+tabularDataToKG/ontology.owl
+tabularDataToKG/menu_descriptions.xlsx

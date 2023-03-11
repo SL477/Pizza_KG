@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://link477.com/ds/pizza#"
      xml:base="http://link477.com/ds/pizza"
+     xmlns:dbr="http://dbpedia.org/resource/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:tef="http://link477.com/ds/pizza#"
@@ -109,7 +110,7 @@
     <!-- http://link477.com/ds/pizza#hasMenuItem -->
 
     <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#hasMenuItem">
-        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#servedInRestauant"/>
+        <owl:inverseOf rdf:resource="http://link477.com/ds/pizza#servedInRestaurant"/>
         <rdfs:domain rdf:resource="http://link477.com/ds/pizza#restaurant"/>
         <rdfs:range rdf:resource="http://link477.com/ds/pizza#menuItem"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The menu items a restaurant has</rdfs:comment>
@@ -200,9 +201,9 @@
     
 
 
-    <!-- http://link477.com/ds/pizza#servedInRestauant -->
+    <!-- http://link477.com/ds/pizza#servedInRestaurant -->
 
-    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#servedInRestauant">
+    <owl:ObjectProperty rdf:about="http://link477.com/ds/pizza#servedInRestaurant">
         <rdfs:domain rdf:resource="http://link477.com/ds/pizza#menuItem"/>
         <rdfs:range rdf:resource="http://link477.com/ds/pizza#restaurant"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The restaurant a menu item is served in</rdfs:comment>
@@ -298,8 +299,8 @@
 
     <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#longitude">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The longditude of the restaurant</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Londitude</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The longitude of the restaurant</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longitude</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -435,9 +436,9 @@
     
 
 
-    <!-- http://link477.com/ds/pizza#resaurantName -->
+    <!-- http://link477.com/ds/pizza#restaurantName -->
 
-    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#resaurantName">
+    <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#restaurantName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the restaurant</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restaurant Name</rdfs:label>
@@ -564,12 +565,64 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#anchovyPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#anchovyPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#anchovies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#anchovies"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchovy Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchovy Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#artichokes -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#artichokes">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artichokes</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artichokes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#arugula -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#arugula">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something that looks like rocket</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arugula</rdfs:label>
     </owl:Class>
     
 
@@ -584,12 +637,284 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#aubergine -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#aubergine">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubergine/eggplant</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubergine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#auberginePizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#auberginePizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#aubergine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#aubergine"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubergine Pizzza/Eggplant</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubergine Pizzza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bacon -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bacon">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#meat"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#baconCheeseBurgerPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#baconCheeseBurgerPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#burgerSauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#cheddar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pickle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bacon"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#burgerSauce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#cheddar"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pickle"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacon Cheeseburger Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacon Cheeseburger Pizza</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.papajohns.com/order/menu/pizza/bacon-cheddarburger#:~:text=Our%20fan%20favorite%20is%20better,on%20Pan%20or%20Large%20crust.</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bakedPotatoPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bakedPotatoPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#sourCream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bacon"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#onion"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#sourCream"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baked Potato Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baked Potato Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#basil -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#basil">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basil</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bbqPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bbqPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bbqSauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#corn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#scallions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bacon"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bbqSauce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#corn"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#onion"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#scallions"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBQ Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBQ Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bbqSauce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bbqSauce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBQ Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBQ Sauce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#beef -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#beef">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#meat"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beef</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beef</rdfs:label>
     </owl:Class>
     
 
@@ -632,6 +957,319 @@
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White pizza. No tomato. Olive oil, salt, occasionally herbs</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Bianca</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#biancaFiorentinaPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#biancaFiorentinaPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#olives"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#parmezan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#spinach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#garlic"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#olives"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#parmezan"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#spinach"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bianca Fiorentina Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bianca Fiorentina Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bltPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bltPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#lettuce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bacon"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#lettuce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLT Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLT Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#blueCheese -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#blueCheese">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#cheese"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Cheese</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Cheese</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#breakfastPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#breakfastPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#germanSausage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#egg"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#germanSausage"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#bruschettaPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#bruschettaPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#parmezan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#sundriedTomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#chicken"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#garlic"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#parmezan"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#sundriedTomato"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruschetta Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruschetta Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#buffaloChickenPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#buffaloChickenPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#blueCheese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#buffaloSauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#blueCheese"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#buffaloSauce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#chicken"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffalo Chicken Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffalo Chicken Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#buffaloSauce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#buffaloSauce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffalo Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffalo Sauce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#burger -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#burger">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaBase"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burger</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#burgerSauce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#burgerSauce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burger Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burger Sauce</rdfs:label>
     </owl:Class>
     
 
@@ -848,6 +1486,26 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#cauliflower -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#cauliflower">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cauliflower</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cauiflower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#cheddar -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#cheddar">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#cheese"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheddar</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheddar</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#cheese -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#cheese">
@@ -889,6 +1547,146 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#chickenParmPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#chickenParmPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#parmezan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#chicken"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#parmezan"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Parm Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Parm Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#chickenPestoPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#chickenPestoPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pesto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#chicken"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pesto"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Pesto Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Pesto Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#chickenPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#chickenPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#chicken"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#city -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#city">
@@ -898,11 +1696,160 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#cookieDough -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#cookieDough">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cookie Dough</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cookie Dough</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#cookiePizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#cookiePizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#cookieDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://link477.com/ds/pizza#cookieDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cookie Dough Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cookie Dough Pizza</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.bbcgoodfood.com/recipes/cookie-dough-pizza</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#corn -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#corn">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corn</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corn</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#country -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#country">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The country a restaurant is in</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#cowboyPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#cowboyPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#cheddar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#germanSausage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mushrooms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#olives"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#cheddar"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#germanSausage"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mushrooms"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#olives"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pepperoni"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowboy Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowboy Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#curry -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#curry">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curry Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#curryPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#curryPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#curry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curry Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curry Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#doughSticks -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#doughSticks">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#menuItem"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dough Sticks</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dough Sticks</rdfs:label>
     </owl:Class>
     
 
@@ -945,6 +1892,26 @@
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Figs on pizza</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e fichi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#egg -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#egg">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egg</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#feta -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#feta">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#cheese"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feta</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feta</rdfs:label>
     </owl:Class>
     
 
@@ -1084,6 +2051,48 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#garlicPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#garlicPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#garlic"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garlic Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garlic Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#germanSausage -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#germanSausage">
@@ -1171,12 +2180,102 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#glutenFreeBase -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#glutenFreeBase">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaBase"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gluten Free Base</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gluten Free Base</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#glutenFreePizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#glutenFreePizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#glutenFreeBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gluten Free Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gluten Free Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#goatsCheese -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#goatsCheese">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#cheese"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheese made from goats milk</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goats Cheese</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#gobiManchurianPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#gobiManchurianPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#cauliflower"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#manchurianSauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#cauliflower"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#garlic"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#manchurianSauce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#onion"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobi Manchurian Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobi Manchurian Pizza</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://in.pinterest.com/pin/gobi-manchurian-pizza--585256914046020227/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1201,12 +2300,194 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#greekPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#greekPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#artichokes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#basil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#feta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#olives"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#artichokes"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#basil"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#feta"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#olives"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greek Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greek Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#ham -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#ham">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#meat"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ham</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ham</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#hariMirchPineapplePizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#hariMirchPineapplePizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#hotGreenPepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#jalapenoPepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pineapple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#hotGreenPepper"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#jalapenoPepper"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pepper"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pineapple"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hari Mirch Pineapple Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hari Mirch Pineapple Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#hawaiian -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#hawaiian">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#ham"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pineapple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#bacon"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#ham"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pineapple"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawiian Pizza, https://en.wikipedia.org/wiki/Hawaiian_pizza (inedible)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawaiian Pizza</rdfs:label>
     </owl:Class>
     
 
@@ -1337,6 +2618,26 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#lettuce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#lettuce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lettuce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lettuce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#manchurianSauce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#manchurianSauce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manchurian Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manchurian Sauce</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#margherita -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#margherita">
@@ -1399,6 +2700,16 @@
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pizza with meat on it</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meat Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#meatballs -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#meatballs">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#meat"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meatballs</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meatballs</rdfs:label>
     </owl:Class>
     
 
@@ -1687,12 +2998,32 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#pepper -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pepper">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red/Green Peppers</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepper</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#pepperoni -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#pepperoni">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#meat"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of spicy sausage</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepperoni</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pesto -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pesto">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesto Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesto</rdfs:label>
     </owl:Class>
     
 
@@ -1707,12 +3038,32 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#pickle -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pickle">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pickle</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pickle</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#pineKernel -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#pineKernel">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pine Kernel</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pine Kernel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pineapple -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pineapple">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pineapple</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pineapple</rdfs:label>
     </owl:Class>
     
 
@@ -1799,6 +3150,144 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#pizzaBurger -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaBurger">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Burger</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Burger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaRoll -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaRoll">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Roll</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Roll</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSauce -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSauce">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Sauce</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Sauce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSlice -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSlice">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pizzaSliceBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slice of pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Slice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSliceBase -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSliceBase">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaBase"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Slice</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Slice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSteak -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSteak">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#roll"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#beef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#beef"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#onion"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pepper"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Steak</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Steak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSub -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSub">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pizza sub</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Sub</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaSubBase -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaSubBase">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaBase"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A base for a pizza sub</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Sub Base</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#pizzaTopping -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaTopping">
@@ -1815,6 +3304,53 @@
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic types of pizza</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#pizzaiola -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#pizzaiola">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#menuItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#basil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#meat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#oil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#oregano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizzaiola, meat cooked pizza style</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizzaiola</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Carne_pizzaiola</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1971,6 +3507,48 @@
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leek, ham and rosemary pizza</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prince Carlo Pizza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#prosciuttoArugula -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#prosciuttoArugula">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#arugula"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#ham"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#arugula"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#ham"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ham and Arugula Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prosciutto Arugula Pizza</rdfs:label>
     </owl:Class>
     
 
@@ -2167,6 +3745,16 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#roll -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#roll">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaBase"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roll</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roll</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#romana -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#romana">
@@ -2271,6 +3859,16 @@
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosemary, a type of herb</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosemary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#scallions -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#scallions">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scallions</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scallions</rdfs:label>
     </owl:Class>
     
 
@@ -2480,6 +4078,16 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#sourCream -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#sourCream">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sour Cream</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sour Cream</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#spinach -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#spinach">
@@ -2520,12 +4128,185 @@
     
 
 
+    <!-- http://link477.com/ds/pizza#supremePizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#supremePizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#germanSausage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#hotGreenPepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#meatballs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mushrooms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#pepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#germanSausage"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#hotGreenPepper"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#meatballs"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mushrooms"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#onion"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#pepperoni"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supreme Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supreme Pizza</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://tuscaneats.com/what-toppings-come-on-a-supreme-pizza/#:~:text=The%20supreme%20pizza%2C%20or%20as,green%20bell%20peppers%2C%20and%20onions.</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://link477.com/ds/pizza#sweetPepper -->
 
     <owl:Class rdf:about="http://link477.com/ds/pizza#sweetPepper">
         <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet Pepper</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet Pepper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#tacoChips -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#tacoChips">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#pizzaTopping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taco Chips</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taco Chips</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#tacoPizza -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#tacoPizza">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#lettuce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tacoChips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#lettuce"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#mozzarella"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tacoChips"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taco Pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taco Pizza</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Taco_pizza</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://link477.com/ds/pizza#threeCheese -->
+
+    <owl:Class rdf:about="http://link477.com/ds/pizza#threeCheese">
+        <rdfs:subClassOf rdf:resource="http://link477.com/ds/pizza#namedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#cheese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://link477.com/ds/pizza#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#cheese"/>
+                            <rdf:Description rdf:about="http://link477.com/ds/pizza#tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://link477.com/ds/pizza#hasTopping"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://link477.com/ds/pizza#cheese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three cheese pizza</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Cheese Pizza</rdfs:label>
     </owl:Class>
     
 
@@ -2736,22 +4517,44 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://link477.com/ds/pizza#american"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#americanHot"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#anchovyPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#auberginePizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#baconCheeseBurgerPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#bakedPotatoPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#bbqPizza"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#bianca"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#biancaFiorentinaPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#bltPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#bruschettaPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#buffaloChickenPizza"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#cajun"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#capricciosa"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#caprina"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#chickenParmPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#chickenPestoPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#chickenPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#cookiePizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#cowboyPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#curryPizza"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#eFichi"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#fiorentina"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#fruttiDiMare"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#garlicPizza"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#giardiniera"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#gobiManchurianPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#greekPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#hariMirchPineapplePizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#hawaiian"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#laReine"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#margherita"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#mushroom"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#napoletana"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#parmese"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#pisan"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#pizzaSteak"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#polloAdAstra"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#princeCarlo"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#prosciuttoArugula"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#pugliese"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#quattroFormaggi"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#quattroStagioni"/>
@@ -2760,23 +4563,10 @@
             <rdf:Description rdf:about="http://link477.com/ds/pizza#sicilian"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#sloppyGiuseppe"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#soho"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#supremePizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#tacoPizza"/>
+            <rdf:Description rdf:about="http://link477.com/ds/pizza#threeCheese"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#veneziana"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#viennese"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#bianca"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#capricciosa"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#eFichi"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#pisan"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#pizzetta"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#pugliese"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#quattroFormaggi"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#quattroStagioni"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#romana"/>
-            <rdf:Description rdf:about="http://link477.com/ds/pizza#sicilian"/>
             <rdf:Description rdf:about="http://link477.com/ds/pizza#viennese"/>
         </owl:members>
     </rdf:Description>
