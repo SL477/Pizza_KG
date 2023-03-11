@@ -5,7 +5,6 @@ Pipfile.lock
 __pycache__/
 .idea/
 tabularDataToKG/states.csv
-tabularDataToKG/ontology_ttl.owl
 tabularDataToKG/cities.csv
 tabularDataToKG/allUSCities.csv
 tabularDataToKG/cityURLS.xlsx

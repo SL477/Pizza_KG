@@ -6,9 +6,9 @@ from rdflib import Graph
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
 from pickle import load
-from clean_menu_items import main as clean_menu_items
+from .clean_menu_items import main as clean_menu_items
 import urllib.parse
-from get_menu_descriptions import main as get_menu_descriptions
+from .get_menu_descriptions import main as get_menu_descriptions
 
 
 dbr_url = 'http://dbpedia.org/resource/'

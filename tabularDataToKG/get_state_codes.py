@@ -3,7 +3,10 @@ import os
 import pandas as pd
 from pizza_kg.sparql_request import sparql_request
 
-if __name__ == "__main__":
+
+def main():
+    """This runs the get State Codes SPARQL query on DBPedia and saves the
+    results to states2.csv"""
     ret = sparql_request(
         "https://dbpedia.org/sparql/",
         os.path.join('tabularDataToKG', 'getStateCodes.sparql'))
@@ -19,3 +22,6 @@ if __name__ == "__main__":
     # save to CSV
     df = pd.DataFrame.from_dict({'states': states, 'codes': codes})
     df.to_csv(os.path.join("tabularDataToKG", "states2.csv"), index=False)
+
+if __name__ == "__main__":
+    main()

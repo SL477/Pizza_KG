@@ -5,7 +5,8 @@ from pickle import dump
 
 
 def main():
-    """Open the cities Excel file, builds a dictionary and then saves it"""
+    """Open the cities Excel file (urlsPlain.xlsx), builds a dictionary and
+    then saves it to city.pkl"""
     df = pd.read_excel(os.path.join('tabularDataToKG', 'urlsPlain.xlsx'))
 
     city_dict = {item.city + '_' + item.province: item.CityURL

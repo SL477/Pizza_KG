@@ -10,4 +10,22 @@ The original ontology/Knowledge Graph is stored in the ontologyModelling folder.
 
 ## Tabular Data to Knowledge Graph
 
-This converts the CSV data to a Knowledge Graph
+This converts the CSV data to a Knowledge Graph. To run use:
+
+```bash
+python3 -m tabularDataToKG
+```
+
+## Documentation
+
+To run use:
+
+```bash
+pipenv run dynamic_docs
+```
+
+To save use:
+
+```bash
+pipenv run save_docs
+```
