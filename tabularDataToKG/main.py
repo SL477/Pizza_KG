@@ -8,6 +8,7 @@ from rdflib.namespace import RDF, RDFS, XSD
 from pickle import load
 from clean_menu_items import main as clean_menu_items
 import urllib.parse
+from get_menu_descriptions import main as get_menu_descriptions
 
 
 dbr_url = 'http://dbpedia.org/resource/'
@@ -161,8 +162,15 @@ def main():
                    rdflib.Literal(string_escape(cat), datatype=XSD.string)))
 
         # get the city
-        city_url = city_dict.get(
-            restaurant_tup.city + '_' + restaurant_tup.province, '')
+        # city_url = city_dict.get(
+        #     restaurant_tup.city + '_' + restaurant_tup.province, '')
+        city_state = restaurant_tup.city + '_' + restaurant_tup.province
+        if city_state == 'Cañon City_CO':
+            city_url = 'http://dbpedia.org/resource/Ca\u00F1on_City,_Colorado'
+        elif city_state == 'Española_NM':
+            city_url = 'http://dbpedia.org/resource/Espa\u00F1ola,_New_Mexico'
+        else:
+            city_url = city_dict[city_state]
         if city_url != '':
             city_url = rdflib.URIRef(city_url.replace("'", ""))
             g.add((restaurant_url, tef.restaurantInCity, city_url))
@@ -293,6 +301,16 @@ def main():
             dateSeen = rdflib.Literal(dateSeen)
             g.add((menu_item_url, tef.term('menus.dateSeen'), dateSeen))
 
+    # add in the ingredients which we know about
+    ingredient_df = get_menu_descriptions()
+    for ingredient_tup in ingredient_df.itertuples():
+        if not pd.isna(ingredient_tup.ingredient) \
+                and not ingredient_tup.ingredient.strip() == '':
+            ingredient_url = rdflib.URIRef(tef_url
+                                           + ingredient_tup.id.strip())
+            ingredient = tef.term(ingredient_tup.ingredient.strip())
+            g.add((ingredient_url, tef.hasTopping, ingredient))
+
     # print the knowledge graph
     print_knowledge_graph(g)
 
@@ -300,9 +318,9 @@ def main():
     g.serialize(format='ttl',
                 destination=os.path.join('tabularDataToKG',
                                          'ontology_ttl.owl'))
-    g.serialize(format='xml',
-                destination=os.path.join('tabularDataToKG',
-                                         'ontology.owl'))
+    # g.serialize(format='xml',
+    #             destination=os.path.join('tabularDataToKG',
+    #                                      'ontology.owl'))
 
 
 if __name__ == '__main__':
