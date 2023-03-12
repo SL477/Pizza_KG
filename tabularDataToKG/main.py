@@ -281,7 +281,8 @@ def main():
 
         # date seen
         for menu_date_seen in menu_tup.menusDateSeen.split(','):
-            date_updated = datetime.strptime(menu_date_seen.split('.')[0].strip('Z'),
+            date_updated = menu_date_seen.split('.')[0].strip('Z')
+            date_updated = datetime.strptime(date_updated,
                                              "%Y-%m-%dT%H:%M:%S")
             date_updated = rdflib.Literal(date_updated, datatype=XSD.dateTime)
             g.add((menu_item_url, tef.term('menus.dateSeen'), date_updated))

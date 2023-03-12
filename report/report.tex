@@ -52,6 +52,9 @@
 
 %Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
 
+\usepackage{csvsimple}
+\usepackage{pgfplotstable}
+
 %%% The "real" document content comes below...
 
 \title{Pizza Knowledge Graph}
@@ -88,5 +91,14 @@ For getting the state and country data no entity resolution was needed.
 For the cities, some more creativity was needed to match some of the cities up after the bulk of them were matched automatically from using SPARQL to get lists of cities from DBPedia.
 
 To resolve the entities I built a map with words to look for in the menu name back to the ontology URL. I did the same thing for the ingredients, but split them up as well.
+
+\chapter{SPARQL \& Reasoning}
+\section{Restaurants Selling Pizza Bianca}
+Test
+
+%\csvautotabular{../sparqlAndReasoning/pizza\_bianca\_restaurants.csv}
+%\csvtotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
+%\csvautotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
+
 
 \end{document}
