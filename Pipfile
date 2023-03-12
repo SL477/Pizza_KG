@@ -9,6 +9,7 @@ rdflib = "*"
 sparqlwrapper = "*"
 pandas = "*"
 openpyxl = "*"
+owlrl = "*"
 
 [dev-packages]
 ipykernel = "*"

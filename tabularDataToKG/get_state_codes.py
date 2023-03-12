@@ -23,5 +23,6 @@ def main():
     df = pd.DataFrame.from_dict({'states': states, 'codes': codes})
     df.to_csv(os.path.join("tabularDataToKG", "states2.csv"), index=False)
 
+
 if __name__ == "__main__":
     main()
