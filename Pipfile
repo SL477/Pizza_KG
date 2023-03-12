@@ -21,6 +21,6 @@ python_version = "3.8"
 
 [scripts]
 check = "flake8"
-dynamic_docs = "pdoc --docformat=numpy tabularDataToKG pizza_kg"
-save_docs = "pdoc --output-directory ./docs tabularDataToKG pizza_kg"
+dynamic_docs = "pdoc --docformat=numpy tabularDataToKG pizza_kg sparqlAndReasoning"
+save_docs = "pdoc --output-directory ./docs tabularDataToKG pizza_kg sparqlAndReasoning"
 tabularDataToKG = "py -m tabularDataToKG"

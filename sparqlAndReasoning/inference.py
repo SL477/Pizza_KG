@@ -4,8 +4,14 @@ from rdflib import Graph
 import owlrl
 
 
-def inference():
-    """This is to run OWL 2 RL reasoning on our Ontology"""
+def inference() -> None:
+    """This is to run OWL 2 RL reasoning on our Ontology.
+    It takes the Knowledge graph from tabularDataToKG, expands it and then
+    saves in sparqlAndReasoning/ontology_ttl.ttl
+
+    Returns
+    -------
+    None"""
     g = Graph()
     tabularDataToKG_graph = os.path.join('tabularDataToKG',
                                          'ontology_ttl.owl')
@@ -16,7 +22,7 @@ def inference():
     # run the reasoning
     # from Lab 7 OWL reasoning https://github.com/city-knowledge-graphs/python
     owlrl.DeductiveClosure(owlrl.OWLRL_Semantics,
-                           axiomatic_triples=False,
+                           axiomatic_triples=True,
                            datatype_axioms=False).expand(g)
 
     print(f'Post-reasoning number of triples: {len(g)}')
