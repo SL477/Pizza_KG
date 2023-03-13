@@ -13,31 +13,31 @@ def main():
     g.parse(os.path.join('sparqlAndReasoning', 'ontology_ttl.ttl'),
             format='ttl')
     with open(os.path.join('sparqlAndReasoning',
-                           'pizza_bianca_restaurants.sparql'), 'r') as f:
+                           'pizza_bianca_restaurants_short.sparql'), 'r') as f:
         query = f.read()
 
     res = g.query(query)
     cols = [
-        'restaurant',
+        # 'restaurant',
         'restaurantLabel',
-        'restaurantComment',
+        # 'restaurantComment',
         'cityLabel',
-        'restaurantLongitude',
-        'restaurantLatitude',
-        'restaurantDateAdded',
-        'dateUpdated',
-        'restaurantID',
-        'restaurantPostCode',
-        'restaurantCurrency',
-        'restaurantPriceMax',
-        'restaurantPriceMin',
-        'primaryCategories',
-        'restaurantAddress',
-        'restaurantName',
-        'keys',
-        'categories',
+        # 'restaurantLongitude',
+        # 'restaurantLatitude',
+        # 'restaurantDateAdded',
+        # 'dateUpdated',
+        # 'restaurantID',
+        # 'restaurantPostCode',
+        # 'restaurantCurrency',
+        # 'restaurantPriceMax',
+        # 'restaurantPriceMin',
+        # 'primaryCategories',
+        # 'restaurantAddress',
+        # 'restaurantName',
+        # 'keys',
+        # 'categories',
         'stateLabel',
-        'countryLabel'
+        # 'countryLabel'
     ]
     df = pd.DataFrame.from_records([row for row in res], columns=cols)
     file_name = os.path.join('sparqlAndReasoning',

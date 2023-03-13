@@ -53,7 +53,24 @@
 %Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
 
 \usepackage{csvsimple}
-\usepackage{pgfplotstable}
+%\usepackage{pgfplotstable}
+\usepackage{longtable} 
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+%\makeatletter
+%\csvset{
+ % my column width/.style={after head=\csv@pretable\begin{longtable}{*{\csv@columncount}{p{#1}}}\csv@tablehead},
+%}
+%\makeatother
 
 %%% The "real" document content comes below...
 
@@ -94,11 +111,20 @@ To resolve the entities I built a map with words to look for in the menu name ba
 
 \chapter{SPARQL \& Reasoning}
 \section{Restaurants Selling Pizza Bianca}
-Test
+The following SPARQL query returns the later table with the restaurants which serve Bianca pizzas.
+
+\lstinputlisting[caption={../sparqlAndReasoning/pizza\_bianca\_restaurants\_short.sparql}]{../sparqlAndReasoning/pizza_bianca_restaurants_short.sparql}
 
 %\csvautotabular{../sparqlAndReasoning/pizza\_bianca\_restaurants.csv}
 %\csvtotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
 %\csvautotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
 
+%\begin{tabular}{| c | c | c | c | c | c| c | c | c | c | c | c | c | c | c | c | c | c| c | c |}
+%	\hline
+%	\csvreader[head to column names]{sparqlAndReasoningResults/pizzaBiancaRestaurants.csv}{}
+	
+%sparqlAndReasoningResults/pizzaBiancaRestaurants.csv
+%\end{tabular}
+\csvautobooklongtable[respect all]{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
 
 \end{document}
