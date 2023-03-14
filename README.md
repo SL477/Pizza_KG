@@ -16,6 +16,16 @@ This converts the CSV data to a Knowledge Graph. To run use:
 python3 -m tabularDataToKG
 ```
 
+## SPARQL and Reasoning
+
+### Restaurants which sell margherita pizza
+
+[Pizza Bianca Restaurants CSV](/sparqlAndReasoning/pizzaBiancaRestaurants.csv)
+
+### Average prixe of a Margherita Pizza
+
+Average price of a Margherita pizza: $12.05
+
 ## Documentation
 
 To run use:
