@@ -20,3 +20,6 @@ python3 sparqlAndReasoning/inference.py
 - pizza_bianca_restaurants.py: this uses the SPARQL query on the Knowledge Graph
 - pizza_bianca_restaurants.sparql: the full query to get everything
 - pizzaBiancaRestaurants.csv: the results of pizza_bianca_restaurants.py
+- restaurants_missing_postcode.csv: the results of restaurants_missing_postcode.py
+- restaurants_missing_postcode.py: this runs the SPARQL query on the Knowledge Graph
+- restaurants_missing_postcode.sparql: this looks for where the postcode of the restaurant is null (or nan in our case)

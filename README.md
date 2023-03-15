@@ -48,6 +48,14 @@ python3 sparqlAndReasoning/average_price_margherita.py
 python3 sparqlAndReasoning/number_restaurants.py
 ```
 
+### Restaurant with no postcode
+
+[Restaurants missing postcode csv](/sparqlAndReasoning/restaurants_missing_postcode.csv)
+
+```bash
+python3 sparqlAndReasoning/restaurants_missing_postcode.py
+```
+
 ## Documentation
 
 To run use:

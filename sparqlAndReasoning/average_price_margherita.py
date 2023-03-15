@@ -1,10 +1,15 @@
-"""This is to get the average price of a margherita pizza"""
+"""This is to get the average price of a Margherita pizza"""
 import rdflib
 import os
 
 
-def main():
-    """This is to get the average price of a margherita pizza"""
+def main() -> float:
+    """This is to get the average price of a Margherita pizza
+
+    Returns
+    -------
+    float
+        The average price of a Margherita pizza"""
     g = rdflib.Graph()
     g.parse(os.path.join('sparqlAndReasoning', 'ontology_ttl.ttl'),
             format='ttl')
