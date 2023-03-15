@@ -9,6 +9,7 @@ from pickle import load
 from .clean_menu_items import main as clean_menu_items
 import urllib.parse
 from .get_menu_descriptions import main as get_menu_descriptions
+from datetime import datetime
 
 
 dbr_url = 'http://dbpedia.org/resource/'
@@ -107,7 +108,7 @@ def main():
         g.add((city_url, RDF.type, tef.city))
         g.add((city_url, RDFS.label, label))
         g.add((city_url, RDFS.comment, comment))
-        g.add((city_url, tef.provinceLocatedIn, rdflib.URIRef(state)))
+        g.add((city_url, tef.cityLocatedIn, rdflib.URIRef(state)))
 
     # start adding the restaurants
     restaurant_fields = [
@@ -236,14 +237,18 @@ def main():
         g.add((restaurant_url, RDFS.comment, comment))
 
         # date Added
+        date_added = datetime.strptime(restaurant_tup.dateAdded,
+                                       "%Y-%m-%d %H:%M:%S%z")
         g.add((restaurant_url,
                tef.dateAdded,
-               rdflib.Literal(restaurant_tup.dateAdded)))
+               rdflib.Literal(date_added, datatype=XSD.dateTime)))
 
         # date updated
+        date_updated = datetime.strptime(restaurant_tup.dateUpdated,
+                                         "%Y-%m-%d %H:%M:%S%z")
         g.add((restaurant_url,
                tef.dateUpdated,
-               rdflib.Literal(restaurant_tup.dateUpdated)))
+               rdflib.Literal(date_updated, datatype=XSD.dateTime)))
 
         # keys
         g.add((restaurant_url,
@@ -274,6 +279,14 @@ def main():
         restaurant_url = rdflib.URIRef(tef_url + menu_tup.id.strip())
         g.add((menu_item_url, tef.servedInRestaurant, restaurant_url))
 
+        # date seen
+        for menu_date_seen in menu_tup.menusDateSeen.split(','):
+            date_updated = menu_date_seen.split('.')[0].strip('Z')
+            date_updated = datetime.strptime(date_updated,
+                                             "%Y-%m-%dT%H:%M:%S")
+            date_updated = rdflib.Literal(date_updated, datatype=XSD.dateTime)
+            g.add((menu_item_url, tef.term('menus.dateSeen'), date_updated))
+
         # pizza size
         if not pd.isna(menu_tup.pizzaSize):
             size = rdflib.Literal(menu_tup.pizzaSize.strip(),
@@ -295,11 +308,6 @@ def main():
         menusAmountMin = rdflib.Literal(menu_tup.menusAmountMin,
                                         datatype=XSD.decimal)
         g.add((menu_item_url, tef.term('menus.amountMin'), menusAmountMin))
-
-        # menus date seen
-        for dateSeen in menu_tup.menusDateSeen.strip().split(','):
-            dateSeen = rdflib.Literal(dateSeen)
-            g.add((menu_item_url, tef.term('menus.dateSeen'), dateSeen))
 
     # add in the ingredients which we know about
     ingredient_df = get_menu_descriptions()

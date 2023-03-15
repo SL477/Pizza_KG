@@ -3,6 +3,7 @@ import os
 import pandas as pd
 from pizza_kg.sparql_request import sparql_request
 
+
 def main():
     """This uses the SPARQL query getCityCodes to get the cities in the USA"""
     ret = sparql_request(
@@ -20,6 +21,7 @@ def main():
     pd.DataFrame.from_dict(
         {'state': states, 'city': cities}).to_csv(
         os.path.join("tabularDataToKG", "cities.csv"), index=False)
+
 
 if __name__ == "__main__":
     main()

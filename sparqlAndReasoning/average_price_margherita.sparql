@@ -1,0 +1,8 @@
+SELECT 
+    (AVG((?maxAmt + ?minAmt) / 2) AS ?avgPrice)
+WHERE {
+    ?pizza rdf:type tef:margherita .
+    ?pizza tef:menus.amountMax ?maxAmt .
+    ?pizza tef:menus.amountMin ?minAmt .
+}
+LIMIT 100

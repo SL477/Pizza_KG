@@ -1,0 +1,66 @@
+SELECT DISTINCT 
+        ?restaurant
+        ?restaurantLabel
+        ?restaurantComment
+        ?cityLabel
+        ?restaurantLongitude
+        ?restaurantLatitude
+        ?restaurantDateAdded
+        (group_concat(?restaurantDateUpdated) AS ?dateUpdated)
+        ?restaurantID
+        ?restaurantPostCode
+        ?restaurantCurrency
+        ?restaurantPriceMax
+        ?restaurantPriceMin
+        (group_concat(?primaryCategory) AS ?primaryCategories)
+        ?restaurantAddress
+        ?restaurantName
+        ?keys
+        (GROUP_CONCAT(?category) AS ?categories)
+        ?stateLabel
+        ?countryLabel
+    WHERE {
+        ?restaurant rdf:type tef:restaurant .
+        ?restaurant rdfs:label ?restaurantLabel .
+        ?restaurant rdfs:comment ?restaurantComment .
+        ?restaurant tef:restaurantInCity ?city .
+        ?city rdfs:label ?cityLabel .
+        ?restaurant tef:longitude ?restaurantLongitude .
+        ?restaurant tef:latitude ?restaurantLatitude .
+        ?restaurant tef:dateAdded ?restaurantDateAdded .
+        ?restaurant tef:dateUpdated ?restaurantDateUpdated .
+        ?restaurant tef:priceRangeCurrency ?restaurantCurrency .
+        ?restaurant tef:id ?restaurantID .
+        ?restaurant tef:priceRangeMax ?restaurantPriceMax .
+        ?restaurant tef:priceRangeMin ?restaurantPriceMin .
+        ?restaurant tef:primaryCategories ?primaryCategory .
+        ?restaurant tef:address ?restaurantAddress .
+        ?restaurant tef:restaurantName ?restaurantName .
+        ?restaurant tef:keys ?keys .
+        ?restaurant tef:category ?category .
+        ?city tef:cityLocatedIn ?state .
+        ?state rdfs:label ?stateLabel .
+        ?state tef:provinceLocatedIn ?country .
+        ?country rdfs:label ?countryLabel .
+        OPTIONAL {
+            ?restaurant tef:postalCode ?restaurantPostCode .
+        }
+        FILTER ( regex(lcase(str(?restaurantPostCode)), "nan") )
+    }
+    GROUP BY ?restaurant
+        ?restaurantLabel
+        ?restaurantComment
+        ?cityLabel
+        ?restaurantLongitude
+        ?restaurantLatitude
+        ?restaurantDateAdded
+        ?restaurantID
+        ?restaurantPostCode
+        ?restaurantCurrency
+        ?restaurantPriceMax
+        ?restaurantPriceMin
+        ?restaurantAddress
+        ?restaurantName
+        ?keys
+        ?stateLabel
+        ?countryLabel

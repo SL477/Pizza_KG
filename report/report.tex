@@ -52,6 +52,27 @@
 
 %Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
 
+\usepackage{csvsimple}
+%\usepackage{pgfplotstable}
+\usepackage{longtable} 
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+%\makeatletter
+%\csvset{
+ % my column width/.style={after head=\csv@pretable\begin{longtable}{*{\csv@columncount}{p{#1}}}\csv@tablehead},
+%}
+%\makeatother
+
 %%% The "real" document content comes below...
 
 \title{Pizza Knowledge Graph}
@@ -88,5 +109,33 @@ For getting the state and country data no entity resolution was needed.
 For the cities, some more creativity was needed to match some of the cities up after the bulk of them were matched automatically from using SPARQL to get lists of cities from DBPedia.
 
 To resolve the entities I built a map with words to look for in the menu name back to the ontology URL. I did the same thing for the ingredients, but split them up as well.
+
+\chapter{SPARQL \& Reasoning}
+\section{Restaurants Selling Pizza Bianca}
+The following SPARQL query returns the table \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/pizzaBiancaRestaurants.csv} with the restaurants which serve Bianca pizzas.
+
+\lstinputlisting[caption={../sparqlAndReasoning/pizza\_bianca\_restaurants\_short.sparql}]{../sparqlAndReasoning/pizza_bianca_restaurants_short.sparql}
+
+%\csvautobooklongtable[respect all]{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
+
+\section{Average Price of a margherita pizza}
+
+The following SPARQL query returns the average price of a Margherita pizza.
+
+\lstinputlisting[caption={../sparqlAndReasoning/average\_price\_margherita.sparql}]{../sparqlAndReasoning/average_price_margherita.sparql}
+
+The average price is \$12.05
+
+\section{Number of restaurants}
+
+The following SPARQL query gets the number of restaurants per state and city and saves them to \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/number_restaurants.csv}.
+
+\lstinputlisting[caption={../sparqlAndReasoning/number\_restaurants.sparql}]{../sparqlAndReasoning/number_restaurants.sparql}
+
+\section{Restaurants missing postcode}
+
+The following SPARQL query finds the restaurants missing their postcode and saves them to \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/restaurants_missing_postcode.csv}.
+
+\lstinputlisting[caption={../sparqlAndReasoning/number\_restaurants\_missing\_postcode.sparql}]{../sparqlAndReasoning/restaurants_missing_postcode.sparql}
 
 \end{document}
