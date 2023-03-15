@@ -18,13 +18,35 @@ python3 -m tabularDataToKG
 
 ## SPARQL and Reasoning
 
-### Restaurants which sell margherita pizza
+To run reasoning use:
+
+```bash
+python3 sparqlAndReasoning/inference.py
+```
+
+### Restaurants which sell Margherita pizza
 
 [Pizza Bianca Restaurants CSV](/sparqlAndReasoning/pizzaBiancaRestaurants.csv)
 
-### Average prixe of a Margherita Pizza
+```bash
+python3 sparqlAndReasoning/pizza_bianca_restaurants.py
+```
+
+### Average price of a Margherita Pizza
 
 Average price of a Margherita pizza: $12.05
+
+```bash
+python3 sparqlAndReasoning/average_price_margherita.py
+```
+
+### Number of restaurants
+
+[Number of Restaurants CSV](/sparqlAndReasoning/number_restaurants.csv)
+
+```bash
+python3 sparqlAndReasoning/number_restaurants.py
+```
 
 ## Documentation
 

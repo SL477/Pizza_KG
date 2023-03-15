@@ -1,0 +1,18 @@
+SELECT
+    ?cityLabel
+    ?stateLabel
+    (COUNT(?restaurant) AS ?restaurantCount)
+WHERE {
+    ?restaurant rdf:type tef:restaurant .
+    ?restaurant tef:restaurantInCity ?city .
+    ?city rdfs:label ?cityLabel .
+    ?city tef:cityLocatedIn ?state .
+    ?state rdfs:label ?stateLabel .
+}
+GROUP BY
+    ?cityLabel
+    ?stateLabel
+ORDER BY
+    ?stateLabel
+    DESC(?restaurantCount)
+    ?cityLabel

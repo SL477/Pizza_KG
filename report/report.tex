@@ -57,6 +57,7 @@
 \usepackage{longtable} 
 \usepackage{listings}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
 
 \lstset{
   basicstyle=\ttfamily,
@@ -111,21 +112,11 @@ To resolve the entities I built a map with words to look for in the menu name ba
 
 \chapter{SPARQL \& Reasoning}
 \section{Restaurants Selling Pizza Bianca}
-The following SPARQL query returns the later table with the restaurants which serve Bianca pizzas.
+The following SPARQL query returns the table \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/pizzaBiancaRestaurants.csv} with the restaurants which serve Bianca pizzas.
 
 \lstinputlisting[caption={../sparqlAndReasoning/pizza\_bianca\_restaurants\_short.sparql}]{../sparqlAndReasoning/pizza_bianca_restaurants_short.sparql}
 
-%\csvautotabular{../sparqlAndReasoning/pizza\_bianca\_restaurants.csv}
-%\csvtotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
-%\csvautotabular{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
-
-%\begin{tabular}{| c | c | c | c | c | c| c | c | c | c | c | c | c | c | c | c | c | c| c | c |}
-%	\hline
-%	\csvreader[head to column names]{sparqlAndReasoningResults/pizzaBiancaRestaurants.csv}{}
-	
-%sparqlAndReasoningResults/pizzaBiancaRestaurants.csv
-%\end{tabular}
-\csvautobooklongtable[respect all]{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
+%\csvautobooklongtable[respect all]{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
 
 \section{Average Price of a margherita pizza}
 
@@ -134,5 +125,11 @@ The following SPARQL query returns the average price of a Margherita pizza.
 \lstinputlisting[caption={../sparqlAndReasoning/average\_price\_margherita.sparql}]{../sparqlAndReasoning/average_price_margherita.sparql}
 
 The average price is \$12.05
+
+\section{Number of restaurants}
+
+The following SPARQL query gets the number of restaurants per state and city and saves them to \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/number_restaurants.csv}.
+
+\lstinputlisting[caption={../sparqlAndReasoning/number\_restaurants.sparql}]{../sparqlAndReasoning/number_restaurants.sparql}
 
 \end{document}
