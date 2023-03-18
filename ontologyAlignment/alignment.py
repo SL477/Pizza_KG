@@ -46,6 +46,8 @@ main_aligned.namespace_manager.bind('pizza', pizza)
 for tef_class in tef_classes:
     try:
         ind = [c.lower() for c in pizza_classes].index(tef_class.lower())
+        if tef_class.lower() == 'capricciosa':
+            continue
         # g.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
         mini_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
         main_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
@@ -62,9 +64,10 @@ for tef_class in tef_classes:
 #         pass
 
 otherEqivalentClasses = [
-    ('quattroStagioni', 'FourSeasons'),
+    ('menuItem', 'Food'),
+    # ('quattroStagioni', 'FourSeasons'),
     ('parmese', 'Parmense'),
-    ('sicilian', 'Siciliana'),
+    # ('sicilian', 'Siciliana'),
     ('cheese', 'CheeseTopping'),
     ('meat', 'MeatTopping'),
     ('seafood', 'FishTopping'),
@@ -101,7 +104,8 @@ otherEqivalentClasses = [
     ('spinach', 'SpinachTopping'),
     ('tomato', 'TomatoTopping'),
     ('sundriedTomato', 'SundriedTomatoTopping'),
-    ('country', 'Country')
+    ('country', 'Country'),
+    ('fruitTopping', 'FruitTopping')
 ]
 for t_class, p_class in otherEqivalentClasses:
     mini_aligned.add((tef.term(t_class), OWL.equivalentClass, pizza.term(p_class)))

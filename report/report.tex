@@ -138,4 +138,9 @@ The following SPARQL query finds the restaurants missing their postcode and save
 
 \lstinputlisting[caption={../sparqlAndReasoning/number\_restaurants\_missing\_postcode.sparql}]{../sparqlAndReasoning/restaurants_missing_postcode.sparql}
 
+\chapter{Ontology Alignment}
+Originally there were several unsatifiable classes, Ice Cream, Pizza Capricciosa, 4 Seasons and Siciliana.
+For the three pizzas it was due to differences in the ingredients in the two ontologies.
+For ice cream the problem was that in both ontologies the Has Topping property had the domain of pizza, by changing that to Food/Menu item in the onotologies this allowed it to be used.
+
 \end{document}

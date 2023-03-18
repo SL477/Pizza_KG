@@ -18,8 +18,6 @@ tef:cajunSpice owl:equivalentClass pizza:CajunSpiceTopping .
 
 tef:capers owl:equivalentClass pizza:CaperTopping .
 
-tef:capricciosa owl:equivalentClass pizza:Capricciosa .
-
 tef:caprina owl:equivalentClass pizza:Caprina .
 
 tef:cheese owl:equivalentClass pizza:CheeseTopping .
@@ -29,6 +27,8 @@ tef:chicken owl:equivalentClass pizza:ChickenTopping .
 tef:country owl:equivalentClass pizza:Country .
 
 tef:fiorentina owl:equivalentClass pizza:Fiorentina .
+
+tef:fruitTopping owl:equivalentClass pizza:FruitTopping .
 
 tef:fruttiDiMare owl:equivalentClass pizza:FruttiDiMare .
 
@@ -67,6 +67,8 @@ tef:leek owl:equivalentClass pizza:LeekTopping .
 tef:margherita owl:equivalentClass pizza:Margherita .
 
 tef:meat owl:equivalentClass pizza:MeatTopping .
+
+tef:menuItem owl:equivalentClass pizza:Food .
 
 tef:mixedSeafood owl:equivalentClass pizza:MixedSeafoodTopping .
 
@@ -112,8 +114,6 @@ tef:princeCarlo owl:equivalentClass pizza:PrinceCarlo .
 
 tef:quattroFormaggi owl:equivalentClass pizza:QuattroFormaggi .
 
-tef:quattroStagioni owl:equivalentClass pizza:FourSeasons .
-
 tef:rocket owl:equivalentClass pizza:RocketTopping .
 
 tef:rosa owl:equivalentClass pizza:Rosa .
@@ -121,8 +121,6 @@ tef:rosa owl:equivalentClass pizza:Rosa .
 tef:rosemary owl:equivalentClass pizza:RosemaryTopping .
 
 tef:seafood owl:equivalentClass pizza:FishTopping .
-
-tef:sicilian owl:equivalentClass pizza:Siciliana .
 
 tef:sloppyGiuseppe owl:equivalentClass pizza:SloppyGiuseppe .
 
