@@ -56,6 +56,14 @@ python3 sparqlAndReasoning/number_restaurants.py
 python3 sparqlAndReasoning/restaurants_missing_postcode.py
 ```
 
+## Ontology Alignment
+
+To run use:
+
+```bash
+python3 ontologyAlignment/alignment.py
+```
+
 ## Documentation
 
 To run use:

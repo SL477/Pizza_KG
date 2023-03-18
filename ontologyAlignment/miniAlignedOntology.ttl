@@ -1,0 +1,144 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix tef: <http://link477.com/ds/pizza#> .
+
+tef:american owl:equivalentClass pizza:American .
+
+tef:americanHot owl:equivalentClass pizza:AmericanHot .
+
+tef:anchovies owl:equivalentClass pizza:AnchoviesTopping .
+
+tef:artichokes owl:equivalentClass pizza:ArtichokeTopping .
+
+tef:asparagus owl:equivalentClass pizza:AsparagusTopping .
+
+tef:cajun owl:equivalentClass pizza:Cajun .
+
+tef:cajunSpice owl:equivalentClass pizza:CajunSpiceTopping .
+
+tef:capers owl:equivalentClass pizza:CaperTopping .
+
+tef:capricciosa owl:equivalentClass pizza:Capricciosa .
+
+tef:caprina owl:equivalentClass pizza:Caprina .
+
+tef:cheese owl:equivalentClass pizza:CheeseTopping .
+
+tef:chicken owl:equivalentClass pizza:ChickenTopping .
+
+tef:country owl:equivalentClass pizza:Country .
+
+tef:fiorentina owl:equivalentClass pizza:Fiorentina .
+
+tef:fruttiDiMare owl:equivalentClass pizza:FruttiDiMare .
+
+tef:garlic owl:equivalentClass pizza:GarlicTopping .
+
+tef:giardiniera owl:equivalentClass pizza:Giardiniera .
+
+tef:goatsCheese owl:equivalentClass pizza:GoatsCheeseTopping .
+
+tef:gorgonzola owl:equivalentClass pizza:GorgonzolaTopping .
+
+tef:ham owl:equivalentClass pizza:HamTopping .
+
+tef:hasBase owl:equivalentProperty pizza:hasBase .
+
+tef:hasIngredient owl:equivalentProperty pizza:hasIngredient .
+
+tef:hasTopping owl:equivalentProperty pizza:hasTopping .
+
+tef:hotGreenPepper owl:equivalentClass pizza:HotGreenPepperTopping .
+
+tef:hotSpicedBeef owl:equivalentClass pizza:HotSpicedBeefTopping .
+
+tef:isBaseOf owl:equivalentProperty pizza:isBaseOf .
+
+tef:isIngredientOf owl:equivalentProperty pizza:isIngredientOf .
+
+tef:isToppingOf owl:equivalentProperty pizza:isToppingOf .
+
+tef:jalapenoPepper owl:equivalentClass pizza:JalapenoPepperTopping .
+
+tef:laReine owl:equivalentClass pizza:LaReine .
+
+tef:leek owl:equivalentClass pizza:LeekTopping .
+
+tef:margherita owl:equivalentClass pizza:Margherita .
+
+tef:meat owl:equivalentClass pizza:MeatTopping .
+
+tef:mixedSeafood owl:equivalentClass pizza:MixedSeafoodTopping .
+
+tef:mozzarella owl:equivalentClass pizza:MozzarellaTopping .
+
+tef:mushroom owl:equivalentClass pizza:Mushroom .
+
+tef:mushrooms owl:equivalentClass pizza:MushroomTopping .
+
+tef:namedPizza owl:equivalentClass pizza:NamedPizza .
+
+tef:napoletana owl:equivalentClass pizza:Napoletana .
+
+tef:olives owl:equivalentClass pizza:OliveTopping .
+
+tef:onion owl:equivalentClass pizza:OnionTopping .
+
+tef:parmese owl:equivalentClass pizza:Parmense .
+
+tef:parmezan owl:equivalentClass pizza:ParmesanTopping .
+
+tef:peperonata owl:equivalentClass pizza:PeperonataTopping .
+
+tef:pepper owl:equivalentClass pizza:PepperTopping .
+
+tef:pepperoni owl:equivalentClass pizza:PeperoniSausageTopping .
+
+tef:petitPois owl:equivalentClass pizza:PetitPoisTopping .
+
+tef:pineKernel owl:equivalentClass pizza:PineKernels .
+
+tef:pizza owl:equivalentClass pizza:Pizza .
+
+tef:pizzaBase owl:equivalentClass pizza:PizzaBase .
+
+tef:pizzaTopping owl:equivalentClass pizza:PizzaTopping .
+
+tef:polloAdAstra owl:equivalentClass pizza:PolloAdAstra .
+
+tef:prawns owl:equivalentClass pizza:PrawnsTopping .
+
+tef:princeCarlo owl:equivalentClass pizza:PrinceCarlo .
+
+tef:quattroFormaggi owl:equivalentClass pizza:QuattroFormaggi .
+
+tef:quattroStagioni owl:equivalentClass pizza:FourSeasons .
+
+tef:rocket owl:equivalentClass pizza:RocketTopping .
+
+tef:rosa owl:equivalentClass pizza:Rosa .
+
+tef:rosemary owl:equivalentClass pizza:RosemaryTopping .
+
+tef:seafood owl:equivalentClass pizza:FishTopping .
+
+tef:sicilian owl:equivalentClass pizza:Siciliana .
+
+tef:sloppyGiuseppe owl:equivalentClass pizza:SloppyGiuseppe .
+
+tef:soho owl:equivalentClass pizza:Soho .
+
+tef:spinach owl:equivalentClass pizza:SpinachTopping .
+
+tef:sultana owl:equivalentClass pizza:SultanaTopping .
+
+tef:sundriedTomato owl:equivalentClass pizza:SundriedTomatoTopping .
+
+tef:sweetPepper owl:equivalentClass pizza:SweetPepperTopping .
+
+tef:tobascoPepperSauce owl:equivalentClass pizza:TobascoPepperSauce .
+
+tef:tomato owl:equivalentClass pizza:TomatoTopping .
+
+tef:veneziana owl:equivalentClass pizza:Veneziana .
+
