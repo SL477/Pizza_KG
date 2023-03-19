@@ -1,7 +1,7 @@
 """Tabular data to Knowledge graph"""
 import os
 import pandas as pd
-from pizza_kg.data import OrgDataFiles, get_org_data, get_graph
+from pizza_kg.data import OrgDataFiles, get_org_data
 from rdflib import Graph
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
@@ -47,11 +47,29 @@ def print_knowledge_graph(g: Graph) -> None:
     print(g.serialize(format='ttl'))
 
 
-def main():
-    """This builds up and saves the Knowledge Graph"""
+def main(original_location: str = 'ontology_ttl.owl',
+         original_format: str = 'ttl',
+         destination: str = os.path.join('tabularDataToKG', 'ontology.owl'),
+         destination_format: str = 'xml'):
+    """This builds up and saves the Knowledge Graph
+
+    Parameters
+    ----------
+    original_location: str
+        WHere the ontology is saved
+
+    original_format: str
+        The format of the Knowledge Graph
+
+    destination: str
+        Where the Knowledge graph is going
+
+    destination_format: str
+        The destination format of the Knowledge Graph"""
     # get the Knowledge Graph
     # https://rdflib.readthedocs.io/en/stable/intro_to_creating_rdf.html
-    g: Graph = get_graph()
+    g: Graph = rdflib.Graph()
+    g.parse(original_location, format=original_format)
 
     # set up the namespaces
     tef = rdflib.Namespace(tef_url)
@@ -201,7 +219,7 @@ def main():
                               datatype=XSD.string)))
 
         # postal code
-        if not pd.isna(restaurant_tup.postalCode):
+        if not pd.isna(restaurant_tup.postalCode) or not restaurant_tup.postalCode == 'nan':
             g.add((restaurant_url,
                    tef.postalCode,
                    rdflib.Literal(restaurant_tup.postalCode,
@@ -323,12 +341,7 @@ def main():
     print_knowledge_graph(g)
 
     # save the knowledge graph
-    g.serialize(format='ttl',
-                destination=os.path.join('tabularDataToKG',
-                                         'ontology_ttl.owl'))
-    # g.serialize(format='xml',
-    #             destination=os.path.join('tabularDataToKG',
-    #                                      'ontology.owl'))
+    g.serialize(format=destination_format, destination=destination)
 
 
 if __name__ == '__main__':

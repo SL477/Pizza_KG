@@ -39,7 +39,8 @@ mini_aligned.namespace_manager.bind('pizza', pizza)
 
 # main aligned ontology
 main_aligned = rdflib.Graph()
-main_aligned.parse(os.path.join('ontologyAlignment', 'ontology.owl'), format='xml')
+main_aligned.parse(os.path.join('ontologyAlignment', 'ontology.owl'),
+                   format='xml')
 main_aligned.namespace_manager.bind('tef', tef)
 main_aligned.namespace_manager.bind('pizza', pizza)
 
@@ -48,20 +49,12 @@ for tef_class in tef_classes:
         ind = [c.lower() for c in pizza_classes].index(tef_class.lower())
         if tef_class.lower() == 'capricciosa':
             continue
-        # g.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
-        mini_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
-        main_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
+        mini_aligned.add((tef.term(tef_class), OWL.equivalentClass,
+                          pizza.term(pizza_classes[ind])))
+        main_aligned.add((tef.term(tef_class), OWL.equivalentClass,
+                          pizza.term(pizza_classes[ind])))
     except:
         pass
-
-# for tef_class in tef_classes:
-#     try:
-#         ind = [c.lower() + 'topping' for c in pizza_classes].index(tef_class.lower())
-#         # g.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
-#         mini_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
-#         main_aligned.add((tef.term(tef_class), OWL.equivalentClass, pizza.term(pizza_classes[ind])))
-#     except:
-#         pass
 
 otherEqivalentClasses = [
     ('menuItem', 'Food'),
@@ -108,8 +101,10 @@ otherEqivalentClasses = [
     ('fruitTopping', 'FruitTopping')
 ]
 for t_class, p_class in otherEqivalentClasses:
-    mini_aligned.add((tef.term(t_class), OWL.equivalentClass, pizza.term(p_class)))
-    main_aligned.add((tef.term(t_class), OWL.equivalentClass, pizza.term(p_class)))
+    mini_aligned.add((tef.term(t_class), OWL.equivalentClass,
+                      pizza.term(p_class)))
+    main_aligned.add((tef.term(t_class), OWL.equivalentClass,
+                      pizza.term(p_class)))
 
 # sub-properties
 equivalentSubProperties = [
@@ -121,8 +116,10 @@ equivalentSubProperties = [
     ('hasTopping', 'hasTopping')
 ]
 for t_prop, p_prop in equivalentSubProperties:
-    mini_aligned.add((tef.term(t_prop), OWL.equivalentProperty, pizza.term(p_prop)))
-    main_aligned.add((tef.term(t_prop), OWL.equivalentProperty, pizza.term(p_prop)))
+    mini_aligned.add((tef.term(t_prop), OWL.equivalentProperty,
+                      pizza.term(p_prop)))
+    main_aligned.add((tef.term(t_prop), OWL.equivalentProperty,
+                      pizza.term(p_prop)))
 
 # print(g.serialize(format='ttl'))
 mini_aligned.serialize(format='ttl',
