@@ -12,8 +12,8 @@ def main():
                         original_format='ttl',
                         destination='dataPreReasoning.ttl',
                         destination_format='ttl')
-    inference(original_location='dataPreReasoning.ttl', original_format='ttl',
-              destination='data.ttl', destination_format='ttl')
+    # inference(original_location='dataPreReasoning.ttl', original_format='ttl',
+    #          destination='data.ttl', destination_format='ttl')
 
 
 if __name__ == '__main__':
