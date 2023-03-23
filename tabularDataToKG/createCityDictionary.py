@@ -4,9 +4,14 @@ import pandas as pd
 from pickle import dump
 
 
-def main():
+def main() -> None:
     """Open the cities Excel file (urlsPlain.xlsx), builds a dictionary and
-    then saves it to city.pkl"""
+    then saves it to city.pkl
+
+    Returns
+    -------
+    None
+        Saves to city.pkl"""
     df = pd.read_excel(os.path.join('tabularDataToKG', 'urlsPlain.xlsx'))
 
     city_dict = {item.city + '_' + item.province: item.CityURL

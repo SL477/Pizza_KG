@@ -95,13 +95,13 @@
 
 \chapter{Ontology Modelling}
 
-For my knowledge graph I have chosen to seperate out the country, province, City, restaurant and menu items into different classes.
-This is so that repeating data is generally only stored once and to enable us to model the hiarchy of the data.
+For my knowledge graph I have chosen to separate out the country, province, City, restaurant and menu items into different classes.
+This is so that repeating data is generally only stored once and to enable us to model the hierarchy of the data.
 For the pizzas I have modelled various different types of pizza and their ingredients.
-In theory this should let us reaon the type of a pizza from the ingredients. I also added in generic types of pizza, e.g. vegetarian, meat.
+In theory this should let us reason the type of a pizza from the ingredients. I also added in generic types of pizza, e.g. vegetarian, meat.
 
 I put in the various relationships between the data, with their opposite types. Such as City has Restaurant and City Located in.
-I also put in various data properties which did not need to go into the class hiarchy, such as the latitude and longditude of the restaurant.
+I also put in various data properties which did not need to go into the class hierarchy, such as the latitude and longitude of the restaurant.
 
 \chapter{Tabular Data to Knowledge Graph}
 
@@ -118,7 +118,7 @@ The following SPARQL query returns the table \url{https://github.com/SL477/Pizza
 
 %\csvautobooklongtable[respect all]{../sparqlAndReasoning/pizzaBiancaRestaurants.csv}
 
-\section{Average Price of a margherita pizza}
+\section{Average Price of a Margherita pizza}
 
 The following SPARQL query returns the average price of a Margherita pizza.
 
@@ -137,5 +137,15 @@ The following SPARQL query gets the number of restaurants per state and city and
 The following SPARQL query finds the restaurants missing their postcode and saves them to \url{https://github.com/SL477/Pizza_KG/blob/main/sparqlAndReasoning/restaurants_missing_postcode.csv}.
 
 \lstinputlisting[caption={../sparqlAndReasoning/number\_restaurants\_missing\_postcode.sparql}]{../sparqlAndReasoning/restaurants_missing_postcode.sparql}
+
+\chapter{Ontology Alignment}
+Originally there were several un-satisfiable classes, Ice Cream, Pizza Capricciosa, 4 Seasons and Siciliana.
+For the three pizzas it was due to differences in the ingredients in the two ontologies.
+For ice cream the problem was that in both ontologies the Has Topping property had the domain of pizza, by changing that to Food/Menu item in the ontologies this allowed it to be used.
+
+The data in the final ontology was too much for the reasoner from the last chapter to handle.
+The reasoner in GraphDB was able to deal with it and I was able to run the SPARQL query to find the meaty pizzas.
+
+\lstinputlisting[caption={../ontologyAlignment/GetMeatyPizzas.sparqll}]{../ontologyAlignment/GetMeatyPizzas.sparql}
 
 \end{document}

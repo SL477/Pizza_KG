@@ -6,9 +6,35 @@ import pandas as pd
 import pprint
 
 
-def main():
+def main() -> None:
     """Get the details of the restaurants that are missing their postcode.
-    Saves to restaurants_missing_postcode.csv"""
+    Saves to restaurants_missing_postcode.csv, using the query in
+    restaurants_missing_postcode.sparql
+
+    Returns
+    -------
+    None
+        Saves to restaurants_missing_postcode.csv with columns:
+        - restaurant
+        - restaurantLabel
+        - restaurantComment
+        - cityLabel
+        - restaurantLongitude
+        - restaurantLatitude
+        - restaurantDateAdded
+        - dateUpdated
+        - restaurantID
+        - restaurantPostCode
+        - restaurantCurrency
+        - restaurantPriceMax
+        - restaurantPriceMin
+        - primaryCategories
+        - restaurantAddress
+        - restaurantName
+        - keys
+        - categories
+        - stateLabel
+        - countryLabel"""
     g = rdflib.Graph()
     g.parse(os.path.join('sparqlAndReasoning', 'ontology_ttl.ttl'),
             format='ttl')

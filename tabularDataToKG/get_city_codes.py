@@ -4,8 +4,15 @@ import pandas as pd
 from pizza_kg.sparql_request import sparql_request
 
 
-def main():
-    """This uses the SPARQL query getCityCodes to get the cities in the USA"""
+def main() -> None:
+    """This uses the SPARQL query getCityCodes to get the cities in the USA
+
+    Returns
+    -------
+    None
+        cities.csv is created with columns:
+            - state
+            - city"""
     ret = sparql_request(
         "https://dbpedia.org/sparql/",
         os.path.join('tabularDataToKG', 'getCityCodes.sparql'))

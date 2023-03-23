@@ -21,6 +21,7 @@ python_version = "3.8"
 
 [scripts]
 check = "flake8"
-dynamic_docs = "pdoc --docformat=numpy tabularDataToKG pizza_kg sparqlAndReasoning"
-save_docs = "pdoc --output-directory ./docs tabularDataToKG pizza_kg sparqlAndReasoning"
+dynamic_docs = "pdoc --docformat=numpy --logo=https://link477.com/assets/images/link477.png tabularDataToKG pizza_kg sparqlAndReasoning ontologyAlignment"
+dynamic_docs_new = "cd .. && pdoc --docformat=numpy --logo=https://link477.com/assets/images/link477.png Pizza_KG"
+save_docs = "pdoc --output-directory ./docs tabularDataToKG pizza_kg sparqlAndReasoning ontologyAlignment"
 tabularDataToKG = "py -m tabularDataToKG"

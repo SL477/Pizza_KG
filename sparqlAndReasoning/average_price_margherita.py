@@ -4,7 +4,8 @@ import os
 
 
 def main() -> float:
-    """This is to get the average price of a Margherita pizza
+    """This is to get the average price of a Margherita pizza.
+    It uses the SPARQL query in average price margherita.
 
     Returns
     -------

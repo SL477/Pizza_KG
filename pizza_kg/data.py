@@ -7,7 +7,10 @@ from rdflib import Graph
 class OrgDataFiles:
     """Constants to hold the datafile names"""
     MINI: str = '8358_1'
+    """The mini dataset in 8358_1.csv"""
     MAIN: str = 'Datafiniti_Pizza_Restaurants_and_the_Pizza_They_Sell_May19'
+    """The main dataset in
+    Datafiniti_Pizza_Restaurants_and_the_Pizza_They_Sell_May19.csv"""
 
 
 def get_org_data(file_name: str) -> pd.DataFrame:
