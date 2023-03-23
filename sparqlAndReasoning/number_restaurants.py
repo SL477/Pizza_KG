@@ -5,8 +5,15 @@ import pandas as pd
 import pprint
 
 
-def main():
-    """Get the number of restaurants by city and state"""
+def main() -> None:
+    """Get the number of restaurants by city and state.
+    Using the SPARQL query in number_restaurants and saving to
+    number_restaurants.csv
+
+    Returns
+    -------
+    None
+        Saves to number_restaurants.csv"""
     g = rdflib.Graph()
     g.parse(os.path.join('sparqlAndReasoning', 'ontology_ttl.ttl'),
             format='ttl')

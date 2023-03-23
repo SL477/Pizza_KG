@@ -4,9 +4,15 @@ import os
 import pandas as pd
 
 
-def main():
+def main() -> None:
     """This uses the SPARQL request get US Cities to get all the cities in the
-    US"""
+    US
+
+    Returns
+    -------
+    None
+        Saves allUSCities.csv with columns:
+            - city"""
     cities = sparql_request(
         "https://dbpedia.org/sparql/",
         os.path.join('tabularDataToKG', 'getUSCities.sparql'))

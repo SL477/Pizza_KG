@@ -13,7 +13,7 @@ def inference(original_location: str = org_location,
               destination_format: str = 'ttl') -> None:
     """This is to run OWL 2 RL reasoning on our Ontology.
     It takes the Knowledge graph from tabularDataToKG, expands it and then
-    saves in sparqlAndReasoning/ontology_ttl.ttl
+    saves in the destination parameter.
 
     Parameters
     ----------
@@ -31,7 +31,8 @@ def inference(original_location: str = org_location,
 
     Returns
     -------
-    None"""
+    None
+        Saves a knowledge graph in the destination parameter"""
     g = Graph()
     g.parse(original_location, format=original_format)
 

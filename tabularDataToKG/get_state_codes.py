@@ -4,9 +4,16 @@ import pandas as pd
 from pizza_kg.sparql_request import sparql_request
 
 
-def main():
+def main() -> None:
     """This runs the get State Codes SPARQL query on DBPedia and saves the
-    results to states2.csv"""
+    results to states2.csv
+
+    Returns
+    -------
+    None
+        Saves to state2.csv with columns:
+            - state
+            - isoCode"""
     ret = sparql_request(
         "https://dbpedia.org/sparql/",
         os.path.join('tabularDataToKG', 'getStateCodes.sparql'))
