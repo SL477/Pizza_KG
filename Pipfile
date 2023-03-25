@@ -10,6 +10,9 @@ sparqlwrapper = "*"
 pandas = "*"
 openpyxl = "*"
 owlrl = "*"
+gensim = "*"
+scikit-learn = "*"
+nltk = "*"
 
 [dev-packages]
 ipykernel = "*"
