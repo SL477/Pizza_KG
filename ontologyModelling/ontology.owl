@@ -259,7 +259,7 @@
     <owl:DatatypeProperty rdf:about="http://link477.com/ds/pizza#dateUpdated">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date the item was updated in the database</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date added</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date updated</rdfs:label>
     </owl:DatatypeProperty>
     
 
