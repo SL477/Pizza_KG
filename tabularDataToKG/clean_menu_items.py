@@ -2,7 +2,7 @@
 import pandas as pd
 import pprint
 import os
-from pizza_kg.data import get_org_data, OrgDataFiles
+from ..pizza_kg.data import get_org_data, OrgDataFiles
 import re
 
 

@@ -1,7 +1,7 @@
 """Tabular data to Knowledge graph"""
 import os
 import pandas as pd
-from pizza_kg.data import OrgDataFiles, get_org_data
+from ..pizza_kg.data import OrgDataFiles, get_org_data
 import rdflib
 from rdflib.namespace import RDF, RDFS, XSD
 from pickle import load

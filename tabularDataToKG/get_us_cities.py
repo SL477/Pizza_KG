@@ -1,5 +1,5 @@
 """This is a SPARQL request to get all the cities in the US"""
-from pizza_kg.sparql_request import sparql_request
+from ..pizza_kg.sparql_request import sparql_request
 import os
 import pandas as pd
 

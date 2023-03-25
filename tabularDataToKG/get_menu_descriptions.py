@@ -3,7 +3,7 @@ in the Knowledge graph"""
 import pandas as pd
 import os
 import urllib.parse
-from pizza_kg.data import get_org_data, OrgDataFiles
+from ..pizza_kg.data import get_org_data, OrgDataFiles
 
 
 def find_ingredient(org: str, ingredient_dict: dict) -> str:
