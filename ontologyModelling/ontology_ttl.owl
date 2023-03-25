@@ -180,7 +180,7 @@ tef:dateAdded rdf:type owl:DatatypeProperty ;
 tef:dateUpdated rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:dateTime ;
                 rdfs:comment "The date the item was updated in the database"^^xsd:string ;
-                rdfs:label "Date added"^^xsd:string .
+                rdfs:label "Date updated"^^xsd:string .
 
 
 ###  http://link477.com/ds/pizza#id
