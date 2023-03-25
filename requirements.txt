@@ -1,0 +1,8 @@
+flake8==6.0.0
+openpyxl==3.1.2
+Owlready2==0.40
+owlrl==6.0.2
+pandas==1.5.3
+pdoc==13.0.0
+rdflib==6.3.1
+SPARQLWrapper==2.0.0
