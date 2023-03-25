@@ -1,6 +1,6 @@
 """This is to recreate the date from the aligned ontology"""
 # from sparqlAndReasoning.inference import inference
-from tabularDataToKG.main import main as tabularDataToKGMain
+from ..tabularDataToKG import main as tabularDataToKGMain
 import os
 
 

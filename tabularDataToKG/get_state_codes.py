@@ -1,7 +1,7 @@
 """Get the state codes from DBPedia using SPARQL and save to CSV"""
 import os
 import pandas as pd
-from pizza_kg.sparql_request import sparql_request
+from ..pizza_kg.sparql_request import sparql_request
 
 
 def main() -> None:
