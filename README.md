@@ -6,7 +6,7 @@ The specification is [here](https://github.com/turing-knowledge-graphs/teaching/
 
 The final class hierarchy:
 
-![Class Hierarchy](/images/ClassHierarchy.JPG)
+![Class Hierarchy](https://github.com/SL477/Pizza_KG/blob/6fca04b2551f58a7955025b2caf3c7821c45d3d4/images/ClassHierarchy.JPG?raw=true)
 
 ## Ontology Modelling
 
@@ -80,7 +80,7 @@ Then run the query in the SPARQL file.
 
 Class Relationships:
 
-![Class Relationships](https://github.com/SL477/Pizza_KG/blob/main/images/ClassRelationships.JPG)
+![Class Relationships](https://github.com/SL477/Pizza_KG/blob/6fca04b2551f58a7955025b2caf3c7821c45d3d4/images/ClassRelationships.JPG?raw=true)
 
 ## Files
 
