@@ -13,6 +13,7 @@ owlrl = "*"
 gensim = "*"
 scikit-learn = "*"
 nltk = "*"
+owl2vec-star = "*"
 
 [dev-packages]
 ipykernel = "*"

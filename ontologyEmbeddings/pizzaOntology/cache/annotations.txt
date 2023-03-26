@@ -1,0 +1,259 @@
+http://link477.com/ds/pizza preferred_label Pizza Knowledge Graph
+http://link477.com/ds/pizza#creator preferred_label Thomas Fishwick
+http://link477.com/ds/pizza#cityHasRestaurant preferred_label City has Restaurant
+http://link477.com/ds/pizza#cityLocatedIn preferred_label City located in
+http://link477.com/ds/pizza#hasBase preferred_label Has Base
+http://link477.com/ds/pizza#hasCity preferred_label Province has city
+http://link477.com/ds/pizza#hasIngredient preferred_label Has Ingredient
+http://link477.com/ds/pizza#hasMenuItem preferred_label Has Menu Item
+http://link477.com/ds/pizza#hasProvince preferred_label Country Has Province
+http://link477.com/ds/pizza#hasTopping preferred_label Has Topping
+http://link477.com/ds/pizza#isBaseOf preferred_label Is Base Of
+http://link477.com/ds/pizza#isIngredientOf preferred_label Is Ingredient Of
+http://link477.com/ds/pizza#isToppingOf preferred_label Is Topping Of
+http://link477.com/ds/pizza#provinceLocatedIn preferred_label Province Located In
+http://link477.com/ds/pizza#restaurantInCity preferred_label Restaurant In City
+http://link477.com/ds/pizza#servedInRestaurant preferred_label Served In Restaurant
+http://link477.com/ds/pizza#address preferred_label Restaurant Address
+http://link477.com/ds/pizza#category preferred_label Category
+http://link477.com/ds/pizza#dateAdded preferred_label Date added
+http://link477.com/ds/pizza#dateUpdated preferred_label Date updated
+http://link477.com/ds/pizza#id preferred_label ID
+http://link477.com/ds/pizza#keys preferred_label The keys of the item
+http://link477.com/ds/pizza#latitude preferred_label Latitude
+http://link477.com/ds/pizza#longitude preferred_label Longitude
+http://link477.com/ds/pizza#menuPageURL preferred_label Menu Page URL
+http://link477.com/ds/pizza#menus.amountMax preferred_label Max amount of the menu
+http://link477.com/ds/pizza#menus.amountMin preferred_label Min amount of the menu
+http://link477.com/ds/pizza#menus.currency preferred_label Menu currency
+http://link477.com/ds/pizza#menus.dateSeen preferred_label Menu date seen
+http://link477.com/ds/pizza#menus.description preferred_label Menu description
+http://link477.com/ds/pizza#menus.name preferred_label Menu item name
+http://link477.com/ds/pizza#pizzaSize preferred_label Pizza size
+http://link477.com/ds/pizza#postalCode preferred_label Post code
+http://link477.com/ds/pizza#priceRangeCurrency preferred_label Price Range Currency
+http://link477.com/ds/pizza#priceRangeMax preferred_label Price range max
+http://link477.com/ds/pizza#priceRangeMin preferred_label Price range min
+http://link477.com/ds/pizza#primaryCategories preferred_label Primary Categories
+http://link477.com/ds/pizza#restaurantName preferred_label Restaurant Name
+http://link477.com/ds/pizza#american preferred_label American
+http://link477.com/ds/pizza#americanHot preferred_label American Hot
+http://link477.com/ds/pizza#anchovies preferred_label Anchovies
+http://link477.com/ds/pizza#anchovyPizza preferred_label Anchovy Pizza
+http://link477.com/ds/pizza#artichokes preferred_label Artichokes
+http://link477.com/ds/pizza#arugula preferred_label Arugula
+http://link477.com/ds/pizza#asparagus preferred_label Asparagus
+http://link477.com/ds/pizza#aubergine preferred_label Aubergine
+http://link477.com/ds/pizza#auberginePizza preferred_label Aubergine Pizzza
+http://link477.com/ds/pizza#bacon preferred_label Bacon
+http://link477.com/ds/pizza#baconCheeseBurgerPizza preferred_label Bacon Cheeseburger Pizza
+http://link477.com/ds/pizza#bakedPotatoPizza preferred_label Baked Potato Pizza
+http://link477.com/ds/pizza#basil preferred_label Basil
+http://link477.com/ds/pizza#bbqPizza preferred_label BBQ Pizza
+http://link477.com/ds/pizza#bbqSauce preferred_label BBQ Sauce
+http://link477.com/ds/pizza#beef preferred_label Beef
+http://link477.com/ds/pizza#bianca preferred_label Pizza Bianca
+http://link477.com/ds/pizza#biancaFiorentinaPizza preferred_label Bianca Fiorentina Pizza
+http://link477.com/ds/pizza#bltPizza preferred_label BLT Pizza
+http://link477.com/ds/pizza#blueCheese preferred_label Blue Cheese
+http://link477.com/ds/pizza#breakfastPizza preferred_label Breakfast Pizza
+http://link477.com/ds/pizza#bruschettaPizza preferred_label Bruschetta Pizza
+http://link477.com/ds/pizza#buffaloChickenPizza preferred_label Buffalo Chicken Pizza
+http://link477.com/ds/pizza#buffaloSauce preferred_label Buffalo Sauce
+http://link477.com/ds/pizza#burger preferred_label Burger
+http://link477.com/ds/pizza#burgerSauce preferred_label Burger Sauce
+http://link477.com/ds/pizza#caciocavallo preferred_label Caciocavallo
+http://link477.com/ds/pizza#cajun preferred_label Cajun Pizza
+http://link477.com/ds/pizza#cajunSpice preferred_label Cajun Spice
+http://link477.com/ds/pizza#capers preferred_label Capers
+http://link477.com/ds/pizza#capricciosa preferred_label Pizza Capricciosa
+http://link477.com/ds/pizza#caprina preferred_label Caprina Pizza
+http://link477.com/ds/pizza#cauliflower preferred_label Cauiflower
+http://link477.com/ds/pizza#cheddar preferred_label Cheddar
+http://link477.com/ds/pizza#cheese preferred_label Cheese
+http://link477.com/ds/pizza#cheesyPizza preferred_label Cheesy Pizza
+http://link477.com/ds/pizza#chicken preferred_label Chicken
+http://link477.com/ds/pizza#chickenParmPizza preferred_label Chicken Parm Pizza
+http://link477.com/ds/pizza#chickenPestoPizza preferred_label Chicken Pesto Pizza
+http://link477.com/ds/pizza#chickenPizza preferred_label Chicken Pizza
+http://link477.com/ds/pizza#city preferred_label City
+http://link477.com/ds/pizza#cookieDough preferred_label Cookie Dough
+http://link477.com/ds/pizza#cookiePizza preferred_label Cookie Dough Pizza
+http://link477.com/ds/pizza#corn preferred_label Corn
+http://link477.com/ds/pizza#country preferred_label Country
+http://link477.com/ds/pizza#cowboyPizza preferred_label Cowboy Pizza
+http://link477.com/ds/pizza#curry preferred_label Curry
+http://link477.com/ds/pizza#curryPizza preferred_label Curry Pizza
+http://link477.com/ds/pizza#doughSticks preferred_label Dough Sticks
+http://link477.com/ds/pizza#eFichi preferred_label e fichi
+http://link477.com/ds/pizza#egg preferred_label Egg
+http://link477.com/ds/pizza#feta preferred_label Feta
+http://link477.com/ds/pizza#fig preferred_label Fig
+http://link477.com/ds/pizza#fiorentina preferred_label Fiorentina Pizza
+http://link477.com/ds/pizza#fontina preferred_label Fontina
+http://link477.com/ds/pizza#fruttiDiMare preferred_label Frutti Di Mare
+http://link477.com/ds/pizza#garlic preferred_label Garlic
+http://link477.com/ds/pizza#garlicPizza preferred_label Garlic Pizza
+http://link477.com/ds/pizza#germanSausage preferred_label German Sausage
+http://link477.com/ds/pizza#giardiniera preferred_label Giardiniera Pizza
+http://link477.com/ds/pizza#glutenFreeBase preferred_label Gluten Free Base
+http://link477.com/ds/pizza#glutenFreePizza preferred_label Gluten Free Pizza
+http://link477.com/ds/pizza#goatsCheese preferred_label Goats Cheese
+http://link477.com/ds/pizza#gobiManchurianPizza preferred_label Gobi Manchurian Pizza
+http://link477.com/ds/pizza#gorgonzola preferred_label Gorgonzola
+http://link477.com/ds/pizza#granaPadano preferred_label Grana Padano
+http://link477.com/ds/pizza#greekPizza preferred_label Greek Pizza
+http://link477.com/ds/pizza#ham preferred_label Ham
+http://link477.com/ds/pizza#hariMirchPineapplePizza preferred_label Hari Mirch Pineapple Pizza
+http://link477.com/ds/pizza#hawaiian preferred_label Hawaiian Pizza
+http://link477.com/ds/pizza#hotGreenPepper preferred_label Hot Green Pepper
+http://link477.com/ds/pizza#hotSpicedBeef preferred_label Hot Spiced Beef
+http://link477.com/ds/pizza#ingredients preferred_label Ingredients
+http://link477.com/ds/pizza#interestingPizza preferred_label Interesting Pizza
+http://link477.com/ds/pizza#jalapenoPepper preferred_label Jalapeno Pepper
+http://link477.com/ds/pizza#laReine preferred_label La Reine Pizza
+http://link477.com/ds/pizza#leek preferred_label Leek
+http://link477.com/ds/pizza#lettuce preferred_label Lettuce
+http://link477.com/ds/pizza#manchurianSauce preferred_label Manchurian Sauce
+http://link477.com/ds/pizza#margherita preferred_label Margherita Pizza
+http://link477.com/ds/pizza#meat preferred_label Meat
+http://link477.com/ds/pizza#meatPizza preferred_label Meat Pizza
+http://link477.com/ds/pizza#meatballs preferred_label Meatballs
+http://link477.com/ds/pizza#menuItem preferred_label Menu Item
+http://link477.com/ds/pizza#mixedSeafood preferred_label Mixed Seafood
+http://link477.com/ds/pizza#mozzarella preferred_label Mozzarella
+http://link477.com/ds/pizza#mushroom preferred_label Mushroom Pizza
+http://link477.com/ds/pizza#mushrooms preferred_label Mushrooms
+http://link477.com/ds/pizza#namedPizza preferred_label Named Pizza
+http://link477.com/ds/pizza#napoletana preferred_label Napoletana Pizza
+http://link477.com/ds/pizza#oil preferred_label Oil
+http://link477.com/ds/pizza#olives preferred_label Olives
+http://link477.com/ds/pizza#onion preferred_label Onion
+http://link477.com/ds/pizza#oregano preferred_label Oregano
+http://link477.com/ds/pizza#parmese preferred_label Parmese Pizza
+http://link477.com/ds/pizza#parmezan preferred_label Parmezan
+http://link477.com/ds/pizza#peperonata preferred_label Peperonata
+http://link477.com/ds/pizza#peperonata preferred_label Sliced peppers, garlic and basil
+http://link477.com/ds/pizza#pepper preferred_label Pepper
+http://link477.com/ds/pizza#pepperoni preferred_label Pepperoni
+http://link477.com/ds/pizza#pesto preferred_label Pesto
+http://link477.com/ds/pizza#petitPois preferred_label Petit Pois
+http://link477.com/ds/pizza#pickle preferred_label Pickle
+http://link477.com/ds/pizza#pineKernel preferred_label Pine Kernel
+http://link477.com/ds/pizza#pineapple preferred_label Pineapple
+http://link477.com/ds/pizza#pisan preferred_label Pisan Pizza
+http://link477.com/ds/pizza#pizza preferred_label Pizza
+http://link477.com/ds/pizza#pizzaBase preferred_label Pizza Base
+http://link477.com/ds/pizza#pizzaBurger preferred_label Pizza Burger
+http://link477.com/ds/pizza#pizzaRoll preferred_label Pizza Roll
+http://link477.com/ds/pizza#pizzaSauce preferred_label Pizza Sauce
+http://link477.com/ds/pizza#pizzaSlice preferred_label Pizza Slice
+http://link477.com/ds/pizza#pizzaSliceBase preferred_label Pizza Slice
+http://link477.com/ds/pizza#pizzaSteak preferred_label Pizza Steak
+http://link477.com/ds/pizza#pizzaSub preferred_label Pizza Sub
+http://link477.com/ds/pizza#pizzaSubBase preferred_label Pizza Sub Base
+http://link477.com/ds/pizza#pizzaTopping preferred_label Pizza Topping
+http://link477.com/ds/pizza#pizzaType preferred_label Pizza Type
+http://link477.com/ds/pizza#pizzaiola preferred_label Pizzaiola
+http://link477.com/ds/pizza#pizzetta preferred_label Pizzetta
+http://link477.com/ds/pizza#polloAdAstra preferred_label Pollo Ad Astra Pizza
+http://link477.com/ds/pizza#prawns preferred_label Prawns
+http://link477.com/ds/pizza#princeCarlo preferred_label Prince Carlo Pizza
+http://link477.com/ds/pizza#prosciuttoArugula preferred_label Prosciutto Arugula Pizza
+http://link477.com/ds/pizza#province preferred_label Province
+http://link477.com/ds/pizza#pugliese preferred_label Pizza Pugliese
+http://link477.com/ds/pizza#quattroFormaggi preferred_label Quattro Formaggi
+http://link477.com/ds/pizza#quattroStagioni preferred_label Pizza Quattro Stagioni
+http://link477.com/ds/pizza#restaurant preferred_label Restaurant
+http://link477.com/ds/pizza#ricotta preferred_label Ricotta
+http://link477.com/ds/pizza#rocket preferred_label Rocket
+http://link477.com/ds/pizza#roll preferred_label Roll
+http://link477.com/ds/pizza#romana preferred_label Pizza Romana
+http://link477.com/ds/pizza#rosa preferred_label Rosa Pizza
+http://link477.com/ds/pizza#rosemary preferred_label Rosemary
+http://link477.com/ds/pizza#scallions preferred_label Scallions
+http://link477.com/ds/pizza#seafood preferred_label Seafood
+http://link477.com/ds/pizza#sicilian preferred_label Sicilian Pizza
+http://link477.com/ds/pizza#slicedTomato preferred_label Sliced Tomato
+http://link477.com/ds/pizza#sloppyGiuseppe preferred_label Sloppy Giuseppe Pizza
+http://link477.com/ds/pizza#smallPizzaBase preferred_label Small Pizza Base
+http://link477.com/ds/pizza#soho preferred_label Soho Pizza
+http://link477.com/ds/pizza#sourCream preferred_label Sour Cream
+http://link477.com/ds/pizza#spinach preferred_label Spinach
+http://link477.com/ds/pizza#stracchino preferred_label Stracchino
+http://link477.com/ds/pizza#sultana preferred_label Sultana
+http://link477.com/ds/pizza#sundriedTomato preferred_label Sundried Tomato
+http://link477.com/ds/pizza#supremePizza preferred_label Supreme Pizza
+http://link477.com/ds/pizza#sweetPepper preferred_label Sweet Pepper
+http://link477.com/ds/pizza#tacoChips preferred_label Taco Chips
+http://link477.com/ds/pizza#tacoPizza preferred_label Taco Pizza
+http://link477.com/ds/pizza#threeCheese preferred_label Three Cheese Pizza
+http://link477.com/ds/pizza#tobascoPepperSauce preferred_label Tobasco Pepper Sauce
+http://link477.com/ds/pizza#toma preferred_label Toma
+http://link477.com/ds/pizza#tomato preferred_label Tomato
+http://link477.com/ds/pizza#vegetarianPizza preferred_label Vegetarian Pizza
+http://link477.com/ds/pizza#veneziana preferred_label Veneziana Pizza
+http://link477.com/ds/pizza#viennese preferred_label Pizza Viennese
+http://link477.com/ds/pizza#country The country a restaurant is in
+http://link477.com/ds/pizza#bianca White pizza. No tomato. Olive oil, salt, occasionally herbs
+http://link477.com/ds/pizza#american American Pizza/pepperoni
+http://link477.com/ds/pizza#asparagus A vegetable
+http://link477.com/ds/pizza#restaurant The restaurant that serves pizzas
+http://link477.com/ds/pizza#aubergine Aubergine/eggplant
+http://link477.com/ds/pizza#romana Pizza with tomato, mozzarella, anchozies, oregano, oil
+http://link477.com/ds/pizza#princeCarlo Leek, ham and rosemary pizza
+http://link477.com/ds/pizza#pizza Pizza, https://en.wikipedia.org/wiki/List_of_pizza_varieties_by_country
+http://link477.com/ds/pizza#curry Curry Sauce
+http://link477.com/ds/pizza#pepper Red/Green Peppers
+http://link477.com/ds/pizza#mushroom Mushroom pizza
+http://link477.com/ds/pizza#meatPizza A pizza with meat on it
+http://link477.com/ds/pizza#margherita Cheese pizza
+http://link477.com/ds/pizza#parmese Ham pizza
+http://link477.com/ds/pizza#province The province a restaurant is in
+http://link477.com/ds/pizza#fruttiDiMare Seafood pizza
+http://link477.com/ds/pizza#pizzaiola Pizzaiola, meat cooked pizza style
+http://link477.com/ds/pizza#sultana Sultana, dried fruit
+http://link477.com/ds/pizza#quattroFormaggi Four cheese pizza
+http://link477.com/ds/pizza#pizzetta Small pizza, ranges in size from three inches to a small personal-sized pizza
+http://link477.com/ds/pizza#interestingPizza A pizza with at least 3 toppings
+http://link477.com/ds/pizza#leek Long green vegetable
+http://link477.com/ds/pizza#tobascoPepperSauce A spicy sauce
+http://link477.com/ds/pizza#pizzaSlice Slice of pizza
+http://link477.com/ds/pizza#eFichi Figs on pizza
+http://link477.com/ds/pizza#polloAdAstra Spicy chicken pizza
+http://link477.com/ds/pizza#hawaiian Hawiian Pizza, https://en.wikipedia.org/wiki/Hawaiian_pizza (inedible)
+http://link477.com/ds/pizza#city The city a restaurant is in
+http://link477.com/ds/pizza#pizzaType Generic types of pizza
+http://link477.com/ds/pizza#rocket Rocket, vegetable leaves
+http://link477.com/ds/pizza#pizzaBase Pizza Base, mainly bread
+http://link477.com/ds/pizza#pesto Pesto Sauce
+http://link477.com/ds/pizza#cauliflower Cauliflower
+http://link477.com/ds/pizza#vegetarianPizza Pizzas suitable for vegetarians
+http://link477.com/ds/pizza#rosa Gorgonzola pizza
+http://link477.com/ds/pizza#pizzaTopping The toppings a pizza may have
+http://link477.com/ds/pizza#americanHot A spicy American pizza with chilli peppers
+http://link477.com/ds/pizza#goatsCheese Cheese made from goats milk
+http://link477.com/ds/pizza#threeCheese Three cheese pizza
+http://link477.com/ds/pizza#viennese Pizza with tomato, mozzarella, German sausage, oregano, oil
+http://link477.com/ds/pizza#pizzaSub A pizza sub
+http://link477.com/ds/pizza#pepperoni A type of spicy sausage
+http://link477.com/ds/pizza#oil Olive Oil
+http://link477.com/ds/pizza#petitPois Small peas
+http://link477.com/ds/pizza#pugliese Pizza Pugliese https://en.wikipedia.org/wiki/Pizza_pugliese, tomato, mozzarella and onion
+http://link477.com/ds/pizza#pizzaSubBase A base for a pizza sub
+http://link477.com/ds/pizza#menuItem An item on the menu in a restaurant
+http://link477.com/ds/pizza#quattroStagioni Four seasons pizza, https://en.wikipedia.org/wiki/Pizza_quattro_stagioni. A pizza divided into four sections of toppings
+http://link477.com/ds/pizza#rosemary Rosemary, a type of herb
+http://link477.com/ds/pizza#capricciosa Pizza with mozzarella, tomato, mushrooms, artichokes, cooked ham, olives, oil
+http://link477.com/ds/pizza#pisan Pisan pizza (pizza pisana) is a smaller and thicker pizza baked into metal plates and traditionally served with anchovies, capers and grated Grana Padano cheese. The slices are traditionally served folded with a slice of cecina, a chickpeas cake, as street food in Pisa, its province and the nearby provinces of Leghorn and Lucca (https://en.wikipedia.org/wiki/List_of_pizza_varieties_by_country)
+http://link477.com/ds/pizza#slicedTomato Sliced Tomatoes
+http://link477.com/ds/pizza#seafood Sea food
+http://link477.com/ds/pizza#cheesyPizza Pizza with just cheese on it
+http://link477.com/ds/pizza#sundriedTomato Sundried tomatoes
+http://link477.com/ds/pizza#arugula Something that looks like rocket
+http://link477.com/ds/pizza#prosciuttoArugula Ham and Arugula Pizza
+http://link477.com/ds/pizza#sicilian Sicilian Pizza, https://en.wikipedia.org/wiki/Sicilian_pizza
+http://link477.com/ds/pizza#namedPizza Different types of pizza
+http://link477.com/ds/pizza#ingredients The contents of the Menu Items
+http://link477.com/ds/pizza#chicken Chicken pieces
+http://link477.com/ds/pizza#auberginePizza Aubergine Pizzza/Eggplant
