@@ -14,3 +14,9 @@ In pizzaOntology is the run on the ontology.
 ```bash
 owl2vec_star standalone --config_file default.cfg --ontology_file ..\..\ontology.owl
 ```
+
+Pizza Data
+
+```bash
+owl2vec_star standalone --config_file default.cfg --ontology_file data.owl
+```
