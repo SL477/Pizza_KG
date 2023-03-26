@@ -1,13 +1,17 @@
 # Ontology Embeddings
 
+## Run Owl2Vec Star
+
 Here we use [Owl2Vec](https://github.com/KRR-Oxford/OWL2Vec-Star) to create word embeddings for the Knowledge graph.
-Download Owl2Vec ZIP file, extract it and then put in the files.
 
 ```bash
 py OWL2Vec_Standalone.py -config_file default.cfg
 ```
 
-Change size to vector-size and remove iter parameter (using version 0.1), line 227. Change line 85/119/214 to use utf-8 encoding.
+Update all calls to open in owl2vec_star to include `encoding="utf-8"`.
+This is because some of the URLs from DBPedia have UTF-8 encodings.
+
+### pizzaOntology
 
 In pizzaOntology is the run on the ontology.
 
@@ -15,8 +19,18 @@ In pizzaOntology is the run on the ontology.
 owl2vec_star standalone --config_file default.cfg --ontology_file ..\..\ontology.owl
 ```
 
-Pizza Data
+### Pizza Data
+
+Pizza data stores the data on the run on the data.
 
 ```bash
 owl2vec_star standalone --config_file default.cfg --ontology_file data.owl
+```
+
+### Pizza Data New Seed
+
+This uses a new random seed.
+
+```bash
+owl2vec_star standalone --config_file pizzaData.cfg --ontology_file data.owl
 ```

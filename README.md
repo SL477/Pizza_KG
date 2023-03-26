@@ -82,6 +82,10 @@ Class Relationships:
 
 ![Class Relationships](https://github.com/SL477/Pizza_KG/blob/main/images/ClassRelationships.JPG)
 
+## Ontology Embeddings
+
+Here I used OWL2Vec to create various models from my pizza Knowledge Graph.
+
 ## Files
 
 - data.ttl: the data in the original ontology
