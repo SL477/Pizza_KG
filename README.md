@@ -80,11 +80,23 @@ Then run the query in the SPARQL file.
 
 Class Relationships:
 
-![Class Relationships](https://github.com/SL477/Pizza_KG/blob/main/images/ClassRelationships.JPG)
+![Class Relationships](/images/ClassRelationships.JPG)
+
+<!--(https://github.com/SL477/Pizza_KG/blob/main/images/ClassRelationships.JPG)-->
 
 ## Ontology Embeddings
 
 Here I used OWL2Vec to create various models from my pizza Knowledge Graph.
+
+### Vector Similarity
+
+| Words | Pizza Data Model | New Seed Model | Ontology Model |
+| :--: | :--: | :--: | :--: |
+|pizza vs [tef:margherita](http://link477.com/ds/pizza#margherita) | 0.19777332 | 0.18296033 | 0.29705462 |
+| margherita vs [tef:marherita](http://link477.com/ds/pizza#margherita) | 0.3494562 | 0.26561624 | 0.48218608 |
+| pizza vs [tef:pizza](http://link477.com/ds/pizza#pizza) | 0.22770958 | 0.2965466 | 0.23359077 |
+| american vs [tef:american](http://link477.com/ds/pizza#american) | 0.31192777 | 0.25724742 | 0.42699656 |
+| pizzaiola vs [tef:pizzaiola](http://link477.com/ds/pizza#pizzaiola) | 0.2567482 | 0.2311137 | 0.46955892 |
 
 ## Files
 

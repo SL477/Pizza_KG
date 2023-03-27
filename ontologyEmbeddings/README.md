@@ -34,3 +34,11 @@ This uses a new random seed.
 ```bash
 owl2vec_star standalone --config_file pizzaData.cfg --ontology_file data.owl
 ```
+
+## Vector Comparison
+
+Here we compare the different models and pairs of words. Using:
+
+```bash
+python3 ontologyEmbeddings/vector_comparison.py
+```

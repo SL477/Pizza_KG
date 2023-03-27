@@ -155,4 +155,26 @@ Here I used OWL 2 VEC to generate the embeddings for the ontology and the data.
 As there were characters in UTF-8 but not ASCII I had to modify the algorithm to use UTF-8 encodings.
 I tried using the reasoner and Weisfeiler-Leman walk, but these caused the algorithm to run for an indefinate amount of time.
 
+\section{Vector Similarity}
+\begin{center}
+	\begin{tabular}{ | c | c | c | c |}
+		\hline
+		\textbf{Words} & \textbf{Pizza Data Model} & \textbf{New Seed Model} & \textbf{Ontology Model} \\
+		\hline
+		pizza vs tef:margherita & 0.19777332 & 0.18296033 & 0.29705462 \\
+		\hline
+		margherita vs tef:margherita & 0.3494562 & 0.26561624 & 0.48218608 \\
+		\hline
+		pizza vs tef:pizza & 0.22770958 & 0.2965466 & 0.23359077 \\
+		\hline
+		american vs tef:american & 0.31192777 & 0.25724742 & 0.42699656 \\
+		\hline
+		pizzaiola vs tef:pizzaiola & 0.2567482 & 0.2311137 & 0.46955892 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+The ontology model has higher similarities than the two data models.
+With the Margherita word against its concept having the highest score.
+
 \end{document}
