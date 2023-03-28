@@ -6,7 +6,7 @@ The specification is [here](https://github.com/turing-knowledge-graphs/teaching/
 
 The final class hierarchy:
 
-![Class Hierarchy](/images/ClassHierarchy.JPG)
+![Class Hierarchy](https://github.com/SL477/Pizza_KG/blob/6fca04b2551f58a7955025b2caf3c7821c45d3d4/images/ClassHierarchy.JPG?raw=true)
 
 ## Ontology Modelling
 
@@ -113,6 +113,7 @@ Pizza Data Model:
 Pizza Data New Seed Model
 
 ![Pizza Data New Seed Model](/images/pizzaDataNSModelClusters.png)
+
 
 ## Files
 
