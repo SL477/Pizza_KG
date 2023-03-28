@@ -6,3 +6,7 @@ pandas==1.5.3
 pdoc==13.0.0
 rdflib==6.3.1
 SPARQLWrapper==2.0.0
+scikit-learn==0.24.2
+nltk==3.8.1
+owl2vec-star==0.2.0
+matplotlib==3.7.1

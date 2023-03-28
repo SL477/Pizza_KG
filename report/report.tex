@@ -87,7 +87,7 @@
 	\maketitle
 
 	\begin{abstract}
-		abstract-text
+Here I looked at building an ontology for Pizzas, bringing in the data from Kaggle, extending the ontology and aligning with Protegé's pizza ontology.
 	\end{abstract}
 \end{minipage}
 
@@ -147,5 +147,39 @@ The data in the final ontology was too much for the reasoner from the last chapt
 The reasoner in GraphDB was able to deal with it and I was able to run the SPARQL query to find the meaty pizzas.
 
 \lstinputlisting[caption={../ontologyAlignment/GetMeatyPizzas.sparqll}]{../ontologyAlignment/GetMeatyPizzas.sparql}
+
+\chapter{Ontology Embeddings}
+
+\section{Run OWL 2 Vec}
+Here I used OWL 2 VEC to generate the embeddings for the ontology and the data.
+As there were characters in UTF-8 but not ASCII I had to modify the algorithm to use UTF-8 encodings.
+I tried using the reasoner and Weisfeiler-Leman walk, but these caused the algorithm to run for an indefinate amount of time.
+
+\section{Vector Similarity}
+\begin{center}
+	\begin{tabular}{ | c | c | c | c |}
+		\hline
+		\textbf{Words} & \textbf{Pizza Data Model} & \textbf{New Seed Model} & \textbf{Ontology Model} \\
+		\hline
+		pizza vs tef:margherita & 0.19777332 & 0.18296033 & 0.29705462 \\
+		\hline
+		margherita vs tef:margherita & 0.3494562 & 0.26561624 & 0.48218608 \\
+		\hline
+		pizza vs tef:pizza & 0.22770958 & 0.2965466 & 0.23359077 \\
+		\hline
+		american vs tef:american & 0.31192777 & 0.25724742 & 0.42699656 \\
+		\hline
+		pizzaiola vs tef:pizzaiola & 0.2567482 & 0.2311137 & 0.46955892 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+The ontology model has higher similarities than the two data models.
+With the Margherita word against its concept having the highest score.
+
+\section{Clusters}
+Using PCA we can project the vectors into two components for the graph.
+PCA has split into three clusters.
+KMeans seems to look best with 8 clusters.
 
 \end{document}

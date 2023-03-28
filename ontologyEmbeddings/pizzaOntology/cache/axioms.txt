@@ -1,0 +1,418 @@
+http://link477.com/ds/pizza#american SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#breakfastPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#egg
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#germanSausage
+http://link477.com/ds/pizza#chickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#rocket SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pizzaSub SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#garlicPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cauliflower
+http://link477.com/ds/pizza#chickenPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#feta SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#bltPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#lettuce
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#capers
+http://link477.com/ds/pizza#pineapple SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#anchovies
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pineapple
+http://link477.com/ds/pizza#pugliese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#prosciuttoArugula SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#chickenPestoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pepper SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#breakfastPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#rosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#scallions SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#menuItem
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#anchovyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#anchovies
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#anchovies
+http://link477.com/ds/pizza#petitPois SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#sundriedTomato SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#fig SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#doughSticks SubClassOf http://link477.com/ds/pizza#menuItem
+http://link477.com/ds/pizza#eFichi SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#caprina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#basil
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#jalapenoPepper
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#pizza SubClassOf http://link477.com/ds/pizza#hasBase some http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pickle SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#goatsCheese SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#ham SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#beef SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#mushroom SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#cajunSpice SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#chickenPestoPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#onion SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#arugula SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#oil SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#slicedTomato
+http://link477.com/ds/pizza#egg SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#feta
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pineKernel
+http://link477.com/ds/pizza#bltPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#bltPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bacon
+http://link477.com/ds/pizza#tacoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#lettuce
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#burgerSauce
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#sultana
+http://link477.com/ds/pizza#pizzaBase SubClassOf http://link477.com/ds/pizza#ingredients
+http://link477.com/ds/pizza#gorgonzola SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#toma SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tobascoPepperSauce
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepperoni
+http://link477.com/ds/pizza#pizzaSubBase SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bacon
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#anchovyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#buffaloSauce
+http://link477.com/ds/pizza#cheddar SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#meatPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#chickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cheddar
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#toma
+http://link477.com/ds/pizza#bianca SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#pizzaRoll SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#meat SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pizzaType SubClassOf http://link477.com/ds/pizza#pizza
+http://link477.com/ds/pizza#spinach SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#capers SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fruttiDiMare SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#bianca SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oil
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#mushroom SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#scallions
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#peperonata
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#jalapenoPepper
+http://link477.com/ds/pizza#caprina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#goatsCheese
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#hotGreenPepper
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#jalapenoPepper SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#sundriedTomato
+http://link477.com/ds/pizza#tomato SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#threeCheese SubClassOf http://link477.com/ds/pizza#hasTopping exactly 3 http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#garlicPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#beef
+http://link477.com/ds/pizza#caprina SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#basil
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oil
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oregano
+http://link477.com/ds/pizza#curry SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#bacon SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#pesto SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#germanSausage
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#pizzaBurger SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#germanSausage
+http://link477.com/ds/pizza#pizzaTopping SubClassOf http://link477.com/ds/pizza#ingredients
+http://link477.com/ds/pizza#parmezan SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#peperonata SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#aubergine SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#blueCheese SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#roll SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#garlic SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#corn
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pineapple
+http://link477.com/ds/pizza#chickenPestoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oil
+http://link477.com/ds/pizza#interestingPizza SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#mushroom SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#vegetarianPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#fruttiDiMare SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#mushroom SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#bianca SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#sourCream SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pizzaSlice SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#ricotta SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#tacoChips SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#artichokes
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#tacoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#artichokes
+http://link477.com/ds/pizza#margherita SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#cheesyPizza EquivalentTo http://link477.com/ds/pizza#pizza and http://link477.com/ds/pizza#hasTopping min 2 http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#lettuce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#spinach
+http://link477.com/ds/pizza#chickenParmPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#leek SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fontina SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#fruttiDiMare SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#leek
+http://link477.com/ds/pizza#manchurianSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#spinach
+http://link477.com/ds/pizza#vegetarianPizza SubClassOf Not(..\..\ontology.hasTopping.some(..\..\ontology.seafood))
+http://link477.com/ds/pizza#sweetPepper SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#margherita SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#greekPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#tobascoPepperSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#mozzarella SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#smallPizzaBase SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#curryPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#gobiManchurianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#manchurianSauce
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#tacoPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#granaPadano SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#hotSpicedBeef SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#prawns
+http://link477.com/ds/pizza#pizzaSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#anchovies SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#breakfastPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#tacoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tacoChips
+http://link477.com/ds/pizza#rosa SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#cookieDough SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#granaPadano
+http://link477.com/ds/pizza#auberginePizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#sultana SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#vegetarianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#veneziana SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#chickenPestoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pesto
+http://link477.com/ds/pizza#rosemary SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#hotGreenPepper SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#pizzaSliceBase SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#germanSausage SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#garlicPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oregano
+http://link477.com/ds/pizza#eFichi SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#fig
+http://link477.com/ds/pizza#romana SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#chickenParmPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#auberginePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#aubergine
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#breakfastPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#cheesyPizza SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#basil
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepperoni
+http://link477.com/ds/pizza#namedPizza SubClassOf http://link477.com/ds/pizza#pizza
+http://link477.com/ds/pizza#margherita SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#prosciuttoArugula SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bacon
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#basil SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#anchovyPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#anchovyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#threeCheese SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#pineKernel SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#threeCheese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#cookiePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cookieDough
+http://link477.com/ds/pizza#cajun SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#hotGreenPepper
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#chickenParmPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#capers
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#meatballs
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#mixedSeafood SubClassOf http://link477.com/ds/pizza#seafood
+http://link477.com/ds/pizza#caprina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#quattroFormaggi SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#blueCheese
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepper
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#artichokes
+http://link477.com/ds/pizza#buffaloSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#chickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#corn SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#chickenPestoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#eFichi SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#hotSpicedBeef
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#asparagus
+http://link477.com/ds/pizza#garlicPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#hotGreenPepper
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#glutenFreeBase SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#prosciuttoArugula SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#rocket
+http://link477.com/ds/pizza#hariMirchPineapplePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#chicken SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#mushrooms SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#anchovies
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bbqSauce
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#eFichi SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#interestingPizza EquivalentTo http://link477.com/ds/pizza#pizza and http://link477.com/ds/pizza#hasTopping min 3 http://www.w3.org/2002/07/owl#Thing
+http://link477.com/ds/pizza#parmese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#ham
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#glutenFreePizza SubClassOf http://link477.com/ds/pizza#pizzaType
+http://link477.com/ds/pizza#quattroFormaggi SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pizza SubClassOf http://link477.com/ds/pizza#menuItem
+http://link477.com/ds/pizza#breakfastPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#germanSausage
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#hotGreenPepper
+http://link477.com/ds/pizza#threeCheese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#petitPois
+http://link477.com/ds/pizza#fruttiDiMare SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mixedSeafood
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#pisan SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#anchovies
+http://link477.com/ds/pizza#auberginePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#pepperoni SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#seafood SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#chickenParmPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#auberginePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#peperonata
+http://link477.com/ds/pizza#quattroStagioni SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#prawns SubClassOf http://link477.com/ds/pizza#seafood
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oregano
+http://link477.com/ds/pizza#quattroFormaggi SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#pizzaSlice SubClassOf http://link477.com/ds/pizza#hasBase some http://link477.com/ds/pizza#pizzaSliceBase
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pickle
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#parmezan
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#bbqSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#leek
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#americanHot SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cajunSpice
+http://link477.com/ds/pizza#chickenParmPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bacon
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#oregano SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#chicken
+http://link477.com/ds/pizza#asparagus SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#polloAdAstra SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#sweetPepper
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#caprina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#sundriedTomato
+http://link477.com/ds/pizza#american SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#meatPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#burgerSauce SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#bruschettaPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#american SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#vegetarianPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#cowboyPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#cheddar
+http://link477.com/ds/pizza#artichokes SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#american SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepperoni
+http://link477.com/ds/pizza#cheese SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#capricciosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#quattroFormaggi SubClassOf http://link477.com/ds/pizza#hasTopping exactly 4 http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#pugliese SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#olives SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#pizzetta SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#prosciuttoArugula SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#arugula
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#bakedPotatoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#sourCream
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#soho SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#biancaFiorentinaPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#olives
+http://link477.com/ds/pizza#stracchino SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#bltPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#laReine SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#meatPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#garlic
+http://link477.com/ds/pizza#tacoPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#meatPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#rosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#sicilian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#caciocavallo
+http://link477.com/ds/pizza#meatballs SubClassOf http://link477.com/ds/pizza#meat
+http://link477.com/ds/pizza#supremePizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepperoni
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oil
+http://link477.com/ds/pizza#giardiniera SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mushrooms
+http://link477.com/ds/pizza#viennese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#burger SubClassOf http://link477.com/ds/pizza#pizzaBase
+http://link477.com/ds/pizza#pugliese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#caciocavallo SubClassOf http://link477.com/ds/pizza#cheese
+http://link477.com/ds/pizza#sloppyGiuseppe SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#rosa SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#gorgonzola
+http://link477.com/ds/pizza#cookiePizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#napoletana SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#capers
+http://link477.com/ds/pizza#bbqPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#pepper
+http://link477.com/ds/pizza#buffaloChickenPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#hawaiian SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#tomato
+http://link477.com/ds/pizza#bltPizza SubClassOf http://link477.com/ds/pizza#namedPizza
+http://link477.com/ds/pizza#cauliflower SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#fiorentina SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#mozzarella
+http://link477.com/ds/pizza#glutenFreePizza SubClassOf http://link477.com/ds/pizza#hasBase some http://link477.com/ds/pizza#glutenFreeBase
+http://link477.com/ds/pizza#pizzetta SubClassOf http://link477.com/ds/pizza#hasBase some http://link477.com/ds/pizza#smallPizzaBase
+http://link477.com/ds/pizza#baconCheeseBurgerPizza SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#bacon
+http://link477.com/ds/pizza#pizzaiola SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#oil
+http://link477.com/ds/pizza#pugliese SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#onion
+http://link477.com/ds/pizza#slicedTomato SubClassOf http://link477.com/ds/pizza#pizzaTopping
+http://link477.com/ds/pizza#princeCarlo SubClassOf http://link477.com/ds/pizza#hasTopping some http://link477.com/ds/pizza#rosemary
+http://link477.com/ds/pizza#pizzaSteak SubClassOf http://link477.com/ds/pizza#hasBase some http://link477.com/ds/pizza#roll

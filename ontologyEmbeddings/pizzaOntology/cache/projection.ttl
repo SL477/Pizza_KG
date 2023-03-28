@@ -1,0 +1,1336 @@
+@prefix ns1: <http://link477.com/ds/pizza#> .
+@prefix obo1: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix obo2: <http://www.geneontology.org/formats/oboInOWL#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2vec: <http://www.semanticweb.org/owl2vec#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://link477.com/ds/pizza> rdfs:label "Pizza Knowledge Graph"^^xsd:string ;
+    rdfs:comment "Pizza Knowledge Graph, created by Thomas Fishwick, 2023-02-11"^^xsd:string .
+
+ns1:address rdfs:label "Restaurant Address"^^xsd:string ;
+    rdfs:comment "The address of the pizza restaurant"^^xsd:string .
+
+ns1:category rdfs:label "Category"^^xsd:string ;
+    rdfs:comment "The various categories of the restaurant"^^xsd:string .
+
+ns1:cityHasRestaurant rdfs:label "City has Restaurant"^^xsd:string ;
+    rdfs:comment "The restaurants a city has"^^xsd:string .
+
+ns1:cityLocatedIn rdfs:label "City located in"^^xsd:string ;
+    rdfs:comment "The province a city is in"^^xsd:string .
+
+ns1:creator rdfs:label "Thomas Fishwick"@en ;
+    rdfs:comment "Created by Thomas Fishwick, 2023-02-11"@en .
+
+ns1:dateAdded rdfs:label "Date added"^^xsd:string ;
+    rdfs:comment "The date the item was added to the database"^^xsd:string .
+
+ns1:dateUpdated rdfs:label "Date updated"^^xsd:string ;
+    rdfs:comment "The date the item was updated in the database"^^xsd:string .
+
+ns1:hasBase rdfs:label "Has Base"^^xsd:string ;
+    rdfs:comment "The type of base a pizza has"^^xsd:string .
+
+ns1:hasCity rdfs:label "Province has city"^^xsd:string ;
+    rdfs:comment "The cities a province has"^^xsd:string .
+
+ns1:hasIngredient rdfs:label "Has Ingredient"^^xsd:string ;
+    rdfs:comment "The ingredients of a menu item"^^xsd:string .
+
+ns1:hasMenuItem rdfs:label "Has Menu Item"^^xsd:string ;
+    rdfs:comment "The menu items a restaurant has"^^xsd:string .
+
+ns1:hasProvince rdfs:label "Country Has Province"^^xsd:string ;
+    rdfs:comment "The provinces within a country"^^xsd:string .
+
+ns1:hasTopping rdfs:label "Has Topping"^^xsd:string ;
+    rdfs:comment "The toppings a pizza has"^^xsd:string .
+
+ns1:id rdfs:label "ID"^^xsd:string ;
+    rdfs:comment "The ID of the menu item"^^xsd:string .
+
+ns1:isBaseOf rdfs:label "Is Base Of"^^xsd:string ;
+    rdfs:comment "The pizzas a base makes"^^xsd:string .
+
+ns1:isIngredientOf rdfs:label "Is Ingredient Of"^^xsd:string ;
+    rdfs:comment "The food item an ingredient makes"^^xsd:string .
+
+ns1:isToppingOf rdfs:label "Is Topping Of"^^xsd:string ;
+    rdfs:comment "The pizzas a topping makes up"^^xsd:string .
+
+ns1:keys rdfs:label "The keys of the item"^^xsd:string ;
+    rdfs:comment "The keys of the menu item"^^xsd:string .
+
+ns1:latitude rdfs:label "Latitude"^^xsd:string ;
+    rdfs:comment "The latitude of the restaurant"^^xsd:string .
+
+ns1:longitude rdfs:label "Longitude"^^xsd:string ;
+    rdfs:comment "The longitude of the restaurant"^^xsd:string .
+
+ns1:menuPageURL rdfs:label "Menu Page URL"^^xsd:string ;
+    rdfs:comment "The menu page URL"^^xsd:string .
+
+ns1:menus.amountMax rdfs:label "Max amount of the menu"^^xsd:string ;
+    rdfs:comment "The maximum amount on the menu"^^xsd:string .
+
+ns1:menus.amountMin rdfs:label "Min amount of the menu"^^xsd:string ;
+    rdfs:comment "The minimum amount on the menu"^^xsd:string .
+
+ns1:menus.currency rdfs:label "Menu currency"^^xsd:string ;
+    rdfs:comment "The currency of the menu"^^xsd:string .
+
+ns1:menus.dateSeen rdfs:label "Menu date seen"^^xsd:string ;
+    rdfs:comment "The date times that the menu was seen"^^xsd:string .
+
+ns1:menus.description rdfs:label "Menu description"^^xsd:string ;
+    rdfs:comment "The description/ingrediants of the menu item"^^xsd:string .
+
+ns1:menus.name rdfs:label "Menu item name"^^xsd:string ;
+    rdfs:comment "The name of the menu item"^^xsd:string .
+
+ns1:pizzaSize rdfs:label "Pizza size"^^xsd:string ;
+    rdfs:comment "The size of the pizza in inches"^^xsd:string .
+
+ns1:postalCode rdfs:label "Post code"^^xsd:string ;
+    rdfs:comment "Post code of the restaurant"^^xsd:string .
+
+ns1:priceRangeCurrency rdfs:label "Price Range Currency"^^xsd:string ;
+    rdfs:comment "The price range of the menu item's currency"^^xsd:string .
+
+ns1:priceRangeMax rdfs:label "Price range max"^^xsd:string ;
+    rdfs:comment "Maximum price range"^^xsd:string .
+
+ns1:priceRangeMin rdfs:label "Price range min"^^xsd:string ;
+    rdfs:comment "Minimum price range of the menu item"^^xsd:string .
+
+ns1:primaryCategories rdfs:label "Primary Categories"^^xsd:string ;
+    rdfs:comment "The primary categroies of the restaurant"^^xsd:string .
+
+ns1:provinceLocatedIn rdfs:label "Province Located In"^^xsd:string ;
+    rdfs:comment "The country a province is within"^^xsd:string .
+
+ns1:restaurantInCity rdfs:label "Restaurant In City"^^xsd:string ;
+    rdfs:comment "The city a restaurant is in"^^xsd:string .
+
+ns1:restaurantName rdfs:label "Restaurant Name"^^xsd:string ;
+    rdfs:comment "The name of the restaurant"^^xsd:string .
+
+ns1:servedInRestaurant rdfs:label "Served In Restaurant"^^xsd:string ;
+    rdfs:comment "The restaurant a menu item is served in"^^xsd:string .
+
+ns1:burger rdfs:label "Burger"^^xsd:string ;
+    rdfs:comment "Burger"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:country rdfs:label "Country"^^xsd:string ;
+    ns1:hasProvince ns1:province ;
+    rdfs:comment "The country a restaurant is in"^^xsd:string .
+
+ns1:curry rdfs:label "Curry"^^xsd:string ;
+    rdfs:comment "Curry Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:curryPizza rdfs:label "Curry Pizza"^^xsd:string ;
+    rdfs:comment "Curry Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza .
+
+ns1:doughSticks rdfs:label "Dough Sticks"^^xsd:string ;
+    rdfs:comment "Dough Sticks"^^xsd:string ;
+    rdfs:subClassOf ns1:menuItem .
+
+ns1:fontina rdfs:label "Fontina"^^xsd:string ;
+    rdfs:comment "Fontina"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese .
+
+ns1:pizzaBurger rdfs:label "Pizza Burger"^^xsd:string ;
+    rdfs:comment "Pizza Burger"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaType .
+
+ns1:pizzaRoll rdfs:label "Pizza Roll"^^xsd:string ;
+    rdfs:comment "Pizza Roll"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaType .
+
+ns1:pizzaSauce rdfs:label "Pizza Sauce"^^xsd:string ;
+    rdfs:comment "Pizza Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pizzaSub rdfs:label "Pizza Sub"^^xsd:string ;
+    rdfs:comment "A pizza sub"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaType .
+
+ns1:pizzaSubBase rdfs:label "Pizza Sub Base"^^xsd:string ;
+    rdfs:comment "A base for a pizza sub"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:ricotta rdfs:label "Ricotta"^^xsd:string ;
+    rdfs:comment "Ricotta"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese .
+
+ns1:stracchino rdfs:label "Stracchino"^^xsd:string ;
+    rdfs:comment "Stracchino"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese .
+
+ns1:american rdfs:label "American"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:pepperoni,
+        ns1:tomato ;
+    rdfs:comment "American Pizza/pepperoni"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:americanHot rdfs:label "American Hot"^^xsd:string ;
+    ns1:hasTopping ns1:hotGreenPepper,
+        ns1:jalapenoPepper,
+        ns1:mozzarella,
+        ns1:pepperoni,
+        ns1:tomato ;
+    rdfs:comment "A spicy American pizza with chilli peppers"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:anchovyPizza rdfs:label "Anchovy Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:anchovies,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Anchovy Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:arugula rdfs:label "Arugula"^^xsd:string ;
+    rdfs:comment "Something that looks like rocket"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:asparagus rdfs:label "Asparagus"^^xsd:string ;
+    rdfs:comment "A vegetable"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:aubergine rdfs:label "Aubergine"^^xsd:string ;
+    rdfs:comment "Aubergine/eggplant"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:auberginePizza rdfs:label "Aubergine Pizzza"^^xsd:string ;
+    ns1:hasTopping ns1:aubergine,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Aubergine Pizzza/Eggplant"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:baconCheeseBurgerPizza rdfs:label "Bacon Cheeseburger Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:bacon,
+        ns1:burgerSauce,
+        ns1:cheddar,
+        ns1:mozzarella,
+        ns1:pickle,
+        ns1:tomato ;
+    rdfs:comment "Bacon Cheeseburger Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:bakedPotatoPizza rdfs:label "Baked Potato Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:bacon,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:sourCream,
+        ns1:tomato ;
+    rdfs:comment "Baked Potato Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:bbqPizza rdfs:label "BBQ Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:bacon,
+        ns1:bbqSauce,
+        ns1:corn,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:scallions,
+        ns1:tomato ;
+    rdfs:comment "BBQ Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:bbqSauce rdfs:label "BBQ Sauce"^^xsd:string ;
+    rdfs:comment "BBQ Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:bianca rdfs:label "Pizza Bianca"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:oil ;
+    rdfs:comment "White pizza. No tomato. Olive oil, salt, occasionally herbs"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:biancaFiorentinaPizza rdfs:label "Bianca Fiorentina Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:garlic,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:parmezan,
+        ns1:spinach ;
+    rdfs:comment "Bianca Fiorentina Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:bltPizza rdfs:label "BLT Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:bacon,
+        ns1:lettuce,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "BLT Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:breakfastPizza rdfs:label "Breakfast Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:egg,
+        ns1:germanSausage,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Breakfast Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:bruschettaPizza rdfs:label "Bruschetta Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:chicken,
+        ns1:garlic,
+        ns1:mozzarella,
+        ns1:parmezan,
+        ns1:sundriedTomato,
+        ns1:tomato ;
+    rdfs:comment "Bruschetta Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:buffaloChickenPizza rdfs:label "Buffalo Chicken Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:blueCheese,
+        ns1:buffaloSauce,
+        ns1:chicken,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Buffalo Chicken Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:buffaloSauce rdfs:label "Buffalo Sauce"^^xsd:string ;
+    rdfs:comment "Buffalo Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:burgerSauce rdfs:label "Burger Sauce"^^xsd:string ;
+    rdfs:comment "Burger Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cajun rdfs:label "Cajun Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:onion,
+        ns1:peperonata,
+        ns1:prawns,
+        ns1:tobascoPepperSauce,
+        ns1:tomato ;
+    rdfs:comment "Cajun Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:cajunSpice rdfs:label "Cajun Spice"^^xsd:string ;
+    rdfs:comment "Cajun Spice"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:capricciosa rdfs:label "Pizza Capricciosa"^^xsd:string ;
+    ns1:hasTopping ns1:artichokes,
+        ns1:ham,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:oil,
+        ns1:olives,
+        ns1:tomato ;
+    rdfs:comment "Pizza with mozzarella, tomato, mushrooms, artichokes, cooked ham, olives, oil"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:caprina rdfs:label "Caprina Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:goatsCheese,
+        ns1:mozzarella,
+        ns1:sundriedTomato,
+        ns1:tomato ;
+    rdfs:comment "Caprina Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:cauliflower rdfs:label "Cauiflower"^^xsd:string ;
+    rdfs:comment "Cauliflower"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cheesyPizza rdfs:label "Cheesy Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cheese ;
+    rdfs:comment "Pizza with just cheese on it"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza,
+        ns1:pizzaType .
+
+ns1:chickenParmPizza rdfs:label "Chicken Parm Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:chicken,
+        ns1:mozzarella,
+        ns1:parmezan,
+        ns1:tomato ;
+    rdfs:comment "Chicken Parm Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:chickenPestoPizza rdfs:label "Chicken Pesto Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:chicken,
+        ns1:mozzarella,
+        ns1:pesto,
+        ns1:tomato ;
+    rdfs:comment "Chicken Pesto Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:chickenPizza rdfs:label "Chicken Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:chicken,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Chicken Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:city rdfs:label "City"^^xsd:string ;
+    ns1:cityHasRestaurant ns1:restaurant ;
+    ns1:cityLocatedIn ns1:province ;
+    rdfs:comment "The city a restaurant is in"^^xsd:string .
+
+ns1:cookieDough rdfs:label "Cookie Dough"^^xsd:string ;
+    rdfs:comment "Cookie Dough"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cookiePizza rdfs:label "Cookie Dough Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cookieDough ;
+    rdfs:comment "Cookie Dough Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:corn rdfs:label "Corn"^^xsd:string ;
+    rdfs:comment "Corn"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cowboyPizza rdfs:label "Cowboy Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cheddar,
+        ns1:germanSausage,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:olives,
+        ns1:pepperoni,
+        ns1:tomato ;
+    rdfs:comment "Cowboy Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:eFichi rdfs:label "e fichi"^^xsd:string ;
+    ns1:hasTopping ns1:fig,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Figs on pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:egg rdfs:label "Egg"^^xsd:string ;
+    rdfs:comment "Egg"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:fig rdfs:label "Fig"^^xsd:string ;
+    rdfs:comment "Fig"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:fiorentina rdfs:label "Fiorentina Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:garlic,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:parmezan,
+        ns1:spinach,
+        ns1:tomato ;
+    rdfs:comment "Fiorentina Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:fruttiDiMare rdfs:label "Frutti Di Mare"^^xsd:string ;
+    ns1:hasTopping ns1:garlic,
+        ns1:mixedSeafood,
+        ns1:tomato ;
+    rdfs:comment "Seafood pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:garlicPizza rdfs:label "Garlic Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:garlic,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Garlic Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:giardiniera rdfs:label "Giardiniera Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:leek,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:olives,
+        ns1:peperonata,
+        ns1:petitPois,
+        ns1:slicedTomato,
+        ns1:tomato ;
+    rdfs:comment "Giardiniera Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:glutenFreeBase rdfs:label "Gluten Free Base"^^xsd:string ;
+    rdfs:comment "Gluten Free Base"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:glutenFreePizza rdfs:label "Gluten Free Pizza"^^xsd:string ;
+    ns1:hasBase ns1:glutenFreeBase ;
+    rdfs:comment "Gluten Free Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza,
+        ns1:pizzaType .
+
+ns1:gobiManchurianPizza rdfs:label "Gobi Manchurian Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cauliflower,
+        ns1:garlic,
+        ns1:manchurianSauce,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:tomato ;
+    rdfs:comment "Gobi Manchurian Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:greekPizza rdfs:label "Greek Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:artichokes,
+        ns1:basil,
+        ns1:feta,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:tomato ;
+    rdfs:comment "Greek Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:hariMirchPineapplePizza rdfs:label "Hari Mirch Pineapple Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:hotGreenPepper,
+        ns1:jalapenoPepper,
+        ns1:mozzarella,
+        ns1:pepper,
+        ns1:pineapple,
+        ns1:tomato ;
+    rdfs:comment "Hari Mirch Pineapple Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:hawaiian rdfs:label "Hawaiian Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:bacon,
+        ns1:ham,
+        ns1:mozzarella,
+        ns1:pineapple,
+        ns1:tomato ;
+    rdfs:comment "Hawiian Pizza, https://en.wikipedia.org/wiki/Hawaiian_pizza (inedible)"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:interestingPizza rdfs:label "Interesting Pizza"^^xsd:string ;
+    rdfs:comment "A pizza with at least 3 toppings"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza,
+        ns1:pizzaType .
+
+ns1:laReine rdfs:label "La Reine Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:ham,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:olives,
+        ns1:tomato ;
+    rdfs:comment "La Reine Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:manchurianSauce rdfs:label "Manchurian Sauce"^^xsd:string ;
+    rdfs:comment "Manchurian Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:margherita rdfs:label "Margherita Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Cheese pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:meatPizza rdfs:label "Meat Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:meat,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "A pizza with meat on it"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:mushroom rdfs:label "Mushroom Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:tomato ;
+    rdfs:comment "Mushroom pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:napoletana rdfs:label "Napoletana Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:anchovies,
+        ns1:capers,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:tomato ;
+    rdfs:comment "Napoletana Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:parmese rdfs:label "Parmese Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:asparagus,
+        ns1:ham,
+        ns1:mozzarella,
+        ns1:parmezan,
+        ns1:tomato ;
+    rdfs:comment "Ham pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:pesto rdfs:label "Pesto"^^xsd:string ;
+    rdfs:comment "Pesto Sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:petitPois rdfs:label "Petit Pois"^^xsd:string ;
+    rdfs:comment "Small peas"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pickle rdfs:label "Pickle"^^xsd:string ;
+    rdfs:comment "Pickle"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pineKernel rdfs:label "Pine Kernel"^^xsd:string ;
+    rdfs:comment "Pine Kernel"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pisan rdfs:label "Pisan Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:anchovies,
+        ns1:capers,
+        ns1:granaPadano,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Pisan pizza (pizza pisana) is a smaller and thicker pizza baked into metal plates and traditionally served with anchovies, capers and grated Grana Padano cheese. The slices are traditionally served folded with a slice of cecina, a chickpeas cake, as street food in Pisa, its province and the nearby provinces of Leghorn and Lucca (https://en.wikipedia.org/wiki/List_of_pizza_varieties_by_country)"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:pizzaSlice rdfs:label "Pizza Slice"^^xsd:string ;
+    ns1:hasBase ns1:pizzaSliceBase ;
+    rdfs:comment "Slice of pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza,
+        ns1:pizzaType .
+
+ns1:pizzaSliceBase rdfs:label "Pizza Slice"^^xsd:string ;
+    rdfs:comment "Pizza Slice"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:pizzaSteak rdfs:label "Pizza Steak"^^xsd:string ;
+    ns1:hasBase ns1:roll ;
+    ns1:hasTopping ns1:beef,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:pepper,
+        ns1:tomato ;
+    rdfs:comment "Pizza Steak"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:pizzaiola rdfs:label "Pizzaiola"^^xsd:string ;
+    ns1:hasTopping ns1:basil,
+        ns1:garlic,
+        ns1:meat,
+        ns1:oil,
+        ns1:oregano,
+        ns1:tomato ;
+    rdfs:comment "Pizzaiola, meat cooked pizza style"^^xsd:string ;
+    rdfs:subClassOf ns1:menuItem,
+        ns1:pizza .
+
+ns1:pizzetta rdfs:label "Pizzetta"^^xsd:string ;
+    ns1:hasBase ns1:smallPizzaBase ;
+    rdfs:comment "Small pizza, ranges in size from three inches to a small personal-sized pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:polloAdAstra rdfs:label "Pollo Ad Astra Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cajunSpice,
+        ns1:chicken,
+        ns1:garlic,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:sweetPepper,
+        ns1:tomato ;
+    rdfs:comment "Spicy chicken pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:princeCarlo rdfs:label "Prince Carlo Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:leek,
+        ns1:mozzarella,
+        ns1:parmezan,
+        ns1:rosemary,
+        ns1:tomato ;
+    rdfs:comment "Leek, ham and rosemary pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:prosciuttoArugula rdfs:label "Prosciutto Arugula Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:arugula,
+        ns1:ham,
+        ns1:mozzarella ;
+    rdfs:comment "Ham and Arugula Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:province rdfs:label "Province"^^xsd:string ;
+    ns1:hasCity ns1:city ;
+    ns1:provinceLocatedIn ns1:country ;
+    rdfs:comment "The province a restaurant is in"^^xsd:string .
+
+ns1:pugliese rdfs:label "Pizza Pugliese"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:onion,
+        ns1:tomato ;
+    rdfs:comment "Pizza Pugliese  https://en.wikipedia.org/wiki/Pizza_pugliese, tomato, mozzarella and onion"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:quattroFormaggi rdfs:label "Quattro Formaggi"^^xsd:string ;
+    ns1:hasTopping ns1:cheese,
+        ns1:tomato ;
+    rdfs:comment "Four cheese pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:quattroStagioni rdfs:label "Pizza Quattro Stagioni"^^xsd:string ;
+    ns1:hasTopping ns1:artichokes,
+        ns1:basil,
+        ns1:ham,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:olives,
+        ns1:tomato ;
+    rdfs:comment "Four seasons pizza, https://en.wikipedia.org/wiki/Pizza_quattro_stagioni. A pizza divided into four sections of toppings"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:restaurant rdfs:label "Restaurant"^^xsd:string ;
+    ns1:hasMenuItem ns1:menuItem ;
+    ns1:restaurantInCity ns1:city ;
+    rdfs:comment "The restaurant that serves pizzas"^^xsd:string .
+
+ns1:rocket rdfs:label "Rocket"^^xsd:string ;
+    rdfs:comment "Rocket, vegetable leaves"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:roll rdfs:label "Roll"^^xsd:string ;
+    rdfs:comment "Roll"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:romana rdfs:label "Pizza Romana"^^xsd:string ;
+    ns1:hasTopping ns1:anchovies,
+        ns1:mozzarella,
+        ns1:oil,
+        ns1:oregano,
+        ns1:tomato ;
+    rdfs:comment "Pizza with tomato, mozzarella, anchozies, oregano, oil"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:rosa rdfs:label "Rosa Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:gorgonzola,
+        ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Gorgonzola pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:rosemary rdfs:label "Rosemary"^^xsd:string ;
+    rdfs:comment "Rosemary, a type of herb"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:scallions rdfs:label "Scallions"^^xsd:string ;
+    rdfs:comment "Scallions"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:sicilian rdfs:label "Sicilian Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:anchovies,
+        ns1:caciocavallo,
+        ns1:onion,
+        ns1:toma,
+        ns1:tomato ;
+    rdfs:comment "Sicilian Pizza, https://en.wikipedia.org/wiki/Sicilian_pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:slicedTomato rdfs:label "Sliced Tomato"^^xsd:string ;
+    rdfs:comment "Sliced Tomatoes"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:sloppyGiuseppe rdfs:label "Sloppy Giuseppe Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:hotGreenPepper,
+        ns1:hotSpicedBeef,
+        ns1:mozzarella,
+        ns1:onion,
+        ns1:tomato ;
+    rdfs:comment "Sloppy Giuseppe Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:smallPizzaBase rdfs:label "Small Pizza Base"^^xsd:string ;
+    rdfs:comment "Small Pizza Base"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaBase .
+
+ns1:soho rdfs:label "Soho Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:garlic,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:parmezan,
+        ns1:rocket,
+        ns1:tomato ;
+    rdfs:comment "Soho Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:sourCream rdfs:label "Sour Cream"^^xsd:string ;
+    rdfs:comment "Sour Cream"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:sultana rdfs:label "Sultana"^^xsd:string ;
+    rdfs:comment "Sultana, dried fruit"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:supremePizza rdfs:label "Supreme Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:germanSausage,
+        ns1:hotGreenPepper,
+        ns1:meatballs,
+        ns1:mushrooms,
+        ns1:onion,
+        ns1:pepperoni,
+        ns1:tomato ;
+    rdfs:comment "Supreme Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:sweetPepper rdfs:label "Sweet Pepper"^^xsd:string ;
+    rdfs:comment "Sweet Pepper"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:tacoChips rdfs:label "Taco Chips"^^xsd:string ;
+    rdfs:comment "Taco Chips"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:tacoPizza rdfs:label "Taco Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:lettuce,
+        ns1:mozzarella,
+        ns1:tacoChips,
+        ns1:tomato ;
+    rdfs:comment "Taco Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:threeCheese rdfs:label "Three Cheese Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:cheese,
+        ns1:tomato ;
+    rdfs:comment "Three cheese pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:tobascoPepperSauce rdfs:label "Tobasco Pepper Sauce"^^xsd:string ;
+    rdfs:comment "A spicy sauce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:vegetarianPizza rdfs:label "Vegetarian Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:mozzarella,
+        ns1:tomato ;
+    rdfs:comment "Pizzas suitable for vegetarians"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:veneziana rdfs:label "Veneziana Pizza"^^xsd:string ;
+    ns1:hasTopping ns1:capers,
+        ns1:mozzarella,
+        ns1:olives,
+        ns1:onion,
+        ns1:pineKernel,
+        ns1:sultana,
+        ns1:tomato ;
+    rdfs:comment "Veneziana Pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:viennese rdfs:label "Pizza Viennese"^^xsd:string ;
+    ns1:hasTopping ns1:germanSausage,
+        ns1:mozzarella,
+        ns1:oil,
+        ns1:oregano,
+        ns1:tomato ;
+    rdfs:comment "Pizza with tomato, mozzarella, German sausage, oregano, oil"^^xsd:string ;
+    rdfs:subClassOf ns1:namedPizza,
+        ns1:pizza .
+
+ns1:beef rdfs:label "Beef"^^xsd:string ;
+    rdfs:comment "Beef"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:blueCheese rdfs:label "Blue Cheese"^^xsd:string ;
+    rdfs:comment "Blue Cheese"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:caciocavallo rdfs:label "Caciocavallo"^^xsd:string ;
+    rdfs:comment "Caciocavallo"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:feta rdfs:label "Feta"^^xsd:string ;
+    rdfs:comment "Feta"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:goatsCheese rdfs:label "Goats Cheese"^^xsd:string ;
+    rdfs:comment "Cheese made from goats milk"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:gorgonzola rdfs:label "Gorgonzola"^^xsd:string ;
+    rdfs:comment "Gorgonzola"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:granaPadano rdfs:label "Grana Padano"^^xsd:string ;
+    rdfs:comment "Grana Padano"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:hotSpicedBeef rdfs:label "Hot Spiced Beef"^^xsd:string ;
+    rdfs:comment "Hot Spiced Beef"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:ingredients rdfs:label "Ingredients"^^xsd:string ;
+    ns1:isIngredientOf ns1:menuItem ;
+    owl2vec:superClassOf ns1:pizzaBase,
+        ns1:pizzaTopping ;
+    rdfs:comment "The contents of the Menu Items"^^xsd:string .
+
+ns1:jalapenoPepper rdfs:label "Jalapeno Pepper"^^xsd:string ;
+    rdfs:comment "Jalapeno Pepper"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:leek rdfs:label "Leek"^^xsd:string ;
+    rdfs:comment "Long green vegetable"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:lettuce rdfs:label "Lettuce"^^xsd:string ;
+    rdfs:comment "Lettuce"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:meatballs rdfs:label "Meatballs"^^xsd:string ;
+    rdfs:comment "Meatballs"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:mixedSeafood rdfs:label "Mixed Seafood"^^xsd:string ;
+    rdfs:comment "Mixed Seafood"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping,
+        ns1:seafood .
+
+ns1:peperonata rdfs:label "Peperonata"^^xsd:string,
+        "Sliced peppers, garlic and basil"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pepper rdfs:label "Pepper"^^xsd:string ;
+    rdfs:comment "Red/Green Peppers"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pineapple rdfs:label "Pineapple"^^xsd:string ;
+    rdfs:comment "Pineapple"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:prawns rdfs:label "Prawns"^^xsd:string ;
+    rdfs:comment "Prawns"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping,
+        ns1:seafood .
+
+ns1:seafood rdfs:label "Seafood"^^xsd:string ;
+    owl2vec:superClassOf ns1:mixedSeafood,
+        ns1:prawns ;
+    rdfs:comment "Sea food"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:spinach rdfs:label "Spinach"^^xsd:string ;
+    rdfs:comment "Spinach"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:sundriedTomato rdfs:label "Sundried Tomato"^^xsd:string ;
+    rdfs:comment "Sundried tomatoes"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:toma rdfs:label "Toma"^^xsd:string ;
+    rdfs:comment "Toma"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:artichokes rdfs:label "Artichokes"^^xsd:string ;
+    rdfs:comment "Artichokes"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:basil rdfs:label "Basil"^^xsd:string ;
+    rdfs:comment "Basil"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:capers rdfs:label "Capers"^^xsd:string ;
+    rdfs:comment "Capers"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cheddar rdfs:label "Cheddar"^^xsd:string ;
+    rdfs:comment "Cheddar"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:oregano rdfs:label "Oregano"^^xsd:string ;
+    rdfs:comment "Oregano"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:hotGreenPepper rdfs:label "Hot Green Pepper"^^xsd:string ;
+    rdfs:comment "Hot Green Pepper"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:anchovies rdfs:label "Anchovies"^^xsd:string ;
+    rdfs:comment "Anchovies"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:germanSausage rdfs:label "German Sausage"^^xsd:string ;
+    rdfs:comment "German Sausage"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:oil rdfs:label "Oil"^^xsd:string ;
+    rdfs:comment "Olive Oil"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pepperoni rdfs:label "Pepperoni"^^xsd:string ;
+    rdfs:comment "A type of spicy sausage"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:bacon rdfs:label "Bacon"^^xsd:string ;
+    rdfs:comment "Bacon"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:menuItem rdfs:label "Menu Item"^^xsd:string ;
+    ns1:hasIngredient ns1:ingredients ;
+    ns1:servedInRestaurant ns1:restaurant ;
+    owl2vec:superClassOf ns1:doughSticks,
+        ns1:pizza,
+        ns1:pizzaiola ;
+    rdfs:comment "An item on the menu in a restaurant"^^xsd:string .
+
+ns1:chicken rdfs:label "Chicken"^^xsd:string ;
+    rdfs:comment "Chicken pieces"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:ham rdfs:label "Ham"^^xsd:string ;
+    rdfs:comment "Ham"^^xsd:string ;
+    rdfs:subClassOf ns1:meat,
+        ns1:pizzaTopping .
+
+ns1:mushrooms rdfs:label "Mushrooms"^^xsd:string ;
+    rdfs:comment "Mushrooms"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:pizzaBase rdfs:label "Pizza Base"^^xsd:string ;
+    ns1:isBaseOf ns1:menuItem ;
+    owl2vec:superClassOf ns1:burger,
+        ns1:glutenFreeBase,
+        ns1:pizzaSliceBase,
+        ns1:pizzaSubBase,
+        ns1:roll,
+        ns1:smallPizzaBase ;
+    rdfs:comment "Pizza Base, mainly bread"^^xsd:string ;
+    rdfs:subClassOf ns1:ingredients .
+
+ns1:pizzaType rdfs:label "Pizza Type"^^xsd:string ;
+    owl2vec:superClassOf ns1:cheesyPizza,
+        ns1:glutenFreePizza,
+        ns1:interestingPizza,
+        ns1:pizzaBurger,
+        ns1:pizzaRoll,
+        ns1:pizzaSlice,
+        ns1:pizzaSub ;
+    rdfs:comment "Generic types of pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza .
+
+ns1:parmezan rdfs:label "Parmezan"^^xsd:string ;
+    rdfs:comment "Parmezan"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:garlic rdfs:label "Garlic"^^xsd:string ;
+    rdfs:comment "Garlic"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:meat rdfs:label "Meat"^^xsd:string ;
+    owl2vec:superClassOf ns1:bacon,
+        ns1:beef,
+        ns1:chicken,
+        ns1:germanSausage,
+        ns1:ham,
+        ns1:hotSpicedBeef,
+        ns1:meatballs,
+        ns1:pepperoni ;
+    rdfs:comment "Meat"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:olives rdfs:label "Olives"^^xsd:string ;
+    rdfs:comment "Olives"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:onion rdfs:label "Onion"^^xsd:string ;
+    rdfs:comment "Onion"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:cheese rdfs:label "Cheese"^^xsd:string ;
+    owl2vec:superClassOf ns1:blueCheese,
+        ns1:caciocavallo,
+        ns1:cheddar,
+        ns1:feta,
+        ns1:fontina,
+        ns1:goatsCheese,
+        ns1:gorgonzola,
+        ns1:granaPadano,
+        ns1:mozzarella,
+        ns1:parmezan,
+        ns1:ricotta,
+        ns1:stracchino,
+        ns1:toma ;
+    rdfs:comment "Cheese"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:mozzarella rdfs:label "Mozzarella"^^xsd:string ;
+    rdfs:comment "Mozzarella"^^xsd:string ;
+    rdfs:subClassOf ns1:cheese,
+        ns1:pizzaTopping .
+
+ns1:tomato rdfs:label "Tomato"^^xsd:string ;
+    rdfs:comment "Tomato"^^xsd:string ;
+    rdfs:subClassOf ns1:pizzaTopping .
+
+ns1:namedPizza rdfs:label "Named Pizza"^^xsd:string ;
+    owl2vec:superClassOf ns1:american,
+        ns1:americanHot,
+        ns1:anchovyPizza,
+        ns1:auberginePizza,
+        ns1:baconCheeseBurgerPizza,
+        ns1:bakedPotatoPizza,
+        ns1:bbqPizza,
+        ns1:bianca,
+        ns1:biancaFiorentinaPizza,
+        ns1:bltPizza,
+        ns1:breakfastPizza,
+        ns1:bruschettaPizza,
+        ns1:buffaloChickenPizza,
+        ns1:cajun,
+        ns1:capricciosa,
+        ns1:caprina,
+        ns1:chickenParmPizza,
+        ns1:chickenPestoPizza,
+        ns1:chickenPizza,
+        ns1:cookiePizza,
+        ns1:cowboyPizza,
+        ns1:curryPizza,
+        ns1:eFichi,
+        ns1:fiorentina,
+        ns1:fruttiDiMare,
+        ns1:garlicPizza,
+        ns1:giardiniera,
+        ns1:gobiManchurianPizza,
+        ns1:greekPizza,
+        ns1:hariMirchPineapplePizza,
+        ns1:hawaiian,
+        ns1:laReine,
+        ns1:margherita,
+        ns1:meatPizza,
+        ns1:mushroom,
+        ns1:napoletana,
+        ns1:parmese,
+        ns1:pisan,
+        ns1:pizzaSteak,
+        ns1:pizzetta,
+        ns1:polloAdAstra,
+        ns1:princeCarlo,
+        ns1:prosciuttoArugula,
+        ns1:pugliese,
+        ns1:quattroFormaggi,
+        ns1:quattroStagioni,
+        ns1:romana,
+        ns1:rosa,
+        ns1:sicilian,
+        ns1:sloppyGiuseppe,
+        ns1:soho,
+        ns1:supremePizza,
+        ns1:tacoPizza,
+        ns1:threeCheese,
+        ns1:vegetarianPizza,
+        ns1:veneziana,
+        ns1:viennese ;
+    rdfs:comment "Different types of pizza"^^xsd:string ;
+    rdfs:subClassOf ns1:pizza .
+
+ns1:pizza rdfs:label "Pizza"^^xsd:string ;
+    ns1:hasBase ns1:pizzaBase ;
+    ns1:hasTopping ns1:pizzaTopping ;
+    owl2vec:superClassOf ns1:american,
+        ns1:americanHot,
+        ns1:anchovyPizza,
+        ns1:auberginePizza,
+        ns1:baconCheeseBurgerPizza,
+        ns1:bakedPotatoPizza,
+        ns1:bbqPizza,
+        ns1:bianca,
+        ns1:biancaFiorentinaPizza,
+        ns1:bltPizza,
+        ns1:breakfastPizza,
+        ns1:bruschettaPizza,
+        ns1:buffaloChickenPizza,
+        ns1:cajun,
+        ns1:capricciosa,
+        ns1:caprina,
+        ns1:cheesyPizza,
+        ns1:chickenParmPizza,
+        ns1:chickenPestoPizza,
+        ns1:chickenPizza,
+        ns1:cookiePizza,
+        ns1:cowboyPizza,
+        ns1:eFichi,
+        ns1:fiorentina,
+        ns1:fruttiDiMare,
+        ns1:garlicPizza,
+        ns1:giardiniera,
+        ns1:glutenFreePizza,
+        ns1:gobiManchurianPizza,
+        ns1:greekPizza,
+        ns1:hariMirchPineapplePizza,
+        ns1:hawaiian,
+        ns1:interestingPizza,
+        ns1:laReine,
+        ns1:margherita,
+        ns1:meatPizza,
+        ns1:mushroom,
+        ns1:namedPizza,
+        ns1:napoletana,
+        ns1:parmese,
+        ns1:pisan,
+        ns1:pizzaSlice,
+        ns1:pizzaSteak,
+        ns1:pizzaType,
+        ns1:pizzaiola,
+        ns1:pizzetta,
+        ns1:polloAdAstra,
+        ns1:princeCarlo,
+        ns1:prosciuttoArugula,
+        ns1:pugliese,
+        ns1:quattroFormaggi,
+        ns1:quattroStagioni,
+        ns1:romana,
+        ns1:rosa,
+        ns1:sicilian,
+        ns1:sloppyGiuseppe,
+        ns1:soho,
+        ns1:supremePizza,
+        ns1:tacoPizza,
+        ns1:threeCheese,
+        ns1:vegetarianPizza,
+        ns1:veneziana,
+        ns1:viennese ;
+    rdfs:comment "Pizza, https://en.wikipedia.org/wiki/List_of_pizza_varieties_by_country"^^xsd:string ;
+    rdfs:subClassOf ns1:menuItem .
+
+ns1:pizzaTopping rdfs:label "Pizza Topping"^^xsd:string ;
+    ns1:isToppingOf ns1:menuItem ;
+    owl2vec:superClassOf ns1:anchovies,
+        ns1:artichokes,
+        ns1:arugula,
+        ns1:asparagus,
+        ns1:aubergine,
+        ns1:bacon,
+        ns1:basil,
+        ns1:bbqSauce,
+        ns1:beef,
+        ns1:blueCheese,
+        ns1:buffaloSauce,
+        ns1:burgerSauce,
+        ns1:caciocavallo,
+        ns1:cajunSpice,
+        ns1:capers,
+        ns1:cauliflower,
+        ns1:cheddar,
+        ns1:cheese,
+        ns1:chicken,
+        ns1:cookieDough,
+        ns1:corn,
+        ns1:curry,
+        ns1:egg,
+        ns1:feta,
+        ns1:fig,
+        ns1:garlic,
+        ns1:germanSausage,
+        ns1:goatsCheese,
+        ns1:gorgonzola,
+        ns1:granaPadano,
+        ns1:ham,
+        ns1:hotGreenPepper,
+        ns1:hotSpicedBeef,
+        ns1:jalapenoPepper,
+        ns1:leek,
+        ns1:lettuce,
+        ns1:manchurianSauce,
+        ns1:meat,
+        ns1:meatballs,
+        ns1:mixedSeafood,
+        ns1:mozzarella,
+        ns1:mushrooms,
+        ns1:oil,
+        ns1:olives,
+        ns1:onion,
+        ns1:oregano,
+        ns1:parmezan,
+        ns1:peperonata,
+        ns1:pepper,
+        ns1:pepperoni,
+        ns1:pesto,
+        ns1:petitPois,
+        ns1:pickle,
+        ns1:pineKernel,
+        ns1:pineapple,
+        ns1:pizzaSauce,
+        ns1:prawns,
+        ns1:rocket,
+        ns1:rosemary,
+        ns1:scallions,
+        ns1:seafood,
+        ns1:slicedTomato,
+        ns1:sourCream,
+        ns1:spinach,
+        ns1:sultana,
+        ns1:sundriedTomato,
+        ns1:sweetPepper,
+        ns1:tacoChips,
+        ns1:tobascoPepperSauce,
+        ns1:toma,
+        ns1:tomato ;
+    rdfs:comment "The toppings a pizza may have"^^xsd:string ;
+    rdfs:subClassOf ns1:ingredients .
+
