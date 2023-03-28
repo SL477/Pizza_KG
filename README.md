@@ -98,6 +98,22 @@ Here I used OWL2Vec to create various models from my pizza Knowledge Graph.
 | american vs [tef:american](http://link477.com/ds/pizza#american) | 0.31192777 | 0.25724742 | 0.42699656 |
 | pizzaiola vs [tef:pizzaiola](http://link477.com/ds/pizza#pizzaiola) | 0.2567482 | 0.2311137 | 0.46955892 |
 
+### Clustering
+
+There did not seem to be much difference in changing the number of clusters:
+
+Pizza Ontology Model:
+
+![Pizza Ontology Model](/images/pizzaOntologyModelClusters.png)
+
+Pizza Data Model:
+
+![Pizza Data Model](/images/pizzaDataModelClusters.png)
+
+Pizza Data New Seed Model
+
+![Pizza Data New Seed Model](/images/pizzaDataNSModelClusters.png)
+
 ## Files
 
 - data.ttl: the data in the original ontology

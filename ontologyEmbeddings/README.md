@@ -42,3 +42,19 @@ Here we compare the different models and pairs of words. Using:
 ```bash
 python3 ontologyEmbeddings/vector_comparison.py
 ```
+
+## Clustering
+
+To get the clusters use:
+
+```bash
+python3 ontologyEmbeddings/clustering.py
+```
+
+## Files
+
+- clustering.py: the code to generate the PCA/KMeans graphs
+- vector_comparison.py: Compare various different word vectors
+- pizzaData: this folder contains the model for the Pizza Data Turtle file converted to RDF format
+- pizzaDataNewSeed: this folder contains the model for the Pizza Data Turtle file converted to RDF format with a different seed
+- pizzaOntology: this folder contains the model for the Pizza Ontology file
