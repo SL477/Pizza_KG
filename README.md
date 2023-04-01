@@ -6,7 +6,7 @@ The specification is [here](https://github.com/turing-knowledge-graphs/teaching/
 
 The final class hierarchy:
 
-![Class Hierarchy](https://github.com/SL477/Pizza_KG/blob/6fca04b2551f58a7955025b2caf3c7821c45d3d4/images/ClassHierarchy.JPG?raw=true)
+![Class Hierarchy](/docs/images/ClassHierarchy.JPG?raw=true)
 
 ## Ontology Modelling
 
@@ -80,7 +80,7 @@ Then run the query in the SPARQL file.
 
 Class Relationships:
 
-![Class Relationships](/images/ClassRelationships.JPG)
+![Class Relationships](/docs/images/ClassRelationships.JPG)
 
 <!--(https://github.com/SL477/Pizza_KG/blob/main/images/ClassRelationships.JPG)-->
 
@@ -104,16 +104,15 @@ There did not seem to be much difference in changing the number of clusters:
 
 Pizza Ontology Model:
 
-![Pizza Ontology Model](/images/pizzaOntologyModelClusters.png)
+![Pizza Ontology Model](/docs/images/pizzaOntologyModelClusters.png)
 
 Pizza Data Model:
 
-![Pizza Data Model](/images/pizzaDataModelClusters.png)
+![Pizza Data Model](/docs/images/pizzaDataModelClusters.png)
 
 Pizza Data New Seed Model
 
-![Pizza Data New Seed Model](/images/pizzaDataNSModelClusters.png)
-
+![Pizza Data New Seed Model](/docs/images/pizzaDataNSModelClusters.png)
 
 ## Files
 
@@ -136,3 +135,8 @@ To save use:
 ```bash
 pipenv run save_docs
 ```
+
+<video width="320" height="240" controls controlsList="nodownload">
+    <source src="https://onedrive.live.com/download?cid=38CDDFDEB1AAA2E6&resid=38CDDFDEB1AAA2E6%21664653&authkey=AFPHLP4HSnoYRTg" type="video/mp4">
+    Your browser does not support the video tag
+</video>
